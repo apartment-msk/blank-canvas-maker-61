@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Shield, Clock, Star, MapPin, Users, Award, Trophy } from "lucide-react";
+import { ArrowRight, Shield, Clock, Star, MapPin, Users, Award, Trophy, Wifi, Monitor, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -201,7 +201,7 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="text-center space-y-4 group">
               <div className="w-16 h-16 mx-auto bg-gradient-luxury rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
                 <Shield className="h-8 w-8 text-luxury-foreground" />
@@ -229,6 +229,36 @@ const Index = () => {
               <h3 className="text-xl font-semibold text-foreground">{t('benefits.bestLocations.title')}</h3>
               <p className="text-muted-foreground">
                 {t('benefits.bestLocations.description')}
+              </p>
+            </div>
+
+            <div className="text-center space-y-4 group">
+              <div className="w-16 h-16 mx-auto bg-gradient-luxury rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                <Wifi className="h-8 w-8 text-luxury-foreground" />
+              </div>
+              <h3 className="text-xl font-semibold text-foreground">{t('benefits.highSpeedInternet.title')}</h3>
+              <p className="text-muted-foreground">
+                {t('benefits.highSpeedInternet.description')}
+              </p>
+            </div>
+
+            <div className="text-center space-y-4 group">
+              <div className="w-16 h-16 mx-auto bg-gradient-luxury rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                <Monitor className="h-8 w-8 text-luxury-foreground" />
+              </div>
+              <h3 className="text-xl font-semibold text-foreground">{t('benefits.smartTV.title')}</h3>
+              <p className="text-muted-foreground">
+                {t('benefits.smartTV.description')}
+              </p>
+            </div>
+
+            <div className="text-center space-y-4 group">
+              <div className="w-16 h-16 mx-auto bg-gradient-luxury rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                <Sparkles className="h-8 w-8 text-luxury-foreground" />
+              </div>
+              <h3 className="text-xl font-semibold text-foreground">{t('benefits.perfectCleanliness.title')}</h3>
+              <p className="text-muted-foreground">
+                {t('benefits.perfectCleanliness.description')}
               </p>
             </div>
           </div>
