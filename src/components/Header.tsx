@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Home, Building2, Info, Phone } from "lucide-react";
+import { Menu, X, Home, Building2, Info, Phone, Users, Gift } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { cn } from "@/lib/utils";
@@ -16,6 +16,8 @@ export function Header() {
     { name: t('navigation.apartments'), href: "/apartments", icon: Building2 },
     { name: t('navigation.about'), href: "/about", icon: Info },
     { name: t('navigation.contacts'), href: "/contacts", icon: Phone },
+    { name: t('navigation.owners'), href: "/owners", icon: Users },
+    { name: t('navigation.offers'), href: "/offers", icon: Gift },
   ];
 
   return (

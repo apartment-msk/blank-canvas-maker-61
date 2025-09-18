@@ -6,13 +6,10 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 const About = () => {
   const stats = [{
-    number: "500+",
+    number: "2500+",
     label: "Довольных гостей"
   }, {
-    number: "50+",
-    label: "Апартаментов"
-  }, {
-    number: "4.9",
+    number: "4.9/5",
     label: "Средний рейтинг"
   }, {
     number: "24/7",
@@ -30,19 +27,6 @@ const About = () => {
     icon: Star,
     title: "Качество превыше всего",
     description: "Мы тщательно отбираем каждые апартаменты и поддерживаем высокие стандарты чистоты и комфорта."
-  }];
-  const team = [{
-    name: "Анна Петрова",
-    role: "Основатель и CEO",
-    description: "15 лет опыта в гостиничном бизнесе. Создала HomeStay с миссией сделать краткосрочную аренду честной и комфортной."
-  }, {
-    name: "Михаил Сергеев",
-    role: "Менеджер по качеству",
-    description: "Отвечает за поддержание высоких стандартов во всех наших апартаментах и контроль качества обслуживания."
-  }, {
-    name: "Елена Козлова",
-    role: "Менеджер поддержки",
-    description: "Руководит службой поддержки 24/7 и обеспечивает быстрое решение любых вопросов наших гостей."
   }];
   return <div className="min-h-screen bg-background">
       <Header />
@@ -65,7 +49,7 @@ const About = () => {
       {/* Stats */}
       <section className="py-16 bg-surface">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {stats.map((stat, index) => <div key={index} className="text-center">
                 <div className="text-4xl md:text-5xl font-bold text-luxury mb-2">
                   {stat.number}
@@ -114,7 +98,7 @@ const About = () => {
                     и безопасного места, где можно чувствовать себя как дома."
                   </blockquote>
                   <footer className="mt-4">
-                    <cite className="font-semibold">— Анна Петрова, основатель HomeStay</cite>
+                    <cite className="font-semibold">— Анастасия Безбородова, основатель HomeStay</cite>
                   </footer>
                 </div>
               </div>
@@ -155,85 +139,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Team */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto space-y-12">
-            <div className="text-center space-y-4">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-                Наша команда
-              </h2>
-              <p className="text-lg text-muted-foreground">
-                Люди, которые делают ваше пребывание незабываемым
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {team.map((member, index) => <Card key={index} className="text-center border-0 shadow-card">
-                  <CardContent className="p-6">
-                    <div className="w-20 h-20 mx-auto mb-4 bg-gradient-luxury rounded-full flex items-center justify-center">
-                      
-                    </div>
-                    <h3 className="text-xl font-semibold text-foreground mb-2">
-                      {member.name}
-                    </h3>
-                    <div className="text-luxury font-medium mb-4">
-                      {member.role}
-                    </div>
-                    <p className="text-sm text-muted-foreground">
-                      {member.description}
-                    </p>
-                  </CardContent>
-                </Card>)}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* For Owners CTA */}
-      <section className="py-16 bg-gradient-hero">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center space-y-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-              Собственникам квартир
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Присоединяйтесь к нашей платформе и получайте стабильный доход 
-              от сдачи своих апартаментов с нашей поддержкой и управлением.
-            </p>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-12">
-              <div className="space-y-2">
-                <div className="w-12 h-12 mx-auto bg-gradient-luxury rounded-xl flex items-center justify-center">
-                  <Shield className="h-6 w-6 text-luxury-foreground" />
-                </div>
-                <h3 className="font-semibold">Гарантии</h3>
-                <p className="text-sm text-muted-foreground">Страхование и защита вашей собственности</p>
-              </div>
-              <div className="space-y-2">
-                <div className="w-12 h-12 mx-auto bg-gradient-luxury rounded-xl flex items-center justify-center">
-                  <Clock className="h-6 w-6 text-luxury-foreground" />
-                </div>
-                <h3 className="font-semibold">Управление</h3>
-                <p className="text-sm text-muted-foreground">Полное управление арендой и обслуживанием</p>
-              </div>
-              <div className="space-y-2">
-                <div className="w-12 h-12 mx-auto bg-gradient-luxury rounded-xl flex items-center justify-center">
-                  <Star className="h-6 w-6 text-luxury-foreground" />
-                </div>
-                <h3 className="font-semibold">Доходность</h3>
-                <p className="text-sm text-muted-foreground">Высокая загрузка и стабильный доход</p>
-              </div>
-            </div>
-
-            <Link to="/contacts">
-              <Button size="lg" className="bg-gradient-luxury text-luxury-foreground hover:shadow-luxury hover:scale-105">
-                Стать партнером
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
 
       <Footer />
     </div>;
