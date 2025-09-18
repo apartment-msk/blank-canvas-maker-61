@@ -98,7 +98,7 @@ const Index = () => {
             
             {/* Integrated Search Widget */}
             <div className="animate-slide-up" style={{ animationDelay: '0.3s' }}>
-              <SearchWidget className="bg-white rounded-2xl p-8 shadow-card max-w-4xl mx-auto" />
+              <SearchWidget className="bg-transparent rounded-2xl p-8 max-w-4xl mx-auto" />
             </div>
           </div>
         </div>
