@@ -4,70 +4,47 @@ import { Shield, Clock, MapPin, Users, Star, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-import { StructuredData, generateOrganizationData, generateBreadcrumbData } from "@/components/StructuredData";
-
 const About = () => {
-  const stats = [
-    { number: "500+", label: "Довольных гостей" },
-    { number: "50+", label: "Апартаментов" },
-    { number: "4.9", label: "Средний рейтинг" },
-    { number: "24/7", label: "Поддержка" }
-  ];
-
-  const values = [
-    {
-      icon: Heart,
-      title: "Забота о каждом госте",
-      description: "Мы относимся к каждому гостю как к близкому другу, обеспечивая персональный подход и внимание к деталям."
-    },
-    {
-      icon: Shield,
-      title: "Честность и прозрачность", 
-      description: "Все фотографии соответствуют действительности. Никаких скрытых платежей или неприятных сюрпризов."
-    },
-    {
-      icon: Star,
-      title: "Качество превыше всего",
-      description: "Мы тщательно отбираем каждые апартаменты и поддерживаем высокие стандарты чистоты и комфорта."
-    }
-  ];
-
-  const team = [
-    {
-      name: "Анна Петрова",
-      role: "Основатель и CEO",
-      description: "15 лет опыта в гостиничном бизнесе. Создала HomeStay с миссией сделать краткосрочную аренду честной и комфортной."
-    },
-    {
-      name: "Михаил Сергеев", 
-      role: "Менеджер по качеству",
-      description: "Отвечает за поддержание высоких стандартов во всех наших апартаментах и контроль качества обслуживания."
-    },
-    {
-      name: "Елена Козлова",
-      role: "Менеджер поддержки",
-      description: "Руководит службой поддержки 24/7 и обеспечивает быстрое решение любых вопросов наших гостей."
-    }
-  ];
-
-  const breadcrumbData = generateBreadcrumbData([
-    { name: "Главная", url: "https://homestay.lovable.app/" },
-    { name: "О нас", url: "https://homestay.lovable.app/about" }
-  ]);
-
-  const aboutPageData = {
-    "@context": "https://schema.org",
-    "@type": "AboutPage",
-    "name": "О HomeStay",
-    "description": "Узнайте больше о нашей команде, истории и ценностях компании HomeStay",
-    "url": "https://homestay.lovable.app/about",
-    "mainEntity": generateOrganizationData()
-  };
-
-  return (
-    <div className="min-h-screen bg-background">
-      <StructuredData data={aboutPageData} />
-      <StructuredData data={breadcrumbData} />
+  const stats = [{
+    number: "500+",
+    label: "Довольных гостей"
+  }, {
+    number: "50+",
+    label: "Апартаментов"
+  }, {
+    number: "4.9",
+    label: "Средний рейтинг"
+  }, {
+    number: "24/7",
+    label: "Поддержка"
+  }];
+  const values = [{
+    icon: Heart,
+    title: "Забота о каждом госте",
+    description: "Мы относимся к каждому гостю как к близкому другу, обеспечивая персональный подход и внимание к деталям."
+  }, {
+    icon: Shield,
+    title: "Честность и прозрачность",
+    description: "Все фотографии соответствуют действительности. Никаких скрытых платежей или неприятных сюрпризов."
+  }, {
+    icon: Star,
+    title: "Качество превыше всего",
+    description: "Мы тщательно отбираем каждые апартаменты и поддерживаем высокие стандарты чистоты и комфорта."
+  }];
+  const team = [{
+    name: "Анна Петрова",
+    role: "Основатель и CEO",
+    description: "15 лет опыта в гостиничном бизнесе. Создала HomeStay с миссией сделать краткосрочную аренду честной и комфортной."
+  }, {
+    name: "Михаил Сергеев",
+    role: "Менеджер по качеству",
+    description: "Отвечает за поддержание высоких стандартов во всех наших апартаментах и контроль качества обслуживания."
+  }, {
+    name: "Елена Козлова",
+    role: "Менеджер поддержки",
+    description: "Руководит службой поддержки 24/7 и обеспечивает быстрое решение любых вопросов наших гостей."
+  }];
+  return <div className="min-h-screen bg-background">
       <Header />
       
       {/* Hero Section */}
@@ -89,14 +66,12 @@ const About = () => {
       <section className="py-16 bg-surface">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
+            {stats.map((stat, index) => <div key={index} className="text-center">
                 <div className="text-4xl md:text-5xl font-bold text-luxury mb-2">
                   {stat.number}
                 </div>
                 <div className="text-muted-foreground">{stat.label}</div>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -162,8 +137,7 @@ const About = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {values.map((value, index) => (
-                <Card key={index} className="text-center border-0 shadow-card hover:shadow-floating transition-shadow">
+              {values.map((value, index) => <Card key={index} className="text-center border-0 shadow-card hover:shadow-floating transition-shadow">
                   <CardContent className="p-8">
                     <div className="w-16 h-16 mx-auto mb-6 bg-gradient-luxury rounded-2xl flex items-center justify-center">
                       <value.icon className="h-8 w-8 text-luxury-foreground" />
@@ -175,8 +149,7 @@ const About = () => {
                       {value.description}
                     </p>
                   </CardContent>
-                </Card>
-              ))}
+                </Card>)}
             </div>
           </div>
         </div>
@@ -196,13 +169,10 @@ const About = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {team.map((member, index) => (
-                <Card key={index} className="text-center border-0 shadow-card">
+              {team.map((member, index) => <Card key={index} className="text-center border-0 shadow-card">
                   <CardContent className="p-6">
                     <div className="w-20 h-20 mx-auto mb-4 bg-gradient-luxury rounded-full flex items-center justify-center">
-                      <span className="text-2xl font-bold text-luxury-foreground">
-                        {member.name.charAt(0)}
-                      </span>
+                      
                     </div>
                     <h3 className="text-xl font-semibold text-foreground mb-2">
                       {member.name}
@@ -214,8 +184,7 @@ const About = () => {
                       {member.description}
                     </p>
                   </CardContent>
-                </Card>
-              ))}
+                </Card>)}
             </div>
           </div>
         </div>
@@ -267,8 +236,6 @@ const About = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default About;
