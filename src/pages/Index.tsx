@@ -11,6 +11,10 @@ import heroImage from "@/assets/hero-apartment.jpg";
 import apartment1 from "@/assets/apartment-1.jpg";
 import apartment2 from "@/assets/apartment-2.jpg";
 import apartment3 from "@/assets/apartment-3.jpg";
+import avitoLogo from "@/assets/logos/avito-logo.png";
+import ostrovokLogo from "@/assets/logos/ostrovok-logo.png";
+import sutochnoLogo from "@/assets/logos/sutochno-logo.png";
+import yandexTravelLogo from "@/assets/logos/yandex-travel-logo.png";
 
 const Index = () => {
   const { t } = useTranslation();
@@ -120,10 +124,8 @@ const Index = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
               {/* Avito Rating */}
               <div className="bg-white rounded-xl p-6 text-center shadow-card hover:shadow-lg transition-shadow">
-                <div className="flex items-center justify-center mb-3">
-                  <div className="bg-blue-600 text-white px-3 py-1 rounded-lg text-sm font-bold">
-                    AVITO
-                  </div>
+                <div className="flex items-center justify-center mb-3 h-12">
+                  <img src={avitoLogo} alt="Avito" className="h-8 w-auto object-contain" />
                 </div>
                 <div className="text-2xl font-bold text-foreground mb-2">4.9</div>
                 <div className="flex justify-center mb-2">
@@ -136,10 +138,8 @@ const Index = () => {
 
               {/* Ostrovok Rating */}
               <div className="bg-white rounded-xl p-6 text-center shadow-card hover:shadow-lg transition-shadow">
-                <div className="flex items-center justify-center mb-3">
-                  <div className="bg-orange-500 text-white px-3 py-1 rounded-lg text-sm font-bold">
-                    ОСТРОВОК
-                  </div>
+                <div className="flex items-center justify-center mb-3 h-12">
+                  <img src={ostrovokLogo} alt="Островок" className="h-8 w-auto object-contain" />
                 </div>
                 <div className="text-2xl font-bold text-foreground mb-2">4.8</div>
                 <div className="flex justify-center mb-2">
@@ -152,10 +152,8 @@ const Index = () => {
 
               {/* Sutochno Rating */}
               <div className="bg-white rounded-xl p-6 text-center shadow-card hover:shadow-lg transition-shadow">
-                <div className="flex items-center justify-center mb-3">
-                  <div className="bg-green-600 text-white px-3 py-1 rounded-lg text-sm font-bold">
-                    СУТОЧНО.РУ
-                  </div>
+                <div className="flex items-center justify-center mb-3 h-12">
+                  <img src={sutochnoLogo} alt="Суточно.ру" className="h-8 w-auto object-contain" />
                 </div>
                 <div className="text-2xl font-bold text-foreground mb-2">4.9</div>
                 <div className="flex justify-center mb-2">
@@ -168,10 +166,8 @@ const Index = () => {
 
               {/* Yandex Travel Rating */}
               <div className="bg-white rounded-xl p-6 text-center shadow-card hover:shadow-lg transition-shadow">
-                <div className="flex items-center justify-center mb-3">
-                  <div className="bg-red-500 text-white px-3 py-1 rounded-lg text-sm font-bold">
-                    ЯНДЕКС.ПУТЕШЕСТВИЯ
-                  </div>
+                <div className="flex items-center justify-center mb-3 h-12">
+                  <img src={yandexTravelLogo} alt="Яндекс Путешествия" className="h-8 w-auto object-contain" />
                 </div>
                 <div className="text-2xl font-bold text-foreground mb-2">4.7</div>
                 <div className="flex justify-center mb-2">
