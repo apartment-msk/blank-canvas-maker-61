@@ -24,7 +24,7 @@ export const generateOrganizationData = () => ({
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "HomeStay",
-  "description": "Премиальные апартаменты для посуточной аренды в Москве",
+  "description": "Комфортные апартаменты для посуточной аренды в Москве",
   "url": "https://homestay.lovable.app",
   "logo": "https://homestay.lovable.app/logo.png",
   "contactPoint": {
@@ -48,9 +48,9 @@ export const generateOrganizationData = () => ({
 export const generateWebSiteData = () => ({
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "name": "HomeStay - Премиальные апартаменты",
+  "name": "HomeStay - Комфортные апартаменты",
   "url": "https://homestay.lovable.app",
-  "description": "Премиальные апартаменты для посуточной аренды в Москве. Честные фото, прозрачные цены, поддержка 24/7.",
+  "description": "Комфортные апартаменты для посуточной аренды в Москве. Честные фото, прозрачные цены, поддержка 24/7.",
   "potentialAction": {
     "@type": "SearchAction",
     "target": "https://homestay.lovable.app/apartments?search={search_term_string}",
@@ -94,7 +94,7 @@ export const generateApartmentListData = (apartments: any[]) => ({
   "@context": "https://schema.org",
   "@type": "ItemList",
   "name": "Апартаменты HomeStay",
-  "description": "Коллекция премиальных апартаментов для краткосрочной аренды",
+  "description": "Коллекция комфортных апартаментов для краткосрочной аренды",
   "numberOfItems": apartments.length,
   "itemListElement": apartments.map((apartment, index) => ({
     "@type": "ListItem",
@@ -158,7 +158,7 @@ export const generateLocalBusinessData = () => ({
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "HomeStay",
-  "description": "Премиальные апартаменты для посуточной аренды",
+  "description": "Комфортные апартаменты для посуточной аренды",
   "url": "https://homestay.lovable.app",
   "address": {
     "@type": "PostalAddress",

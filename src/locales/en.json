@@ -33,7 +33,7 @@
     "owners": "For Owners"
   },
   "hero": {
-    "title": "Premium apartments",
+    "title": "Comfortable apartments",
     "subtitle": "for your comfort",
     "description": "Discover a world of comfort and style in our carefully curated apartments. Honest photos, transparent prices, 24/7 support.",
     "findApartments": "Find apartments"
@@ -61,6 +61,18 @@
     "bestLocations": {
       "title": "Best locations",
       "description": "Convenient location near attractions, transport and infrastructure."
+    },
+    "highSpeedInternet": {
+      "title": "High-speed internet",
+      "description": "High-speed connection from 300 Mbps for work and entertainment."
+    },
+    "smartTv": {
+      "title": "Smart TV",
+      "description": "Modern TVs with subscriptions to streaming services and entertainment platforms."
+    },
+    "perfectCleanliness": {
+      "title": "Perfect cleanliness",
+      "description": "Exceptionally thorough approach to cleaning and maintaining perfect order in every apartment."
     }
   },
   "apartments": {
@@ -120,7 +132,7 @@
   },
   "about": {
     "title": "About us",
-    "description": "We create unforgettable living experiences by combining the comfort of premium apartments with personal service and an honest approach to business.",
+    "description": "We create unforgettable living experiences by combining the comfort of modern apartments with personal service and an honest approach to business.",
     "stats": {
       "guests": "Happy guests",
       "apartments": "Apartments",
@@ -129,7 +141,7 @@
     },
     "story": {
       "title": "Our story",
-      "description": "How we came to create a premium apartment rental service"
+      "description": "How we came to create a comfortable apartment rental service"
     },
     "values": {
       "title": "Our values",
@@ -154,7 +166,7 @@
     }
   },
   "footer": {
-    "description": "Premium apartments for short-term rental. Comfort, quality, reliability.",
+    "description": "Comfortable apartments for short-term rental. Comfort, quality, reliability.",
     "quickLinks": "Quick links",
     "contactInfo": "Contact info",
     "documents": "Documents",
