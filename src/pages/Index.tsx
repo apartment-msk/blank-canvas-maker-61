@@ -246,9 +246,9 @@ const Index = () => {
               <div className="w-16 h-16 mx-auto bg-gradient-luxury rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
                 <Monitor className="h-8 w-8 text-luxury-foreground" />
               </div>
-              <h3 className="text-xl font-semibold text-foreground">{t('benefits.smartTV.title')}</h3>
+              <h3 className="text-xl font-semibold text-foreground">{t('benefits.smartTv.title')}</h3>
               <p className="text-muted-foreground">
-                {t('benefits.smartTV.description')}
+                {t('benefits.smartTv.description')}
               </p>
             </div>
 
