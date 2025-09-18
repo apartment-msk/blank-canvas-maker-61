@@ -38,23 +38,29 @@ All colors MUST be HSL.
     
     --radius: 0.75rem;
     
-    /* Custom apartment rental theme colors */
-    --luxury: 24 87% 67%;
+    /* Modern apartment rental theme colors */
+    --luxury: 217 91% 60%;
     --luxury-foreground: 0 0% 100%;
-    --warm: 32 100% 95%;
-    --warm-foreground: 24 10% 10%;
-    --neutral: 25 5% 45%;
-    --surface: 60 9% 98%;
+    --warm: 32 95% 44%;
+    --warm-foreground: 0 0% 100%;
+    --neutral: 215 20% 65%;
+    --surface: 210 40% 98%;
+    --accent-purple: 262 83% 58%;
+    --accent-cyan: 188 94% 68%;
     
-    /* Gradients */
-    --gradient-luxury: linear-gradient(135deg, hsl(24 87% 67%), hsl(32 84% 74%));
-    --gradient-warm: linear-gradient(180deg, hsl(32 100% 95%), hsl(60 9% 98%));
-    --gradient-hero: linear-gradient(135deg, hsl(24 87% 67% / 0.1), hsl(32 84% 74% / 0.05));
+    /* Modern gradients */
+    --gradient-luxury: linear-gradient(135deg, hsl(217 91% 60%), hsl(262 83% 58%));
+    --gradient-warm: linear-gradient(135deg, hsl(32 95% 44%), hsl(217 91% 60%));
+    --gradient-hero: linear-gradient(135deg, hsl(217 91% 60% / 0.9), hsl(262 83% 58% / 0.7));
+    --gradient-glass: linear-gradient(135deg, hsl(0 0% 100% / 0.1), hsl(0 0% 100% / 0.05));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(210 40% 98%));
     
-    /* Shadows */
-    --shadow-luxury: 0 10px 30px -10px hsl(24 87% 67% / 0.3);
-    --shadow-card: 0 4px 20px -4px hsl(20 14% 4% / 0.1);
-    --shadow-floating: 0 20px 40px -12px hsl(20 14% 4% / 0.15);
+    /* Modern shadows */
+    --shadow-luxury: 0 25px 50px -12px hsl(217 91% 60% / 0.25);
+    --shadow-card: 0 8px 32px -8px hsl(217 91% 60% / 0.1);
+    --shadow-floating: 0 32px 64px -12px hsl(217 91% 60% / 0.2);
+    --shadow-glass: 0 8px 32px 0 hsl(0 0% 0% / 0.1);
+    --shadow-neon: 0 0 80px hsl(217 91% 60% / 0.4);
     
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);

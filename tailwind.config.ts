@@ -57,6 +57,8 @@ export default {
         },
         neutral: "hsl(var(--neutral))",
         surface: "hsl(var(--surface))",
+        "accent-purple": "hsl(var(--accent-purple))",
+        "accent-cyan": "hsl(var(--accent-cyan))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -132,11 +134,18 @@ export default {
         "gradient-luxury": "var(--gradient-luxury)",
         "gradient-warm": "var(--gradient-warm)",
         "gradient-hero": "var(--gradient-hero)",
+        "gradient-glass": "var(--gradient-glass)",
+        "gradient-card": "var(--gradient-card)",
       },
       boxShadow: {
         "luxury": "var(--shadow-luxury)",
         "card": "var(--shadow-card)",
         "floating": "var(--shadow-floating)",
+        "glass": "var(--shadow-glass)",
+        "neon": "var(--shadow-neon)",
+      },
+      backdropBlur: {
+        'xs': '2px',
       },
     },
   },
