@@ -75,8 +75,8 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Header />
       
-      {/* Hero Section */}
-      <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
+      {/* Hero Section with Booking */}
+      <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${heroImage})` }}
@@ -84,42 +84,31 @@ const Index = () => {
           <div className="absolute inset-0 bg-black/40" />
         </div>
         
-        <div className="relative z-10 container mx-auto px-4 text-center text-white">
-          <div className="max-w-4xl mx-auto space-y-6 animate-fade-in">
-            <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-              {t('hero.title')}
-              <span className="block text-luxury">{t('hero.subtitle')}</span>
-            </h1>
-            <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto">
-              {t('hero.description')}
-            </p>
+        <div className="relative z-10 container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center text-white mb-12 animate-fade-in">
+              <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
+                {t('hero.title')}
+                <span className="block text-luxury">{t('hero.subtitle')}</span>
+              </h1>
+              <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto">
+                {t('hero.description')}
+              </p>
+            </div>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            {/* Integrated Search Widget */}
+            <div className="animate-slide-up" style={{ animationDelay: '0.3s' }}>
+              <SearchWidget className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-card max-w-4xl mx-auto" />
+            </div>
+            
+            <div className="text-center mt-8">
               <Link to="/apartments">
-                <Button size="lg" className="bg-gradient-luxury text-luxury-foreground hover:shadow-luxury hover:scale-105 transition-all">
+                <Button variant="outline" size="lg" className="border-white/30 text-white hover:bg-white/20 backdrop-blur-sm">
                   {t('hero.findApartments')}
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Search Widget */}
-      <section className="py-16 bg-surface">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center space-y-8">
-            <div className="space-y-4">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-                {t('search.title')}
-              </h2>
-              <p className="text-lg text-muted-foreground">
-                {t('search.description')}
-              </p>
-            </div>
-            
-            <SearchWidget className="bg-white rounded-2xl p-8 shadow-card" />
           </div>
         </div>
       </section>
