@@ -4,6 +4,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ApartmentCard } from "@/components/ApartmentCard";
 import { SearchWidget } from "@/components/SearchWidget";
+import { ApartmentListWidget } from "@/components/ApartmentListWidget";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
@@ -188,40 +189,10 @@ const Apartments = () => {
         </div>
       </section>
 
-      {/* Apartments Grid */}
+      {/* Apartments from Widget */}
       <section className="py-12">
         <div className="container mx-auto px-4">
-          {filteredApartments.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredApartments.map((apartment, index) => (
-                <div key={apartment.id} className="animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
-                  <ApartmentCard {...apartment} />
-                </div>
-              ))}
-            </div>
-          ) : (
-            <div className="text-center py-12">
-              <div className="max-w-md mx-auto space-y-4">
-                <div className="w-16 h-16 mx-auto bg-muted rounded-full flex items-center justify-center">
-                  <Search className="h-8 w-8 text-muted-foreground" />
-                </div>
-                <h3 className="text-xl font-semibold text-foreground">Ничего не найдено</h3>
-                <p className="text-muted-foreground">
-                  Попробуйте изменить параметры поиска или фильтры
-                </p>
-                <Button 
-                  variant="outline" 
-                  onClick={() => {
-                    setSearchQuery("");
-                    setPriceRange("all");
-                    setSortBy("price-low");
-                  }}
-                >
-                  Сбросить фильтры
-                </Button>
-              </div>
-            </div>
-          )}
+          <ApartmentListWidget className="w-full" />
         </div>
       </section>
 

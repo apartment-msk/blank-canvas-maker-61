@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-interface SearchWidgetProps {
+interface ApartmentListWidgetProps {
   className?: string;
 }
 
@@ -13,7 +13,7 @@ declare global {
   }
 }
 
-export function SearchWidget({ className }: SearchWidgetProps) {
+export function ApartmentListWidget({ className }: ApartmentListWidgetProps) {
   useEffect(() => {
     // Load the widget script
     const script = document.createElement('script');
@@ -23,14 +23,17 @@ export function SearchWidget({ className }: SearchWidgetProps) {
 
     // Initialize widget when script loads
     script.onload = () => {
-      if (window.homereserve && window.homereserve.initWidgetSearch) {
-        window.homereserve.initWidgetSearch({ token: "HYkUIAGFQD" });
+      if (window.homereserve && window.homereserve.initWidgetList) {
+        window.homereserve.initWidgetList({ token: "HYkUIAGFQD" });
       }
     };
 
     return () => {
       // Cleanup script if component unmounts
-      document.head.removeChild(script);
+      const existingScript = document.querySelector('script[src="https://homereserve.ru/widget.js"]');
+      if (existingScript) {
+        document.head.removeChild(existingScript);
+      }
     };
   }, []);
 
