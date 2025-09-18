@@ -85,8 +85,8 @@ const Index = () => {
         </div>
         
         <div className="relative z-10 container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center text-white mb-12 animate-fade-in">
+          <div className="max-w-6xl mx-auto text-center">
+            <div className="text-white mb-12 animate-fade-in">
               <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
                 {t('hero.title')}
                 <span className="block text-luxury">{t('hero.subtitle')}</span>
@@ -98,16 +98,7 @@ const Index = () => {
             
             {/* Integrated Search Widget */}
             <div className="animate-slide-up" style={{ animationDelay: '0.3s' }}>
-              <SearchWidget className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-card max-w-4xl mx-auto" />
-            </div>
-            
-            <div className="text-center mt-8">
-              <Link to="/apartments">
-                <Button variant="outline" size="lg" className="border-white/30 text-white hover:bg-white/20 backdrop-blur-sm">
-                  {t('hero.findApartments')}
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              </Link>
+              <SearchWidget className="bg-white rounded-2xl p-8 shadow-card max-w-4xl mx-auto" />
             </div>
           </div>
         </div>
