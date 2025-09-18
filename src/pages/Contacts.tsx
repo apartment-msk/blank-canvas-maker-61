@@ -9,6 +9,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
+import { StructuredData, generateOrganizationData, generateBreadcrumbData } from "@/components/StructuredData";
 
 const Contacts = () => {
   const [formData, setFormData] = useState({
@@ -81,8 +82,42 @@ const Contacts = () => {
     setFormData(prev => ({ ...prev, [field]: value }));
   };
 
+  const breadcrumbData = generateBreadcrumbData([
+    { name: "Главная", url: "https://homestay.lovable.app/" },
+    { name: "Контакты", url: "https://homestay.lovable.app/contacts" }
+  ]);
+
+  const contactPageData = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Контакты HomeStay",
+    "description": "Свяжитесь с нами любым удобным способом. Поддержка 24/7.",
+    "url": "https://homestay.lovable.app/contacts",
+    "mainEntity": {
+      ...generateOrganizationData(),
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "ул. Тверская, д. 10, стр. 2, офис 520",
+        "addressLocality": "Москва",
+        "addressCountry": "RU",
+        "postalCode": "125009"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "55.7558",
+        "longitude": "37.6176"
+      },
+      "openingHours": [
+        "Mo-Fr 09:00-19:00",
+        "Sa 10:00-16:00"
+      ]
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background">
+      <StructuredData data={contactPageData} />
+      <StructuredData data={breadcrumbData} />
       <Header />
       
       {/* Hero Section */}

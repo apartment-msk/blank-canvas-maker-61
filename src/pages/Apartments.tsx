@@ -5,6 +5,7 @@ import { Footer } from "@/components/Footer";
 import { ApartmentCard } from "@/components/ApartmentCard";
 import { SearchWidget } from "@/components/SearchWidget";
 import { ApartmentListWidget } from "@/components/ApartmentListWidget";
+import { StructuredData, generateApartmentListData, generateBreadcrumbData } from "@/components/StructuredData";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
@@ -111,8 +112,15 @@ const Apartments = () => {
     }
   });
 
+  const breadcrumbData = generateBreadcrumbData([
+    { name: "Главная", url: "https://homestay.lovable.app/" },
+    { name: "Апартаменты", url: "https://homestay.lovable.app/apartments" }
+  ]);
+
   return (
     <div className="min-h-screen bg-background">
+      <StructuredData data={generateApartmentListData(apartments)} />
+      <StructuredData data={breadcrumbData} />
       <Header />
       
       {/* Page Header */}

@@ -4,6 +4,7 @@ import { Shield, Clock, MapPin, Users, Star, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
+import { StructuredData, generateOrganizationData, generateBreadcrumbData } from "@/components/StructuredData";
 
 const About = () => {
   const stats = [
@@ -49,8 +50,24 @@ const About = () => {
     }
   ];
 
+  const breadcrumbData = generateBreadcrumbData([
+    { name: "Главная", url: "https://homestay.lovable.app/" },
+    { name: "О нас", url: "https://homestay.lovable.app/about" }
+  ]);
+
+  const aboutPageData = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "О HomeStay",
+    "description": "Узнайте больше о нашей команде, истории и ценностях компании HomeStay",
+    "url": "https://homestay.lovable.app/about",
+    "mainEntity": generateOrganizationData()
+  };
+
   return (
     <div className="min-h-screen bg-background">
+      <StructuredData data={aboutPageData} />
+      <StructuredData data={breadcrumbData} />
       <Header />
       
       {/* Hero Section */}

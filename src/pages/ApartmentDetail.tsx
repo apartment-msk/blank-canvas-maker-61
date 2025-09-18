@@ -4,6 +4,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ReviewCard } from "@/components/ReviewCard";
 import { SearchWidget } from "@/components/SearchWidget";
+import { StructuredData, generateApartmentData, generateReviewsData, generateBreadcrumbData } from "@/components/StructuredData";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
@@ -84,8 +85,17 @@ const ApartmentDetail = () => {
     return <div>Апартамент не найден</div>;
   }
 
+  const breadcrumbData = generateBreadcrumbData([
+    { name: "Главная", url: "https://homestay.lovable.app/" },
+    { name: "Апартаменты", url: "https://homestay.lovable.app/apartments" },
+    { name: apartment.title, url: `https://homestay.lovable.app/apartment/${apartment.id}` }
+  ]);
+
   return (
     <div className="min-h-screen bg-background">
+      <StructuredData data={generateApartmentData(apartment)} />
+      <StructuredData data={generateReviewsData(reviews, apartment.title)} />
+      <StructuredData data={breadcrumbData} />
       <Header />
       
       {/* Breadcrumb */}

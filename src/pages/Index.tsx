@@ -6,6 +6,7 @@ import { Footer } from "@/components/Footer";
 import { SearchWidget } from "@/components/SearchWidget";
 import { ApartmentCard } from "@/components/ApartmentCard";
 import { ReviewCard } from "@/components/ReviewCard";
+import { StructuredData, generateOrganizationData, generateWebSiteData, generateLocalBusinessData } from "@/components/StructuredData";
 import { useTranslation } from "react-i18next";
 import heroImage from "@/assets/hero-apartment.jpg";
 import apartment1 from "@/assets/apartment-1.jpg";
@@ -73,6 +74,9 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <StructuredData data={generateOrganizationData()} />
+      <StructuredData data={generateWebSiteData()} />
+      <StructuredData data={generateLocalBusinessData()} />
       <Header />
       
       {/* Hero Section with Booking */}
