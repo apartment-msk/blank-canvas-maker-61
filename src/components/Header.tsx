@@ -1,19 +1,22 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Home, Building2, Info, Phone, Users } from "lucide-react";
+import { Menu, X, Home, Building2, Info, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { cn } from "@/lib/utils";
-
-const navigation = [
-  { name: "Главная", href: "/", icon: Home },
-  { name: "Апартаменты", href: "/apartments", icon: Building2 },
-  { name: "О нас", href: "/about", icon: Info },
-  { name: "Контакты", href: "/contacts", icon: Phone },
-];
+import { useTranslation } from "react-i18next";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  const { t } = useTranslation();
+
+  const navigation = [
+    { name: t('navigation.home'), href: "/", icon: Home },
+    { name: t('navigation.apartments'), href: "/apartments", icon: Building2 },
+    { name: t('navigation.about'), href: "/about", icon: Info },
+    { name: t('navigation.contacts'), href: "/contacts", icon: Phone },
+  ];
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur-md">
@@ -28,7 +31,7 @@ export function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-1">
+          <div className="hidden md:flex items-center space-x-1">
             {navigation.map((item) => {
               const isActive = location.pathname === item.href;
               return (
@@ -47,7 +50,8 @@ export function Header() {
                 </Link>
               );
             })}
-          </nav>
+            <LanguageSwitcher />
+          </div>
 
           {/* Mobile menu button */}
           <Button
@@ -83,6 +87,9 @@ export function Header() {
                   </Link>
                 );
               })}
+              <div className="px-4 py-2">
+                <LanguageSwitcher />
+              </div>
             </nav>
           </div>
         )}

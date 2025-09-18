@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 import { Building2, Phone, Mail, MapPin, MessageCircle } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 export function Footer() {
+  const { t } = useTranslation();
   return (
     <footer className="bg-surface border-t">
       <div className="container mx-auto px-4 py-12">
@@ -15,33 +17,32 @@ export function Footer() {
               <span className="text-xl font-bold text-foreground">HomeStay</span>
             </div>
             <p className="text-sm text-muted-foreground">
-              Премиальные апартаменты для краткосрочной аренды. 
-              Комфорт, качество, надежность.
+              {t('footer.description')}
             </p>
           </div>
 
           {/* Quick Links */}
           <div className="space-y-4">
-            <h3 className="font-semibold text-foreground">Навигация</h3>
+            <h3 className="font-semibold text-foreground">{t('footer.quickLinks')}</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link to="/" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Главная
+                  {t('navigation.home')}
                 </Link>
               </li>
               <li>
                 <Link to="/apartments" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Апартаменты
+                  {t('navigation.apartments')}
                 </Link>
               </li>
               <li>
                 <Link to="/about" className="text-muted-foreground hover:text-foreground transition-colors">
-                  О нас
+                  {t('navigation.about')}
                 </Link>
               </li>
               <li>
                 <Link to="/contacts" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Контакты
+                  {t('navigation.contacts')}
                 </Link>
               </li>
             </ul>
@@ -49,7 +50,7 @@ export function Footer() {
 
           {/* Contact Info */}
           <div className="space-y-4">
-            <h3 className="font-semibold text-foreground">Контакты</h3>
+            <h3 className="font-semibold text-foreground">{t('footer.contactInfo')}</h3>
             <div className="space-y-2 text-sm">
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4 text-luxury" />
@@ -68,21 +69,21 @@ export function Footer() {
 
           {/* Legal */}
           <div className="space-y-4">
-            <h3 className="font-semibold text-foreground">Документы</h3>
+            <h3 className="font-semibold text-foreground">{t('footer.documents')}</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link to="/privacy" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Политика конфиденциальности
+                  {t('footer.privacy')}
                 </Link>
               </li>
               <li>
                 <Link to="/terms" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Пользовательское соглашение
+                  {t('footer.terms')}
                 </Link>
               </li>
               <li>
                 <Link to="/owners" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Собственникам
+                  {t('navigation.owners')}
                 </Link>
               </li>
             </ul>
@@ -90,7 +91,7 @@ export function Footer() {
         </div>
 
         <div className="border-t mt-8 pt-8 text-center text-sm text-muted-foreground">
-          <p>&copy; 2024 HomeStay. Все права защищены.</p>
+          <p>&copy; 2024 HomeStay. {t('footer.copyright')}</p>
         </div>
       </div>
     </footer>

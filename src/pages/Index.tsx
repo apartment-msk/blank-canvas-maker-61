@@ -6,12 +6,14 @@ import { Footer } from "@/components/Footer";
 import { SearchWidget } from "@/components/SearchWidget";
 import { ApartmentCard } from "@/components/ApartmentCard";
 import { ReviewCard } from "@/components/ReviewCard";
+import { useTranslation } from "react-i18next";
 import heroImage from "@/assets/hero-apartment.jpg";
 import apartment1 from "@/assets/apartment-1.jpg";
 import apartment2 from "@/assets/apartment-2.jpg";
 import apartment3 from "@/assets/apartment-3.jpg";
 
 const Index = () => {
+  const { t } = useTranslation();
   const featuredApartments = [
     {
       id: "1",
@@ -85,18 +87,17 @@ const Index = () => {
         <div className="relative z-10 container mx-auto px-4 text-center text-white">
           <div className="max-w-4xl mx-auto space-y-6 animate-fade-in">
             <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-              Премиальные апартаменты
-              <span className="block text-luxury">для вашего комфорта</span>
+              {t('hero.title')}
+              <span className="block text-luxury">{t('hero.subtitle')}</span>
             </h1>
             <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto">
-              Откройте для себя мир комфорта и стиля в наших тщательно подобранных апартаментах. 
-              Честные фото, прозрачные цены, поддержка 24/7.
+              {t('hero.description')}
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link to="/apartments">
                 <Button size="lg" className="bg-gradient-luxury text-luxury-foreground hover:shadow-luxury hover:scale-105 transition-all">
-                  Найти апартаменты
+                  {t('hero.findApartments')}
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
@@ -111,10 +112,10 @@ const Index = () => {
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <div className="space-y-4">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-                Найдите идеальные апартаменты
+                {t('search.title')}
               </h2>
               <p className="text-lg text-muted-foreground">
-                Используйте наш удобный поиск для выбора даты и местоположения
+                {t('search.description')}
               </p>
             </div>
             
@@ -128,10 +129,10 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center space-y-4 mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-              Почему выбирают нас
+              {t('benefits.title')}
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Мы создаем незабываемый опыт проживания для каждого гостя
+              {t('benefits.description')}
             </p>
           </div>
 
@@ -140,9 +141,9 @@ const Index = () => {
               <div className="w-16 h-16 mx-auto bg-gradient-luxury rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
                 <Shield className="h-8 w-8 text-luxury-foreground" />
               </div>
-              <h3 className="text-xl font-semibold text-foreground">Честные фото</h3>
+              <h3 className="text-xl font-semibold text-foreground">{t('benefits.honestPhotos.title')}</h3>
               <p className="text-muted-foreground">
-                Все фотографии соответствуют действительности. Никаких неприятных сюрпризов при заселении.
+                {t('benefits.honestPhotos.description')}
               </p>
             </div>
 
@@ -150,9 +151,9 @@ const Index = () => {
               <div className="w-16 h-16 mx-auto bg-gradient-luxury rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
                 <Clock className="h-8 w-8 text-luxury-foreground" />
               </div>
-              <h3 className="text-xl font-semibold text-foreground">Поддержка 24/7</h3>
+              <h3 className="text-xl font-semibold text-foreground">{t('benefits.support24.title')}</h3>
               <p className="text-muted-foreground">
-                Наша команда всегда готова помочь вам в любое время дня и ночи.
+                {t('benefits.support24.description')}
               </p>
             </div>
 
@@ -160,9 +161,9 @@ const Index = () => {
               <div className="w-16 h-16 mx-auto bg-gradient-luxury rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
                 <MapPin className="h-8 w-8 text-luxury-foreground" />
               </div>
-              <h3 className="text-xl font-semibold text-foreground">Лучшие локации</h3>
+              <h3 className="text-xl font-semibold text-foreground">{t('benefits.bestLocations.title')}</h3>
               <p className="text-muted-foreground">
-                Удобное расположение рядом с достопримечательностями, транспортом и инфраструктурой.
+                {t('benefits.bestLocations.description')}
               </p>
             </div>
           </div>
@@ -174,10 +175,10 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center space-y-4 mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-              Популярные апартаменты
+              {t('apartments.title')}
             </h2>
             <p className="text-lg text-muted-foreground">
-              Наши гости особенно ценят эти варианты размещения
+              {t('apartments.description')}
             </p>
           </div>
 
@@ -192,7 +193,7 @@ const Index = () => {
           <div className="text-center mt-12">
             <Link to="/apartments">
               <Button variant="outline" size="lg" className="border-luxury text-luxury hover:bg-luxury hover:text-luxury-foreground">
-                Смотреть все апартаменты
+                {t('apartments.viewAll')}
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
@@ -205,10 +206,10 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center space-y-4 mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-              Отзывы наших гостей
+              {t('reviews.title')}
             </h2>
             <p className="text-lg text-muted-foreground">
-              Узнайте, что говорят о нас те, кто уже выбрал наши апартаменты
+              {t('reviews.description')}
             </p>
           </div>
 

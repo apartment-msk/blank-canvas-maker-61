@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { MapPin, Users, Star, Wifi, Car, Coffee } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { useTranslation } from "react-i18next";
 
 interface ApartmentCardProps {
   id: string;
@@ -26,6 +27,8 @@ export function ApartmentCard({
   amenities,
   description,
 }: ApartmentCardProps) {
+  const { t } = useTranslation();
+  
   const getAmenityIcon = (amenity: string) => {
     switch (amenity.toLowerCase()) {
       case 'wifi':
@@ -70,7 +73,7 @@ export function ApartmentCard({
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
               <Users className="h-4 w-4 text-muted-foreground" />
-              <span className="text-sm text-muted-foreground">до {guests} гостей</span>
+              <span className="text-sm text-muted-foreground">{t('apartments.upTo')} {guests} {t('apartments.guests')}</span>
             </div>
             <div className="flex items-center space-x-1">
               {amenities.slice(0, 3).map((amenity, index) => (
@@ -84,13 +87,13 @@ export function ApartmentCard({
           <div className="flex items-center justify-between pt-4 border-t">
             <div>
               <span className="text-2xl font-bold text-foreground">{price.toLocaleString()}₽</span>
-              <span className="text-sm text-muted-foreground ml-1">/ ночь</span>
+              <span className="text-sm text-muted-foreground ml-1">{t('apartments.perNight')}</span>
             </div>
             <Link 
               to={`/apartment/${id}`}
               className="inline-flex items-center justify-center rounded-lg bg-gradient-luxury px-4 py-2 text-sm font-medium text-luxury-foreground transition-all hover:shadow-luxury hover:scale-105"
             >
-              Подробнее
+              {t('apartments.details')}
             </Link>
           </div>
         </div>

@@ -1,0 +1,170 @@
+{
+  "common": {
+    "loading": "加载中...",
+    "search": "搜索",
+    "filter": "筛选",
+    "sort": "排序",
+    "reset": "重置",
+    "submit": "提交",
+    "cancel": "取消",
+    "save": "保存",
+    "edit": "编辑",
+    "delete": "删除",
+    "view": "查看",
+    "back": "返回",
+    "next": "下一个",
+    "previous": "上一个",
+    "close": "关闭",
+    "select": "选择",
+    "all": "全部",
+    "none": "无",
+    "yes": "是",
+    "no": "否",
+    "error": "错误",
+    "success": "成功",
+    "warning": "警告",
+    "info": "信息"
+  },
+  "navigation": {
+    "home": "首页",
+    "apartments": "公寓",
+    "about": "关于我们",
+    "contacts": "联系我们",
+    "owners": "房东专区"
+  },
+  "hero": {
+    "title": "高端公寓",
+    "subtitle": "为您的舒适而生",
+    "description": "在我们精心挑选的公寓中发现舒适与品质的世界。真实照片，透明价格，24/7支持。",
+    "findApartments": "寻找公寓"
+  },
+  "search": {
+    "title": "寻找完美公寓",
+    "description": "使用我们便捷的搜索功能选择日期和位置",
+    "placeholder": "按名称或地区搜索...",
+    "checkIn": "入住",
+    "checkOut": "退房",
+    "guests": "客人",
+    "searchButton": "搜索"
+  },
+  "benefits": {
+    "title": "为什么选择我们",
+    "description": "我们为每位客人创造难忘的住宿体验",
+    "honestPhotos": {
+      "title": "真实照片",
+      "description": "所有照片都与实际相符。入住时绝无不愉快的意外。"
+    },
+    "support24": {
+      "title": "24/7支持",
+      "description": "我们的团队随时准备在昼夜任何时间为您提供帮助。"
+    },
+    "bestLocations": {
+      "title": "优越位置",
+      "description": "临近景点、交通和基础设施的便利位置。"
+    }
+  },
+  "apartments": {
+    "title": "热门公寓",
+    "description": "我们的客人特别推荐这些住宿选择",
+    "viewAll": "查看所有公寓",
+    "perNight": "/ 夜",
+    "upTo": "最多",
+    "guests": "客人",
+    "details": "详情",
+    "rating": "评分",
+    "reviews": "评价",
+    "bedrooms": "卧室",
+    "bathrooms": "浴室",
+    "area": "面积",
+    "amenities": "设施",
+    "rules": "住宿规则",
+    "description": "描述"
+  },
+  "reviews": {
+    "title": "客人评价",
+    "description": "了解已经选择我们公寓的客人怎么说",
+    "ago": "前",
+    "weeks": "周",
+    "month": "月"
+  },
+  "filters": {
+    "priceRange": "价格",
+    "anyPrice": "任何价格",
+    "budget": "低于800元",
+    "mid": "800元 - 1500元",
+    "luxury": "超过1500元",
+    "sortBy": "排序方式",
+    "priceLow": "价格：从低到高",
+    "priceHigh": "价格：从高到低",
+    "byRating": "按评分",
+    "byGuests": "按客人数量",
+    "resultsOf": "的",
+    "resetFilters": "重置筛选"
+  },
+  "contact": {
+    "call": "拨打电话",
+    "message": "发送消息",
+    "whatsapp": "WhatsApp",
+    "email": "邮箱",
+    "support247": "24/7支持",
+    "quickResponse": "快速响应",
+    "formTitle": "联系我们",
+    "formDescription": "填写表格，我们将在一小时内回复您",
+    "name": "姓名",
+    "phone": "电话",
+    "subject": "主题",
+    "yourMessage": "消息",
+    "send": "发送消息",
+    "messageSent": "消息已发送！",
+    "willContact": "我们会尽快联系您。"
+  },
+  "about": {
+    "title": "关于我们",
+    "description": "我们通过将高端公寓的舒适与个性化服务和诚信的商业理念相结合，创造难忘的住宿体验。",
+    "stats": {
+      "guests": "满意客人",
+      "apartments": "公寓数量",
+      "rating": "平均评分",
+      "support": "支持"
+    },
+    "story": {
+      "title": "我们的故事",
+      "description": "我们如何创建高端公寓租赁服务"
+    },
+    "values": {
+      "title": "我们的价值观",
+      "description": "指导我们工作的原则",
+      "care": {
+        "title": "关爱每一位客人",
+        "description": "我们像对待挚友一样对待每一位客人，提供个性化服务和细致入微的关怀。"
+      },
+      "honesty": {
+        "title": "诚信透明",
+        "description": "所有照片都与实际相符。没有隐藏费用或不愉快的意外。"
+      },
+      "quality": {
+        "title": "品质至上",
+        "description": "我们精心挑选每一套公寓，保持高标准的清洁度和舒适度。"
+      }
+    },
+    "forOwners": {
+      "title": "致房东",
+      "description": "加入我们的平台，在我们的支持和管理下从您的公寓租赁中获得稳定收入。",
+      "becomePartner": "成为合作伙伴"
+    }
+  },
+  "footer": {
+    "description": "短期租赁的高端公寓。舒适、品质、可靠。",
+    "quickLinks": "快速链接",
+    "contactInfo": "联系信息",
+    "documents": "文档",
+    "privacy": "隐私政策",
+    "terms": "服务条款",
+    "copyright": "版权所有。"
+  },
+  "notFound": {
+    "title": "404",
+    "description": "哎呀！找不到页面",
+    "returnHome": "返回首页"
+  }
+}
