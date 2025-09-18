@@ -120,49 +120,65 @@ const Index = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
               {/* Avito Rating */}
               <div className="bg-white rounded-xl p-6 text-center shadow-card hover:shadow-lg transition-shadow">
+                <div className="flex items-center justify-center mb-3">
+                  <div className="bg-blue-600 text-white px-3 py-1 rounded-lg text-sm font-bold">
+                    AVITO
+                  </div>
+                </div>
                 <div className="text-2xl font-bold text-foreground mb-2">4.9</div>
                 <div className="flex justify-center mb-2">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
                   ))}
                 </div>
-                <div className="text-sm text-muted-foreground">Avito</div>
                 <div className="text-xs text-muted-foreground">156 отзывов</div>
               </div>
 
               {/* Ostrovok Rating */}
               <div className="bg-white rounded-xl p-6 text-center shadow-card hover:shadow-lg transition-shadow">
+                <div className="flex items-center justify-center mb-3">
+                  <div className="bg-orange-500 text-white px-3 py-1 rounded-lg text-sm font-bold">
+                    ОСТРОВОК
+                  </div>
+                </div>
                 <div className="text-2xl font-bold text-foreground mb-2">4.8</div>
                 <div className="flex justify-center mb-2">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
                   ))}
                 </div>
-                <div className="text-sm text-muted-foreground">Островок</div>
                 <div className="text-xs text-muted-foreground">89 отзывов</div>
               </div>
 
               {/* Sutochno Rating */}
               <div className="bg-white rounded-xl p-6 text-center shadow-card hover:shadow-lg transition-shadow">
+                <div className="flex items-center justify-center mb-3">
+                  <div className="bg-green-600 text-white px-3 py-1 rounded-lg text-sm font-bold">
+                    СУТОЧНО.РУ
+                  </div>
+                </div>
                 <div className="text-2xl font-bold text-foreground mb-2">4.9</div>
                 <div className="flex justify-center mb-2">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
                   ))}
                 </div>
-                <div className="text-sm text-muted-foreground">Суточно.ру</div>
                 <div className="text-xs text-muted-foreground">203 отзыва</div>
               </div>
 
               {/* Yandex Travel Rating */}
               <div className="bg-white rounded-xl p-6 text-center shadow-card hover:shadow-lg transition-shadow">
+                <div className="flex items-center justify-center mb-3">
+                  <div className="bg-red-500 text-white px-3 py-1 rounded-lg text-sm font-bold">
+                    ЯНДЕКС.ПУТЕШЕСТВИЯ
+                  </div>
+                </div>
                 <div className="text-2xl font-bold text-foreground mb-2">4.7</div>
                 <div className="flex justify-center mb-2">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
                   ))}
                 </div>
-                <div className="text-sm text-muted-foreground">Яндекс Путешествия</div>
                 <div className="text-xs text-muted-foreground">67 отзывов</div>
               </div>
             </div>
