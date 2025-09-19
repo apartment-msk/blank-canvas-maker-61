@@ -198,7 +198,7 @@ const Index = () => {
                           <img 
                             src={guestsChoiceAward} 
                             alt="Guests' Choice Award 2024" 
-                            className="w-32 h-24 mx-auto rounded-lg object-cover"
+                            className="w-32 h-40 mx-auto rounded-lg object-cover"
                           />
                         </div>
                       </DialogTrigger>
@@ -219,7 +219,7 @@ const Index = () => {
                           <img 
                             src={certificate202310} 
                             alt="Сертификат Суточно.ру 2023 - 10/10" 
-                            className="w-32 h-24 mx-auto rounded-lg object-cover rotate-180"
+                            className="w-32 h-40 mx-auto rounded-lg object-cover rotate-180"
                           />
                         </div>
                       </DialogTrigger>
@@ -240,7 +240,7 @@ const Index = () => {
                           <img 
                             src={certificate202399a} 
                             alt="Сертификат Суточно.ру 2023 - 9.9/10" 
-                            className="w-32 h-24 mx-auto rounded-lg object-cover rotate-180"
+                            className="w-32 h-40 mx-auto rounded-lg object-cover rotate-180"
                           />
                         </div>
                       </DialogTrigger>
@@ -261,7 +261,7 @@ const Index = () => {
                           <img 
                             src={certificate202399b} 
                             alt="Сертификат Суточно.ру 2023 - 9.9/10" 
-                            className="w-32 h-24 mx-auto rounded-lg object-cover rotate-180"
+                            className="w-32 h-40 mx-auto rounded-lg object-cover rotate-180"
                           />
                         </div>
                       </DialogTrigger>
@@ -282,7 +282,7 @@ const Index = () => {
                           <img 
                             src={certificate202297} 
                             alt="Сертификат Суточно.ру 2022 - 9.7/10" 
-                            className="w-32 h-24 mx-auto rounded-lg object-cover"
+                            className="w-32 h-40 mx-auto rounded-lg object-cover"
                           />
                         </div>
                       </DialogTrigger>
@@ -303,7 +303,7 @@ const Index = () => {
                           <img 
                             src={certificate202296} 
                             alt="Сертификат Суточно.ру 2022 - 9.6/10" 
-                            className="w-32 h-24 mx-auto rounded-lg object-cover"
+                            className="w-32 h-40 mx-auto rounded-lg object-cover"
                           />
                         </div>
                       </DialogTrigger>
@@ -324,7 +324,7 @@ const Index = () => {
                           <img 
                             src={certificate202398_1} 
                             alt="Сертификат Суточно.ру 2023 - 9.8/10" 
-                            className="w-32 h-24 mx-auto rounded-lg object-cover"
+                            className="w-32 h-40 mx-auto rounded-lg object-cover rotate-180"
                           />
                         </div>
                       </DialogTrigger>
@@ -345,7 +345,7 @@ const Index = () => {
                           <img 
                             src={certificate202397_2} 
                             alt="Сертификат Суточно.ру 2023 - 9.7/10" 
-                            className="w-32 h-24 mx-auto rounded-lg object-cover"
+                            className="w-32 h-40 mx-auto rounded-lg object-cover rotate-180"
                           />
                         </div>
                       </DialogTrigger>
@@ -366,7 +366,7 @@ const Index = () => {
                           <img 
                             src={certificate202498_1} 
                             alt="Сертификат Суточно.ру 2024 - 9.8/10" 
-                            className="w-32 h-24 mx-auto rounded-lg object-cover"
+                            className="w-32 h-40 mx-auto rounded-lg object-cover rotate-180"
                           />
                         </div>
                       </DialogTrigger>
@@ -387,7 +387,7 @@ const Index = () => {
                           <img 
                             src={certificate202498_2} 
                             alt="Сертификат Суточно.ру 2024 - 9.8/10" 
-                            className="w-32 h-24 mx-auto rounded-lg object-cover"
+                            className="w-32 h-40 mx-auto rounded-lg object-cover rotate-180"
                           />
                         </div>
                       </DialogTrigger>
@@ -408,7 +408,7 @@ const Index = () => {
                           <img 
                             src={certificate202498_3} 
                             alt="Сертификат Суточно.ру 2024 - 9.8/10" 
-                            className="w-32 h-24 mx-auto rounded-lg object-cover"
+                            className="w-32 h-40 mx-auto rounded-lg object-cover rotate-180"
                           />
                         </div>
                       </DialogTrigger>
@@ -429,7 +429,7 @@ const Index = () => {
                           <img 
                             src={certificate202499} 
                             alt="Сертификат Суточно.ру 2024 - 9.9/10" 
-                            className="w-32 h-24 mx-auto rounded-lg object-cover"
+                            className="w-32 h-40 mx-auto rounded-lg object-cover rotate-180"
                           />
                         </div>
                       </DialogTrigger>
@@ -450,7 +450,7 @@ const Index = () => {
                           <img 
                             src={certificate202498_4} 
                             alt="Сертификат Суточно.ру 2024 - 9.8/10" 
-                            className="w-32 h-24 mx-auto rounded-lg object-cover"
+                            className="w-32 h-40 mx-auto rounded-lg object-cover rotate-180"
                           />
                         </div>
                       </DialogTrigger>
@@ -471,7 +471,7 @@ const Index = () => {
                           <img 
                             src={certificate202498_5} 
                             alt="Сертификат Суточно.ру 2024 - 9.8/10" 
-                            className="w-32 h-24 mx-auto rounded-lg object-cover"
+                            className="w-32 h-40 mx-auto rounded-lg object-cover rotate-180"
                           />
                         </div>
                       </DialogTrigger>
