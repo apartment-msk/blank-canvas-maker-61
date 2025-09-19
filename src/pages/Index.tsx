@@ -1,9 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Shield, Clock, Star, MapPin, Users, Award, Trophy, Wifi, Monitor, Sparkles } from "lucide-react";
 import guestsChoiceAward from "@/assets/guests-choice-award.png";
-import sutochno10Certificate from "@/assets/sutochno-10-certificate.jpg";
-import sutochno97Certificate from "@/assets/sutochno-97-certificate.jpg";
-import sutochno98Certificate from "@/assets/sutochno-98-certificate.jpg";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -195,36 +192,6 @@ const Index = () => {
                   alt="Guests' Choice Award 2024" 
                   className="w-32 h-auto mx-auto rounded-lg"
                 />
-              </div>
-            </div>
-
-            {/* Sutochno.ru Certificates */}
-            <div className="mt-8">
-              <h3 className="text-xl font-bold text-foreground text-center mb-6">
-                Сертификаты Суточно.ру "Гости рекомендуют!"
-              </h3>
-              <div className="flex flex-wrap justify-center gap-4">
-                <div className="bg-white rounded-xl p-3 shadow-card hover:shadow-lg transition-all hover:scale-105">
-                  <img 
-                    src={sutochno10Certificate} 
-                    alt="Суточно.ру - 10 из 10, 2023" 
-                    className="w-40 h-auto mx-auto rounded-lg"
-                  />
-                </div>
-                <div className="bg-white rounded-xl p-3 shadow-card hover:shadow-lg transition-all hover:scale-105">
-                  <img 
-                    src={sutochno98Certificate} 
-                    alt="Суточно.ру - 9.8 из 10, 2023" 
-                    className="w-40 h-auto mx-auto rounded-lg"
-                  />
-                </div>
-                <div className="bg-white rounded-xl p-3 shadow-card hover:shadow-lg transition-all hover:scale-105">
-                  <img 
-                    src={sutochno97Certificate} 
-                    alt="Суточно.ру - 9.7 из 10, 2022" 
-                    className="w-40 h-auto mx-auto rounded-lg"
-                  />
-                </div>
               </div>
             </div>
           </div>
