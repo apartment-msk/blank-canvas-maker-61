@@ -145,7 +145,7 @@ const Index = () => {
         className="py-12 bg-gradient-to-r from-primary/5 to-luxury/5"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
+        viewport={{ once: false }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
         <div className="container mx-auto px-4">
@@ -154,7 +154,7 @@ const Index = () => {
               className="text-center mb-8"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
               transition={{ duration: 0.6, ease: "easeOut" }}
             >
               <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
@@ -170,7 +170,7 @@ const Index = () => {
               className="flex justify-center"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
               transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
             >
               <Carousel className="w-full max-w-5xl">
@@ -501,7 +501,7 @@ const Index = () => {
         className="py-16 bg-surface"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
+        viewport={{ once: false }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
         <div className="container mx-auto px-4">
@@ -509,7 +509,7 @@ const Index = () => {
             className="text-center space-y-4 mb-12"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-foreground">
@@ -527,7 +527,7 @@ const Index = () => {
                 className="hover-scale"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: false }}
                 transition={{ duration: 0.6, delay: index * 0.2, ease: "easeOut" }}
               >
                 <ApartmentCard {...apartment} />
@@ -539,7 +539,7 @@ const Index = () => {
             className="text-center mt-12"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
             transition={{ duration: 0.6, delay: 0.8, ease: "easeOut" }}
           >
             <Link to="/apartments">
@@ -557,7 +557,7 @@ const Index = () => {
         className="py-16"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
+        viewport={{ once: false }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
         <div className="container mx-auto px-4">
@@ -565,7 +565,7 @@ const Index = () => {
             className="text-center space-y-4 mb-12"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-foreground">
@@ -583,7 +583,7 @@ const Index = () => {
                 className="hover-scale"
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
+                viewport={{ once: false }}
                 transition={{ duration: 0.6, delay: index * 0.2, ease: "easeOut" }}
               >
                 <ReviewCard {...review} />
