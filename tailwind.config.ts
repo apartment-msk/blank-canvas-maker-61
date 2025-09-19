@@ -140,5 +140,30 @@ export default {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+    function({ addUtilities }) {
+      const newUtilities = {
+        '.hover-scale': {
+          '@apply transition-transform duration-300 ease-out hover:scale-105': {},
+        },
+        '.animation-delay-100': {
+          'animation-delay': '0.1s',
+        },
+        '.animation-delay-200': {
+          'animation-delay': '0.2s',
+        },
+        '.animation-delay-300': {
+          'animation-delay': '0.3s',
+        },
+        '.animation-delay-400': {
+          'animation-delay': '0.4s',
+        },
+        '.animation-delay-500': {
+          'animation-delay': '0.5s',
+        },
+      }
+      addUtilities(newUtilities)
+    }
+  ],
 } satisfies Config;

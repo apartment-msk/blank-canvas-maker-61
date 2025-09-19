@@ -11,6 +11,7 @@ import { ApartmentCard } from "@/components/ApartmentCard";
 import { ReviewCard } from "@/components/ReviewCard";
 import { StructuredData, generateOrganizationData, generateWebSiteData, generateLocalBusinessData } from "@/components/StructuredData";
 import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
 import heroImage from "@/assets/hero-apartment.jpg";
 import apartment1 from "@/assets/apartment-1.jpg";
 import apartment2 from "@/assets/apartment-2.jpg";
@@ -97,7 +98,12 @@ const Index = () => {
       <Header />
       
       {/* Hero Section with Booking */}
-      <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
+      <motion.section 
+        className="relative min-h-[80vh] flex items-center justify-center overflow-hidden"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${heroImage})` }}
@@ -107,7 +113,12 @@ const Index = () => {
         
         <div className="relative z-10 container mx-auto px-4">
           <div className="max-w-6xl mx-auto text-center">
-            <div className="text-white mb-12 animate-fade-in">
+            <motion.div 
+              className="text-white mb-12"
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+            >
               <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
                 {t('hero.title')}
                 <span className="block text-luxury">{t('hero.subtitle')}</span>
@@ -115,31 +126,53 @@ const Index = () => {
               <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto">
                 {t('hero.description')}
               </p>
-            </div>
+            </motion.div>
             
             {/* Integrated Search Widget */}
-            <div className="animate-slide-up" style={{ animationDelay: '0.3s' }}>
+            <motion.div 
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
+            >
               <SearchWidget className="bg-transparent rounded-2xl p-8 max-w-4xl mx-auto" />
-            </div>
+            </motion.div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Ratings & Awards Section */}
-      <section className="py-12 bg-gradient-to-r from-primary/5 to-luxury/5 animate-fade-in">
+      <motion.section 
+        className="py-12 bg-gradient-to-r from-primary/5 to-luxury/5"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-8 animate-scale-in">
+            <motion.div 
+              className="text-center mb-8"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+            >
               <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
                 Наши достижения и рейтинги
               </h2>
               <p className="text-muted-foreground">
                 Мы гордимся доверием наших гостей и высокими оценками на ведущих платформах
               </p>
-            </div>
+            </motion.div>
 
             {/* Awards and Certificates Carousel */}
-            <div className="flex justify-center animate-slide-up" style={{ animationDelay: '0.3s' }}>
+            <motion.div 
+              className="flex justify-center"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+            >
               <Carousel className="w-full max-w-5xl">
                 <CarouselContent>
                   <CarouselItem className="md:basis-1/2 lg:basis-1/3">
@@ -382,10 +415,10 @@ const Index = () => {
                 <CarouselPrevious />
                 <CarouselNext />
               </Carousel>
-            </div>
+            </motion.div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Key Benefits */}
       <section className="py-16 animate-fade-in">
@@ -464,57 +497,101 @@ const Index = () => {
       </section>
 
       {/* Featured Apartments */}
-      <section className="py-16 bg-surface animate-fade-in">
+      <motion.section 
+        className="py-16 bg-surface"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
         <div className="container mx-auto px-4">
-          <div className="text-center space-y-4 mb-12 animate-scale-in">
+          <motion.div 
+            className="text-center space-y-4 mb-12"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+          >
             <h2 className="text-3xl md:text-4xl font-bold text-foreground">
               {t('apartments.title')}
             </h2>
             <p className="text-lg text-muted-foreground">
               {t('apartments.description')}
             </p>
-          </div>
+          </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredApartments.map((apartment, index) => (
-              <div key={apartment.id} className="animate-slide-up hover-scale" style={{ animationDelay: `${index * 0.2}s` }}>
+              <motion.div 
+                key={apartment.id} 
+                className="hover-scale"
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.2, ease: "easeOut" }}
+              >
                 <ApartmentCard {...apartment} />
-              </div>
+              </motion.div>
             ))}
           </div>
 
-          <div className="text-center mt-12 animate-fade-in" style={{ animationDelay: '0.8s' }}>
+          <motion.div 
+            className="text-center mt-12"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.8, ease: "easeOut" }}
+          >
             <Link to="/apartments">
               <Button variant="outline" size="lg" className="border-luxury text-luxury hover:bg-luxury hover:text-luxury-foreground hover-scale">
                 {t('apartments.viewAll')}
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
-          </div>
+          </motion.div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Reviews */}
-      <section className="py-16 animate-fade-in">
+      <motion.section 
+        className="py-16"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
         <div className="container mx-auto px-4">
-          <div className="text-center space-y-4 mb-12 animate-scale-in">
+          <motion.div 
+            className="text-center space-y-4 mb-12"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+          >
             <h2 className="text-3xl md:text-4xl font-bold text-foreground">
               {t('reviews.title')}
             </h2>
             <p className="text-lg text-muted-foreground">
               {t('reviews.description')}
             </p>
-          </div>
+          </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {reviews.map((review, index) => (
-              <div key={index} className="animate-scale-in hover-scale" style={{ animationDelay: `${index * 0.2}s` }}>
+              <motion.div 
+                key={index} 
+                className="hover-scale"
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.2, ease: "easeOut" }}
+              >
                 <ReviewCard {...review} />
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
-      </section>
+      </motion.section>
 
       <Footer />
     </div>
