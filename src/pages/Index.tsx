@@ -227,7 +227,7 @@ const Index = () => {
                           <img 
                             src={certificate202310} 
                             alt="Сертификат Суточно.ру 2023 - 10/10" 
-                            className="w-32 h-auto mx-auto rounded-lg"
+                            className="w-32 h-auto mx-auto rounded-lg rotate-180"
                           />
                           <div className="text-xs text-muted-foreground mt-2">2023 - 10/10</div>
                         </div>
@@ -236,7 +236,7 @@ const Index = () => {
                         <img 
                           src={certificate202310} 
                           alt="Сертификат Суточно.ру 2023 - 10/10" 
-                          className="w-full h-auto rounded-lg"
+                          className="w-full h-auto rounded-lg rotate-180"
                         />
                       </DialogContent>
                     </Dialog>
@@ -249,7 +249,7 @@ const Index = () => {
                           <img 
                             src={certificate202399a} 
                             alt="Сертификат Суточно.ру 2023 - 9.9/10" 
-                            className="w-32 h-auto mx-auto rounded-lg"
+                            className="w-32 h-auto mx-auto rounded-lg rotate-180"
                           />
                           <div className="text-xs text-muted-foreground mt-2">2023 - 9.9/10</div>
                         </div>
@@ -258,7 +258,7 @@ const Index = () => {
                         <img 
                           src={certificate202399a} 
                           alt="Сертификат Суточно.ру 2023 - 9.9/10" 
-                          className="w-full h-auto rounded-lg"
+                          className="w-full h-auto rounded-lg rotate-180"
                         />
                       </DialogContent>
                     </Dialog>
@@ -271,7 +271,7 @@ const Index = () => {
                           <img 
                             src={certificate202399b} 
                             alt="Сертификат Суточно.ру 2023 - 9.9/10" 
-                            className="w-32 h-auto mx-auto rounded-lg"
+                            className="w-32 h-auto mx-auto rounded-lg rotate-180"
                           />
                           <div className="text-xs text-muted-foreground mt-2">2023 - 9.9/10</div>
                         </div>
@@ -280,7 +280,7 @@ const Index = () => {
                         <img 
                           src={certificate202399b} 
                           alt="Сертификат Суточно.ру 2023 - 9.9/10" 
-                          className="w-full h-auto rounded-lg"
+                          className="w-full h-auto rounded-lg rotate-180"
                         />
                       </DialogContent>
                     </Dialog>
