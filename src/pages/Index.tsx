@@ -430,7 +430,7 @@ const Index = () => {
                           <img 
                             src={certificate202499} 
                             alt="Сертификат Суточно.ру 2024 - 9.9/10" 
-                            className="w-32 h-40 mx-auto rounded-lg object-cover rotate-180"
+                            className="w-32 h-50 mx-auto rounded-lg object-cover rotate-180"
                           />
                         </div>
                       </DialogTrigger>
