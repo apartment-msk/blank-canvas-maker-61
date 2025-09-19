@@ -20,6 +20,14 @@ import certificate202296 from "@/assets/certificate-2022-96.jpg";
 import certificate202310 from "@/assets/certificate-2023-10.jpg";
 import certificate202399a from "@/assets/certificate-2023-99a.jpg";
 import certificate202399b from "@/assets/certificate-2023-99b.jpg";
+import certificate202398_1 from "@/assets/certificate-2023-98-1.jpg";
+import certificate202397_2 from "@/assets/certificate-2023-97-2.jpg";
+import certificate202498_1 from "@/assets/certificate-2024-98-1.jpg";
+import certificate202498_2 from "@/assets/certificate-2024-98-2.jpg";
+import certificate202498_3 from "@/assets/certificate-2024-98-3.jpg";
+import certificate202499 from "@/assets/certificate-2024-99.jpg";
+import certificate202498_4 from "@/assets/certificate-2024-98-4.jpg";
+import certificate202498_5 from "@/assets/certificate-2024-98-5.jpg";
 
 const Index = () => {
   const { t } = useTranslation();
@@ -190,7 +198,7 @@ const Index = () => {
                           <img 
                             src={guestsChoiceAward} 
                             alt="Guests' Choice Award 2024" 
-                            className="w-32 h-auto mx-auto rounded-lg"
+                            className="w-32 h-24 mx-auto rounded-lg object-cover"
                           />
                         </div>
                       </DialogTrigger>
@@ -211,9 +219,8 @@ const Index = () => {
                           <img 
                             src={certificate202310} 
                             alt="Сертификат Суточно.ру 2023 - 10/10" 
-                            className="w-32 h-auto mx-auto rounded-lg rotate-180"
+                            className="w-32 h-24 mx-auto rounded-lg object-cover rotate-180"
                           />
-                          <div className="text-xs text-muted-foreground mt-2">2023 - 10/10</div>
                         </div>
                       </DialogTrigger>
                       <DialogContent className="max-w-3xl w-full">
@@ -233,9 +240,8 @@ const Index = () => {
                           <img 
                             src={certificate202399a} 
                             alt="Сертификат Суточно.ру 2023 - 9.9/10" 
-                            className="w-32 h-auto mx-auto rounded-lg rotate-180"
+                            className="w-32 h-24 mx-auto rounded-lg object-cover rotate-180"
                           />
-                          <div className="text-xs text-muted-foreground mt-2">2023 - 9.9/10</div>
                         </div>
                       </DialogTrigger>
                       <DialogContent className="max-w-3xl w-full">
@@ -255,9 +261,8 @@ const Index = () => {
                           <img 
                             src={certificate202399b} 
                             alt="Сертификат Суточно.ру 2023 - 9.9/10" 
-                            className="w-32 h-auto mx-auto rounded-lg rotate-180"
+                            className="w-32 h-24 mx-auto rounded-lg object-cover rotate-180"
                           />
-                          <div className="text-xs text-muted-foreground mt-2">2023 - 9.9/10</div>
                         </div>
                       </DialogTrigger>
                       <DialogContent className="max-w-3xl w-full">
@@ -277,9 +282,8 @@ const Index = () => {
                           <img 
                             src={certificate202297} 
                             alt="Сертификат Суточно.ру 2022 - 9.7/10" 
-                            className="w-32 h-auto mx-auto rounded-lg"
+                            className="w-32 h-24 mx-auto rounded-lg object-cover"
                           />
-                          <div className="text-xs text-muted-foreground mt-2">2022 - 9.7/10</div>
                         </div>
                       </DialogTrigger>
                       <DialogContent className="max-w-3xl w-full">
@@ -299,15 +303,182 @@ const Index = () => {
                           <img 
                             src={certificate202296} 
                             alt="Сертификат Суточно.ру 2022 - 9.6/10" 
-                            className="w-32 h-auto mx-auto rounded-lg"
+                            className="w-32 h-24 mx-auto rounded-lg object-cover"
                           />
-                          <div className="text-xs text-muted-foreground mt-2">2022 - 9.6/10</div>
                         </div>
                       </DialogTrigger>
                       <DialogContent className="max-w-3xl w-full">
                         <img 
                           src={certificate202296} 
                           alt="Сертификат Суточно.ру 2022 - 9.6/10" 
+                          className="w-full h-auto rounded-lg"
+                        />
+                      </DialogContent>
+                    </Dialog>
+                  </CarouselItem>
+
+                  <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                    <Dialog>
+                      <DialogTrigger asChild>
+                        <div className="bg-white rounded-xl p-4 text-center shadow-card hover:shadow-lg transition-all hover:scale-105 cursor-pointer">
+                          <img 
+                            src={certificate202398_1} 
+                            alt="Сертификат Суточно.ру 2023 - 9.8/10" 
+                            className="w-32 h-24 mx-auto rounded-lg object-cover"
+                          />
+                        </div>
+                      </DialogTrigger>
+                      <DialogContent className="max-w-3xl w-full">
+                        <img 
+                          src={certificate202398_1} 
+                          alt="Сертификат Суточно.ру 2023 - 9.8/10" 
+                          className="w-full h-auto rounded-lg"
+                        />
+                      </DialogContent>
+                    </Dialog>
+                  </CarouselItem>
+
+                  <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                    <Dialog>
+                      <DialogTrigger asChild>
+                        <div className="bg-white rounded-xl p-4 text-center shadow-card hover:shadow-lg transition-all hover:scale-105 cursor-pointer">
+                          <img 
+                            src={certificate202397_2} 
+                            alt="Сертификат Суточно.ру 2023 - 9.7/10" 
+                            className="w-32 h-24 mx-auto rounded-lg object-cover"
+                          />
+                        </div>
+                      </DialogTrigger>
+                      <DialogContent className="max-w-3xl w-full">
+                        <img 
+                          src={certificate202397_2} 
+                          alt="Сертификат Суточно.ру 2023 - 9.7/10" 
+                          className="w-full h-auto rounded-lg"
+                        />
+                      </DialogContent>
+                    </Dialog>
+                  </CarouselItem>
+
+                  <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                    <Dialog>
+                      <DialogTrigger asChild>
+                        <div className="bg-white rounded-xl p-4 text-center shadow-card hover:shadow-lg transition-all hover:scale-105 cursor-pointer">
+                          <img 
+                            src={certificate202498_1} 
+                            alt="Сертификат Суточно.ру 2024 - 9.8/10" 
+                            className="w-32 h-24 mx-auto rounded-lg object-cover"
+                          />
+                        </div>
+                      </DialogTrigger>
+                      <DialogContent className="max-w-3xl w-full">
+                        <img 
+                          src={certificate202498_1} 
+                          alt="Сертификат Суточно.ру 2024 - 9.8/10" 
+                          className="w-full h-auto rounded-lg"
+                        />
+                      </DialogContent>
+                    </Dialog>
+                  </CarouselItem>
+
+                  <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                    <Dialog>
+                      <DialogTrigger asChild>
+                        <div className="bg-white rounded-xl p-4 text-center shadow-card hover:shadow-lg transition-all hover:scale-105 cursor-pointer">
+                          <img 
+                            src={certificate202498_2} 
+                            alt="Сертификат Суточно.ру 2024 - 9.8/10" 
+                            className="w-32 h-24 mx-auto rounded-lg object-cover"
+                          />
+                        </div>
+                      </DialogTrigger>
+                      <DialogContent className="max-w-3xl w-full">
+                        <img 
+                          src={certificate202498_2} 
+                          alt="Сертификат Суточно.ру 2024 - 9.8/10" 
+                          className="w-full h-auto rounded-lg"
+                        />
+                      </DialogContent>
+                    </Dialog>
+                  </CarouselItem>
+
+                  <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                    <Dialog>
+                      <DialogTrigger asChild>
+                        <div className="bg-white rounded-xl p-4 text-center shadow-card hover:shadow-lg transition-all hover:scale-105 cursor-pointer">
+                          <img 
+                            src={certificate202498_3} 
+                            alt="Сертификат Суточно.ру 2024 - 9.8/10" 
+                            className="w-32 h-24 mx-auto rounded-lg object-cover"
+                          />
+                        </div>
+                      </DialogTrigger>
+                      <DialogContent className="max-w-3xl w-full">
+                        <img 
+                          src={certificate202498_3} 
+                          alt="Сертификат Суточно.ру 2024 - 9.8/10" 
+                          className="w-full h-auto rounded-lg"
+                        />
+                      </DialogContent>
+                    </Dialog>
+                  </CarouselItem>
+
+                  <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                    <Dialog>
+                      <DialogTrigger asChild>
+                        <div className="bg-white rounded-xl p-4 text-center shadow-card hover:shadow-lg transition-all hover:scale-105 cursor-pointer">
+                          <img 
+                            src={certificate202499} 
+                            alt="Сертификат Суточно.ру 2024 - 9.9/10" 
+                            className="w-32 h-24 mx-auto rounded-lg object-cover"
+                          />
+                        </div>
+                      </DialogTrigger>
+                      <DialogContent className="max-w-3xl w-full">
+                        <img 
+                          src={certificate202499} 
+                          alt="Сертификат Суточно.ру 2024 - 9.9/10" 
+                          className="w-full h-auto rounded-lg"
+                        />
+                      </DialogContent>
+                    </Dialog>
+                  </CarouselItem>
+
+                  <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                    <Dialog>
+                      <DialogTrigger asChild>
+                        <div className="bg-white rounded-xl p-4 text-center shadow-card hover:shadow-lg transition-all hover:scale-105 cursor-pointer">
+                          <img 
+                            src={certificate202498_4} 
+                            alt="Сертификат Суточно.ру 2024 - 9.8/10" 
+                            className="w-32 h-24 mx-auto rounded-lg object-cover"
+                          />
+                        </div>
+                      </DialogTrigger>
+                      <DialogContent className="max-w-3xl w-full">
+                        <img 
+                          src={certificate202498_4} 
+                          alt="Сертификат Суточно.ру 2024 - 9.8/10" 
+                          className="w-full h-auto rounded-lg"
+                        />
+                      </DialogContent>
+                    </Dialog>
+                  </CarouselItem>
+
+                  <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                    <Dialog>
+                      <DialogTrigger asChild>
+                        <div className="bg-white rounded-xl p-4 text-center shadow-card hover:shadow-lg transition-all hover:scale-105 cursor-pointer">
+                          <img 
+                            src={certificate202498_5} 
+                            alt="Сертификат Суточно.ру 2024 - 9.8/10" 
+                            className="w-32 h-24 mx-auto rounded-lg object-cover"
+                          />
+                        </div>
+                      </DialogTrigger>
+                      <DialogContent className="max-w-3xl w-full">
+                        <img 
+                          src={certificate202498_5} 
+                          alt="Сертификат Суточно.ру 2024 - 9.8/10" 
                           className="w-full h-auto rounded-lg"
                         />
                       </DialogContent>
