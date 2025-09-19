@@ -324,6 +324,28 @@ const Index = () => {
                       <DialogTrigger asChild>
                         <div className="bg-white rounded-xl p-4 text-center shadow-card hover:shadow-lg transition-all hover:scale-105 cursor-pointer">
                           <img 
+                            src={certificateSilver2024} 
+                            alt="Серебряный партнёр Суточно.ру 2024" 
+                            className="w-32 h-48 mx-auto rounded-lg object-cover"
+                          />
+                        </div>
+                      </DialogTrigger>
+                      <DialogContent className="max-w-3xl w-full">
+                        <DialogTitle className="sr-only">Серебряный партнёр Суточно.ру 2024</DialogTitle>
+                        <img 
+                          src={certificateSilver2024} 
+                          alt="Серебряный партнёр Суточно.ру 2024" 
+                          className="w-full h-auto rounded-lg"
+                        />
+                      </DialogContent>
+                    </Dialog>
+                  </CarouselItem>
+
+                  <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                    <Dialog>
+                      <DialogTrigger asChild>
+                        <div className="bg-white rounded-xl p-4 text-center shadow-card hover:shadow-lg transition-all hover:scale-105 cursor-pointer">
+                          <img 
                             src={certificate202398_1} 
                             alt="Сертификат Суточно.ру 2023 - 9.8/10" 
                             className="w-32 h-48 mx-auto rounded-lg object-cover"
@@ -401,28 +423,6 @@ const Index = () => {
                         <img 
                           src={certificate202498_5} 
                           alt="Сертификат Суточно.ру 2024 - 9.8/10" 
-                          className="w-full h-auto rounded-lg"
-                        />
-                      </DialogContent>
-                    </Dialog>
-                  </CarouselItem>
-
-                  <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-                    <Dialog>
-                      <DialogTrigger asChild>
-                        <div className="bg-white rounded-xl p-4 text-center shadow-card hover:shadow-lg transition-all hover:scale-105 cursor-pointer">
-                          <img 
-                            src={certificateSilver2024} 
-                            alt="Серебряный партнёр Суточно.ру 2024" 
-                            className="w-32 h-48 mx-auto rounded-lg object-cover"
-                          />
-                        </div>
-                      </DialogTrigger>
-                      <DialogContent className="max-w-3xl w-full">
-                        <DialogTitle className="sr-only">Серебряный партнёр Суточно.ру 2024</DialogTitle>
-                        <img 
-                          src={certificateSilver2024} 
-                          alt="Серебряный партнёр Суточно.ру 2024" 
                           className="w-full h-auto rounded-lg"
                         />
                       </DialogContent>
