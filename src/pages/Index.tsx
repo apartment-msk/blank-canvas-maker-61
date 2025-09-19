@@ -190,7 +190,7 @@ const Index = () => {
                           <img 
                             src={guestsChoiceAward} 
                             alt="Guests' Choice Award 2024" 
-                            className="w-32 h-auto mx-auto rounded-lg"
+                            className="w-32 h-24 mx-auto rounded-lg object-cover"
                           />
                         </div>
                       </DialogTrigger>
@@ -211,9 +211,8 @@ const Index = () => {
                           <img 
                             src={certificate202310} 
                             alt="Сертификат Суточно.ру 2023 - 10/10" 
-                            className="w-32 h-auto mx-auto rounded-lg rotate-180"
+                            className="w-32 h-24 mx-auto rounded-lg object-cover rotate-180"
                           />
-                          <div className="text-xs text-muted-foreground mt-2">2023 - 10/10</div>
                         </div>
                       </DialogTrigger>
                       <DialogContent className="max-w-3xl w-full">
@@ -233,9 +232,8 @@ const Index = () => {
                           <img 
                             src={certificate202399a} 
                             alt="Сертификат Суточно.ру 2023 - 9.9/10" 
-                            className="w-32 h-auto mx-auto rounded-lg rotate-180"
+                            className="w-32 h-24 mx-auto rounded-lg object-cover rotate-180"
                           />
-                          <div className="text-xs text-muted-foreground mt-2">2023 - 9.9/10</div>
                         </div>
                       </DialogTrigger>
                       <DialogContent className="max-w-3xl w-full">
@@ -255,9 +253,8 @@ const Index = () => {
                           <img 
                             src={certificate202399b} 
                             alt="Сертификат Суточно.ру 2023 - 9.9/10" 
-                            className="w-32 h-auto mx-auto rounded-lg rotate-180"
+                            className="w-32 h-24 mx-auto rounded-lg object-cover rotate-180"
                           />
-                          <div className="text-xs text-muted-foreground mt-2">2023 - 9.9/10</div>
                         </div>
                       </DialogTrigger>
                       <DialogContent className="max-w-3xl w-full">
@@ -277,9 +274,8 @@ const Index = () => {
                           <img 
                             src={certificate202297} 
                             alt="Сертификат Суточно.ру 2022 - 9.7/10" 
-                            className="w-32 h-auto mx-auto rounded-lg"
+                            className="w-32 h-24 mx-auto rounded-lg object-cover"
                           />
-                          <div className="text-xs text-muted-foreground mt-2">2022 - 9.7/10</div>
                         </div>
                       </DialogTrigger>
                       <DialogContent className="max-w-3xl w-full">
@@ -299,9 +295,8 @@ const Index = () => {
                           <img 
                             src={certificate202296} 
                             alt="Сертификат Суточно.ру 2022 - 9.6/10" 
-                            className="w-32 h-auto mx-auto rounded-lg"
+                            className="w-32 h-24 mx-auto rounded-lg object-cover"
                           />
-                          <div className="text-xs text-muted-foreground mt-2">2022 - 9.6/10</div>
                         </div>
                       </DialogTrigger>
                       <DialogContent className="max-w-3xl w-full">
