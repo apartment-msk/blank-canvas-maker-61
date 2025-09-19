@@ -199,7 +199,7 @@ const Index = () => {
                           <img 
                             src={guestsChoiceAward} 
                             alt="Guests' Choice Award 2024" 
-                            className="w-32 h-50 mx-auto rounded-lg object-cover"
+                            className="w-32 h-48 mx-auto rounded-lg object-cover"
                           />
                         </div>
                       </DialogTrigger>
