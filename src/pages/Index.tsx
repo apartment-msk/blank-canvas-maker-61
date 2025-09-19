@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Shield, Clock, Star, MapPin, Users, Award, Trophy, Wifi, Monitor, Sparkles } from "lucide-react";
+import guestsChoiceAward from "@/assets/guests-choice-award.png";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -172,7 +173,7 @@ const Index = () => {
             </div>
 
             {/* Awards */}
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+            <div className="flex flex-col lg:flex-row gap-6 justify-center items-center">
               <div className="bg-gradient-luxury text-luxury-foreground rounded-xl p-6 text-center shadow-card hover:shadow-lg transition-all hover:scale-105">
                 <Award className="h-8 w-8 mx-auto mb-3" />
                 <div className="font-bold text-lg mb-1">Суперхозяин</div>
@@ -183,6 +184,14 @@ const Index = () => {
                 <Trophy className="h-8 w-8 mx-auto mb-3" />
                 <div className="font-bold text-lg mb-1">Guests' Choice</div>
                 <div className="text-sm opacity-90">2024</div>
+              </div>
+
+              <div className="bg-white rounded-xl p-4 text-center shadow-card hover:shadow-lg transition-all hover:scale-105">
+                <img 
+                  src={guestsChoiceAward} 
+                  alt="Guests' Choice Award 2024" 
+                  className="w-32 h-auto mx-auto rounded-lg"
+                />
               </div>
             </div>
           </div>
