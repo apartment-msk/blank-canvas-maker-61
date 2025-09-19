@@ -184,22 +184,6 @@ const Index = () => {
               <Carousel className="w-full max-w-5xl">
                 <CarouselContent>
                   <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-                    <div className="bg-gradient-luxury text-luxury-foreground rounded-xl p-6 text-center shadow-card hover:shadow-lg transition-all hover:scale-105">
-                      <Award className="h-8 w-8 mx-auto mb-3" />
-                      <div className="font-bold text-lg mb-1">Суперхозяин</div>
-                      <div className="text-sm opacity-90">2024</div>
-                    </div>
-                  </CarouselItem>
-
-                  <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-                    <div className="bg-gradient-to-r from-amber-500 to-orange-500 text-white rounded-xl p-6 text-center shadow-card hover:shadow-lg transition-all hover:scale-105">
-                      <Trophy className="h-8 w-8 mx-auto mb-3" />
-                      <div className="font-bold text-lg mb-1">Guests' Choice</div>
-                      <div className="text-sm opacity-90">2024</div>
-                    </div>
-                  </CarouselItem>
-
-                  <CarouselItem className="md:basis-1/2 lg:basis-1/3">
                     <Dialog>
                       <DialogTrigger asChild>
                         <div className="bg-white rounded-xl p-4 text-center shadow-card hover:shadow-lg transition-all hover:scale-105 cursor-pointer">
