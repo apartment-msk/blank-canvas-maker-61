@@ -220,7 +220,7 @@ const Index = () => {
                           <img 
                             src={certificate202310} 
                             alt="Сертификат Суточно.ру 2023 - 10/10" 
-                            className="w-32 h-50 mx-auto rounded-lg object-cover rotate-180"
+                             className="w-32 h-48 mx-auto rounded-lg object-cover"
                           />
                         </div>
                       </DialogTrigger>
@@ -228,7 +228,7 @@ const Index = () => {
                         <img 
                           src={certificate202310} 
                           alt="Сертификат Суточно.ру 2023 - 10/10" 
-                          className="w-full h-auto rounded-lg rotate-180"
+                           className="w-full h-auto rounded-lg"
                         />
                       </DialogContent>
                     </Dialog>
@@ -241,7 +241,7 @@ const Index = () => {
                           <img 
                             src={certificate202399a} 
                             alt="Сертификат Суточно.ру 2023 - 9.9/10" 
-                            className="w-32 h-50 mx-auto rounded-lg object-cover rotate-180"
+                             className="w-32 h-48 mx-auto rounded-lg object-cover"
                           />
                         </div>
                       </DialogTrigger>
@@ -249,7 +249,7 @@ const Index = () => {
                         <img 
                           src={certificate202399a} 
                           alt="Сертификат Суточно.ру 2023 - 9.9/10" 
-                          className="w-full h-auto rounded-lg rotate-180"
+                           className="w-full h-auto rounded-lg"
                         />
                       </DialogContent>
                     </Dialog>
@@ -262,7 +262,7 @@ const Index = () => {
                           <img 
                             src={certificate202399b} 
                             alt="Сертификат Суточно.ру 2023 - 9.9/10" 
-                            className="w-32 h-50 mx-auto rounded-lg object-cover rotate-180"
+                             className="w-32 h-48 mx-auto rounded-lg object-cover"
                           />
                         </div>
                       </DialogTrigger>
@@ -270,7 +270,7 @@ const Index = () => {
                         <img 
                           src={certificate202399b} 
                           alt="Сертификат Суточно.ру 2023 - 9.9/10" 
-                          className="w-full h-auto rounded-lg rotate-180"
+                          className="w-full h-auto rounded-lg"
                         />
                       </DialogContent>
                     </Dialog>
