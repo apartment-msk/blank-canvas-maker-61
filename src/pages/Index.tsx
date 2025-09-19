@@ -126,10 +126,10 @@ const Index = () => {
       </section>
 
       {/* Ratings & Awards Section */}
-      <section className="py-12 bg-gradient-to-r from-primary/5 to-luxury/5">
+      <section className="py-12 bg-gradient-to-r from-primary/5 to-luxury/5 animate-fade-in">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-8">
+            <div className="text-center mb-8 animate-scale-in">
               <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
                 Наши достижения и рейтинги
               </h2>
@@ -139,13 +139,13 @@ const Index = () => {
             </div>
 
             {/* Awards and Certificates Carousel */}
-            <div className="flex justify-center">
+            <div className="flex justify-center animate-slide-up" style={{ animationDelay: '0.3s' }}>
               <Carousel className="w-full max-w-5xl">
                 <CarouselContent>
                   <CarouselItem className="md:basis-1/2 lg:basis-1/3">
                     <Dialog>
                       <DialogTrigger asChild>
-                        <div className="bg-white rounded-xl p-4 text-center shadow-card hover:shadow-lg transition-all hover:scale-105 cursor-pointer">
+                        <div className="bg-white rounded-xl p-4 text-center shadow-card hover:shadow-lg transition-all hover:scale-105 cursor-pointer hover-scale">
                           <img 
                             src={certificateSilver2024} 
                             alt="Серебряный партнёр Суточно.ру 2024" 
@@ -167,7 +167,7 @@ const Index = () => {
                   <CarouselItem className="md:basis-1/2 lg:basis-1/3">
                     <Dialog>
                       <DialogTrigger asChild>
-                        <div className="bg-white rounded-xl p-4 text-center shadow-card hover:shadow-lg transition-all hover:scale-105 cursor-pointer">
+                        <div className="bg-white rounded-xl p-4 text-center shadow-card hover:shadow-lg transition-all hover:scale-105 cursor-pointer hover-scale">
                           <img 
                             src={guestsChoiceAward} 
                             alt="Guests' Choice Award 2024" 
@@ -388,9 +388,9 @@ const Index = () => {
       </section>
 
       {/* Key Benefits */}
-      <section className="py-16">
+      <section className="py-16 animate-fade-in">
         <div className="container mx-auto px-4">
-          <div className="text-center space-y-4 mb-12">
+          <div className="text-center space-y-4 mb-12 animate-scale-in">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground">
               {t('benefits.title')}
             </h2>
@@ -400,7 +400,7 @@ const Index = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="text-center space-y-4 group">
+            <div className="text-center space-y-4 group animate-slide-up" style={{ animationDelay: '0.1s' }}>
               <div className="w-16 h-16 mx-auto bg-gradient-luxury rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
                 <Shield className="h-8 w-8 text-luxury-foreground" />
               </div>
@@ -410,7 +410,7 @@ const Index = () => {
               </p>
             </div>
 
-            <div className="text-center space-y-4 group">
+            <div className="text-center space-y-4 group animate-slide-up" style={{ animationDelay: '0.2s' }}>
               <div className="w-16 h-16 mx-auto bg-gradient-luxury rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
                 <Clock className="h-8 w-8 text-luxury-foreground" />
               </div>
@@ -420,7 +420,7 @@ const Index = () => {
               </p>
             </div>
 
-            <div className="text-center space-y-4 group">
+            <div className="text-center space-y-4 group animate-slide-up" style={{ animationDelay: '0.3s' }}>
               <div className="w-16 h-16 mx-auto bg-gradient-luxury rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
                 <MapPin className="h-8 w-8 text-luxury-foreground" />
               </div>
@@ -430,7 +430,7 @@ const Index = () => {
               </p>
             </div>
 
-            <div className="text-center space-y-4 group">
+            <div className="text-center space-y-4 group animate-slide-up" style={{ animationDelay: '0.4s' }}>
               <div className="w-16 h-16 mx-auto bg-gradient-luxury rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
                 <Wifi className="h-8 w-8 text-luxury-foreground" />
               </div>
@@ -440,7 +440,7 @@ const Index = () => {
               </p>
             </div>
 
-            <div className="text-center space-y-4 group">
+            <div className="text-center space-y-4 group animate-slide-up" style={{ animationDelay: '0.5s' }}>
               <div className="w-16 h-16 mx-auto bg-gradient-luxury rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
                 <Monitor className="h-8 w-8 text-luxury-foreground" />
               </div>
@@ -450,7 +450,7 @@ const Index = () => {
               </p>
             </div>
 
-            <div className="text-center space-y-4 group">
+            <div className="text-center space-y-4 group animate-slide-up" style={{ animationDelay: '0.6s' }}>
               <div className="w-16 h-16 mx-auto bg-gradient-luxury rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
                 <Sparkles className="h-8 w-8 text-luxury-foreground" />
               </div>
@@ -464,9 +464,9 @@ const Index = () => {
       </section>
 
       {/* Featured Apartments */}
-      <section className="py-16 bg-surface">
+      <section className="py-16 bg-surface animate-fade-in">
         <div className="container mx-auto px-4">
-          <div className="text-center space-y-4 mb-12">
+          <div className="text-center space-y-4 mb-12 animate-scale-in">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground">
               {t('apartments.title')}
             </h2>
@@ -477,15 +477,15 @@ const Index = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredApartments.map((apartment, index) => (
-              <div key={apartment.id} className="animate-slide-up" style={{ animationDelay: `${index * 0.2}s` }}>
+              <div key={apartment.id} className="animate-slide-up hover-scale" style={{ animationDelay: `${index * 0.2}s` }}>
                 <ApartmentCard {...apartment} />
               </div>
             ))}
           </div>
 
-          <div className="text-center mt-12">
+          <div className="text-center mt-12 animate-fade-in" style={{ animationDelay: '0.8s' }}>
             <Link to="/apartments">
-              <Button variant="outline" size="lg" className="border-luxury text-luxury hover:bg-luxury hover:text-luxury-foreground">
+              <Button variant="outline" size="lg" className="border-luxury text-luxury hover:bg-luxury hover:text-luxury-foreground hover-scale">
                 {t('apartments.viewAll')}
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
@@ -495,9 +495,9 @@ const Index = () => {
       </section>
 
       {/* Reviews */}
-      <section className="py-16">
+      <section className="py-16 animate-fade-in">
         <div className="container mx-auto px-4">
-          <div className="text-center space-y-4 mb-12">
+          <div className="text-center space-y-4 mb-12 animate-scale-in">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground">
               {t('reviews.title')}
             </h2>
@@ -508,7 +508,7 @@ const Index = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {reviews.map((review, index) => (
-              <div key={index} className="animate-scale-in" style={{ animationDelay: `${index * 0.2}s` }}>
+              <div key={index} className="animate-scale-in hover-scale" style={{ animationDelay: `${index * 0.2}s` }}>
                 <ReviewCard {...review} />
               </div>
             ))}
