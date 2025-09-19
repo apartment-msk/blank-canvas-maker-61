@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Shield, Clock, Star, MapPin, Users, Award, Trophy, Wifi, Monitor, Sparkles } from "lucide-react";
+import { ArrowRight, Shield, Clock, Star, MapPin, Users, Award, Trophy, Wifi, Monitor, Sparkles, X } from "lucide-react";
 import guestsChoiceAward from "@/assets/guests-choice-award.png";
 import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { SearchWidget } from "@/components/SearchWidget";
@@ -13,6 +15,11 @@ import heroImage from "@/assets/hero-apartment.jpg";
 import apartment1 from "@/assets/apartment-1.jpg";
 import apartment2 from "@/assets/apartment-2.jpg";
 import apartment3 from "@/assets/apartment-3.jpg";
+import certificate202297 from "@/assets/certificate-2022-97.jpg";
+import certificate202296 from "@/assets/certificate-2022-96.jpg";
+import certificate202310 from "@/assets/certificate-2023-10.jpg";
+import certificate202399a from "@/assets/certificate-2023-99a.jpg";
+import certificate202399b from "@/assets/certificate-2023-99b.jpg";
 
 const Index = () => {
   const { t } = useTranslation();
@@ -172,27 +179,160 @@ const Index = () => {
               </div>
             </div>
 
-            {/* Awards */}
-            <div className="flex flex-col lg:flex-row gap-6 justify-center items-center">
-              <div className="bg-gradient-luxury text-luxury-foreground rounded-xl p-6 text-center shadow-card hover:shadow-lg transition-all hover:scale-105">
-                <Award className="h-8 w-8 mx-auto mb-3" />
-                <div className="font-bold text-lg mb-1">Суперхозяин</div>
-                <div className="text-sm opacity-90">2024</div>
-              </div>
+            {/* Awards and Certificates Carousel */}
+            <div className="flex justify-center">
+              <Carousel className="w-full max-w-5xl">
+                <CarouselContent>
+                  <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                    <div className="bg-gradient-luxury text-luxury-foreground rounded-xl p-6 text-center shadow-card hover:shadow-lg transition-all hover:scale-105">
+                      <Award className="h-8 w-8 mx-auto mb-3" />
+                      <div className="font-bold text-lg mb-1">Суперхозяин</div>
+                      <div className="text-sm opacity-90">2024</div>
+                    </div>
+                  </CarouselItem>
 
-              <div className="bg-gradient-to-r from-amber-500 to-orange-500 text-white rounded-xl p-6 text-center shadow-card hover:shadow-lg transition-all hover:scale-105">
-                <Trophy className="h-8 w-8 mx-auto mb-3" />
-                <div className="font-bold text-lg mb-1">Guests' Choice</div>
-                <div className="text-sm opacity-90">2024</div>
-              </div>
+                  <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                    <div className="bg-gradient-to-r from-amber-500 to-orange-500 text-white rounded-xl p-6 text-center shadow-card hover:shadow-lg transition-all hover:scale-105">
+                      <Trophy className="h-8 w-8 mx-auto mb-3" />
+                      <div className="font-bold text-lg mb-1">Guests' Choice</div>
+                      <div className="text-sm opacity-90">2024</div>
+                    </div>
+                  </CarouselItem>
 
-              <div className="bg-white rounded-xl p-4 text-center shadow-card hover:shadow-lg transition-all hover:scale-105">
-                <img 
-                  src={guestsChoiceAward} 
-                  alt="Guests' Choice Award 2024" 
-                  className="w-32 h-auto mx-auto rounded-lg"
-                />
-              </div>
+                  <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                    <Dialog>
+                      <DialogTrigger asChild>
+                        <div className="bg-white rounded-xl p-4 text-center shadow-card hover:shadow-lg transition-all hover:scale-105 cursor-pointer">
+                          <img 
+                            src={guestsChoiceAward} 
+                            alt="Guests' Choice Award 2024" 
+                            className="w-32 h-auto mx-auto rounded-lg"
+                          />
+                        </div>
+                      </DialogTrigger>
+                      <DialogContent className="max-w-3xl w-full">
+                        <img 
+                          src={guestsChoiceAward} 
+                          alt="Guests' Choice Award 2024" 
+                          className="w-full h-auto rounded-lg"
+                        />
+                      </DialogContent>
+                    </Dialog>
+                  </CarouselItem>
+
+                  <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                    <Dialog>
+                      <DialogTrigger asChild>
+                        <div className="bg-white rounded-xl p-4 text-center shadow-card hover:shadow-lg transition-all hover:scale-105 cursor-pointer">
+                          <img 
+                            src={certificate202310} 
+                            alt="Сертификат Суточно.ру 2023 - 10/10" 
+                            className="w-32 h-auto mx-auto rounded-lg"
+                          />
+                          <div className="text-xs text-muted-foreground mt-2">2023 - 10/10</div>
+                        </div>
+                      </DialogTrigger>
+                      <DialogContent className="max-w-3xl w-full">
+                        <img 
+                          src={certificate202310} 
+                          alt="Сертификат Суточно.ру 2023 - 10/10" 
+                          className="w-full h-auto rounded-lg"
+                        />
+                      </DialogContent>
+                    </Dialog>
+                  </CarouselItem>
+
+                  <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                    <Dialog>
+                      <DialogTrigger asChild>
+                        <div className="bg-white rounded-xl p-4 text-center shadow-card hover:shadow-lg transition-all hover:scale-105 cursor-pointer">
+                          <img 
+                            src={certificate202399a} 
+                            alt="Сертификат Суточно.ру 2023 - 9.9/10" 
+                            className="w-32 h-auto mx-auto rounded-lg"
+                          />
+                          <div className="text-xs text-muted-foreground mt-2">2023 - 9.9/10</div>
+                        </div>
+                      </DialogTrigger>
+                      <DialogContent className="max-w-3xl w-full">
+                        <img 
+                          src={certificate202399a} 
+                          alt="Сертификат Суточно.ру 2023 - 9.9/10" 
+                          className="w-full h-auto rounded-lg"
+                        />
+                      </DialogContent>
+                    </Dialog>
+                  </CarouselItem>
+
+                  <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                    <Dialog>
+                      <DialogTrigger asChild>
+                        <div className="bg-white rounded-xl p-4 text-center shadow-card hover:shadow-lg transition-all hover:scale-105 cursor-pointer">
+                          <img 
+                            src={certificate202399b} 
+                            alt="Сертификат Суточно.ру 2023 - 9.9/10" 
+                            className="w-32 h-auto mx-auto rounded-lg"
+                          />
+                          <div className="text-xs text-muted-foreground mt-2">2023 - 9.9/10</div>
+                        </div>
+                      </DialogTrigger>
+                      <DialogContent className="max-w-3xl w-full">
+                        <img 
+                          src={certificate202399b} 
+                          alt="Сертификат Суточно.ру 2023 - 9.9/10" 
+                          className="w-full h-auto rounded-lg"
+                        />
+                      </DialogContent>
+                    </Dialog>
+                  </CarouselItem>
+
+                  <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                    <Dialog>
+                      <DialogTrigger asChild>
+                        <div className="bg-white rounded-xl p-4 text-center shadow-card hover:shadow-lg transition-all hover:scale-105 cursor-pointer">
+                          <img 
+                            src={certificate202297} 
+                            alt="Сертификат Суточно.ру 2022 - 9.7/10" 
+                            className="w-32 h-auto mx-auto rounded-lg"
+                          />
+                          <div className="text-xs text-muted-foreground mt-2">2022 - 9.7/10</div>
+                        </div>
+                      </DialogTrigger>
+                      <DialogContent className="max-w-3xl w-full">
+                        <img 
+                          src={certificate202297} 
+                          alt="Сертификат Суточно.ру 2022 - 9.7/10" 
+                          className="w-full h-auto rounded-lg"
+                        />
+                      </DialogContent>
+                    </Dialog>
+                  </CarouselItem>
+
+                  <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                    <Dialog>
+                      <DialogTrigger asChild>
+                        <div className="bg-white rounded-xl p-4 text-center shadow-card hover:shadow-lg transition-all hover:scale-105 cursor-pointer">
+                          <img 
+                            src={certificate202296} 
+                            alt="Сертификат Суточно.ру 2022 - 9.6/10" 
+                            className="w-32 h-auto mx-auto rounded-lg"
+                          />
+                          <div className="text-xs text-muted-foreground mt-2">2022 - 9.6/10</div>
+                        </div>
+                      </DialogTrigger>
+                      <DialogContent className="max-w-3xl w-full">
+                        <img 
+                          src={certificate202296} 
+                          alt="Сертификат Суточно.ру 2022 - 9.6/10" 
+                          className="w-full h-auto rounded-lg"
+                        />
+                      </DialogContent>
+                    </Dialog>
+                  </CarouselItem>
+                </CarouselContent>
+                <CarouselPrevious />
+                <CarouselNext />
+              </Carousel>
             </div>
           </div>
         </div>
