@@ -297,10 +297,10 @@ const Index = () => {
                     </Dialog>
                   </CarouselItem>
 
-                  <CarouselItem>
+                  <CarouselItem className="md:basis-1/2 lg:basis-1/3">
                     <Dialog>
                       <DialogTrigger asChild>
-                        <div className="cursor-pointer transform transition-transform hover:scale-105">
+                        <div className="bg-white rounded-xl p-4 text-center shadow-card hover:shadow-lg transition-all hover:scale-105 cursor-pointer">
                           <img 
                             src={certificate202296} 
                             alt="Сертификат Суточно.ру 2022 - 9.6/10" 
@@ -319,10 +319,10 @@ const Index = () => {
                     </Dialog>
                   </CarouselItem>
 
-                  <CarouselItem>
+                  <CarouselItem className="md:basis-1/2 lg:basis-1/3">
                     <Dialog>
                       <DialogTrigger asChild>
-                        <div className="cursor-pointer transform transition-transform hover:scale-105">
+                        <div className="bg-white rounded-xl p-4 text-center shadow-card hover:shadow-lg transition-all hover:scale-105 cursor-pointer">
                           <img 
                             src={certificate202398_1} 
                             alt="Сертификат Суточно.ру 2023 - 9.8/10" 
@@ -341,14 +341,14 @@ const Index = () => {
                     </Dialog>
                   </CarouselItem>
 
-                  <CarouselItem>
+                  <CarouselItem className="md:basis-1/2 lg:basis-1/3">
                     <Dialog>
                       <DialogTrigger asChild>
-                        <div className="cursor-pointer transform transition-transform hover:scale-105">
+                        <div className="bg-white rounded-xl p-4 text-center shadow-card hover:shadow-lg transition-all hover:scale-105 cursor-pointer">
                           <img 
                             src={certificate202499} 
                             alt="Сертификат Суточно.ру 2024 - 9.9/10" 
-                            className="w-32 h-48 mx-auto rounded-lg object-cover rotate-180"
+                            className="w-32 h-48 mx-auto rounded-lg object-cover"
                           />
                         </div>
                       </DialogTrigger>
@@ -363,14 +363,14 @@ const Index = () => {
                     </Dialog>
                   </CarouselItem>
 
-                  <CarouselItem>
+                  <CarouselItem className="md:basis-1/2 lg:basis-1/3">
                     <Dialog>
                       <DialogTrigger asChild>
-                        <div className="cursor-pointer transform transition-transform hover:scale-105">
+                        <div className="bg-white rounded-xl p-4 text-center shadow-card hover:shadow-lg transition-all hover:scale-105 cursor-pointer">
                           <img 
                             src={certificate202498_4} 
                             alt="Сертификат Суточно.ру 2024 - 9.8/10" 
-                            className="w-32 h-48 mx-auto rounded-lg object-cover rotate-180"
+                            className="w-32 h-48 mx-auto rounded-lg object-cover"
                           />
                         </div>
                       </DialogTrigger>
@@ -385,14 +385,14 @@ const Index = () => {
                     </Dialog>
                   </CarouselItem>
 
-                  <CarouselItem>
+                  <CarouselItem className="md:basis-1/2 lg:basis-1/3">
                     <Dialog>
                       <DialogTrigger asChild>
-                        <div className="cursor-pointer transform transition-transform hover:scale-105">
+                        <div className="bg-white rounded-xl p-4 text-center shadow-card hover:shadow-lg transition-all hover:scale-105 cursor-pointer">
                           <img 
                             src={certificate202498_5} 
                             alt="Сертификат Суточно.ру 2024 - 9.8/10" 
-                            className="w-32 h-48 mx-auto rounded-lg object-cover rotate-180"
+                            className="w-32 h-48 mx-auto rounded-lg object-cover"
                           />
                         </div>
                       </DialogTrigger>
@@ -407,10 +407,10 @@ const Index = () => {
                     </Dialog>
                   </CarouselItem>
 
-                  <CarouselItem>
+                  <CarouselItem className="md:basis-1/2 lg:basis-1/3">
                     <Dialog>
                       <DialogTrigger asChild>
-                        <div className="cursor-pointer transform transition-transform hover:scale-105">
+                        <div className="bg-white rounded-xl p-4 text-center shadow-card hover:shadow-lg transition-all hover:scale-105 cursor-pointer">
                           <img 
                             src={certificateSilver2024} 
                             alt="Серебряный партнёр Суточно.ру 2024" 
