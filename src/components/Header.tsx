@@ -29,7 +29,7 @@ export function Header() {
             <img 
               src="/src/assets/logo-volshebno-tut.png" 
               alt="Волшебно тут - Апартаменты Москвы" 
-              className="h-8"
+              className="h-12 w-auto"
             />
           </Link>
 

@@ -14,7 +14,7 @@ export function Footer() {
               <img 
                 src="/src/assets/logo-volshebno-tut.png" 
                 alt="Волшебно тут - Апартаменты Москвы" 
-                className="h-8"
+                className="h-10 w-auto"
               />
             </div>
             <p className="text-sm text-muted-foreground">
