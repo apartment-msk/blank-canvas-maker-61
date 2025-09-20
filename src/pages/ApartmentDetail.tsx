@@ -86,9 +86,9 @@ const ApartmentDetail = () => {
   }
 
   const breadcrumbData = generateBreadcrumbData([
-    { name: "Главная", url: "https://homestay.lovable.app/" },
-    { name: "Апартаменты", url: "https://homestay.lovable.app/apartments" },
-    { name: apartment.title, url: `https://homestay.lovable.app/apartment/${apartment.id}` }
+    { name: "Главная", url: "https://volshebno-tut.lovable.app/" },
+    { name: "Апартаменты", url: "https://volshebno-tut.lovable.app/apartments" },
+    { name: apartment.title, url: `https://volshebno-tut.lovable.app/apartment/${apartment.id}` }
   ]);
 
   return (

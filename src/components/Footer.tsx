@@ -11,10 +11,11 @@ export function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-luxury">
-                <Building2 className="h-5 w-5 text-luxury-foreground" />
-              </div>
-              <span className="text-xl font-bold text-foreground">HomeStay</span>
+              <img 
+                src="/src/assets/logo-volshebno-tut.png" 
+                alt="Волшебно тут - Апартаменты Москвы" 
+                className="h-8"
+              />
             </div>
             <p className="text-sm text-muted-foreground">
               {t('footer.description')}
@@ -58,7 +59,7 @@ export function Footer() {
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4 text-luxury" />
-                <span className="text-muted-foreground">info@homestay.ru</span>
+                <span className="text-muted-foreground">info@volshebno-tut.ru</span>
               </div>
               <div className="flex items-center space-x-2">
                 <MessageCircle className="h-4 w-4 text-luxury" />
@@ -91,7 +92,7 @@ export function Footer() {
         </div>
 
         <div className="border-t mt-8 pt-8 text-center text-sm text-muted-foreground">
-          <p>&copy; 2024 HomeStay. {t('footer.copyright')}</p>
+          <p>&copy; 2024 Волшебно тут. {t('footer.copyright')}</p>
         </div>
       </div>
     </footer>

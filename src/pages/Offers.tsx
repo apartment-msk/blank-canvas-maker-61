@@ -52,7 +52,7 @@ const Offers = () => {
     {
       icon: Gift,
       title: "Подарки для гостей",
-      description: "Комплименты от HomeStay при заселении"
+      description: "Комплименты от Волшебно тут при заселении"
     },
     {
       icon: Percent,

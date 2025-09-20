@@ -23,10 +23,10 @@ export function StructuredData({ data }: StructuredDataProps) {
 export const generateOrganizationData = () => ({
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "HomeStay",
+  "name": "Волшебно тут",
   "description": "Комфортные апартаменты для посуточной аренды в Москве",
-  "url": "https://homestay.lovable.app",
-  "logo": "https://homestay.lovable.app/logo.png",
+  "url": "https://volshebno-tut.lovable.app",
+  "logo": "https://volshebno-tut.lovable.app/src/assets/logo-volshebno-tut.png",
   "contactPoint": {
     "@type": "ContactPoint",
     "telephone": "+7-495-123-45-67",
@@ -39,21 +39,21 @@ export const generateOrganizationData = () => ({
     "addressCountry": "RU"
   },
   "sameAs": [
-    "https://www.instagram.com/homestay",
-    "https://www.facebook.com/homestay",
-    "https://t.me/homestay"
+    "https://www.instagram.com/volshebno_tut",
+    "https://www.facebook.com/volshebno.tut",
+    "https://t.me/volshebno_tut"
   ]
 });
 
 export const generateWebSiteData = () => ({
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "name": "HomeStay - Комфортные апартаменты",
-  "url": "https://homestay.lovable.app",
+  "name": "Волшебно тут - Комфортные апартаменты",
+  "url": "https://volshebno-tut.lovable.app",
   "description": "Комфортные апартаменты для посуточной аренды в Москве. Честные фото, прозрачные цены, поддержка 24/7.",
   "potentialAction": {
     "@type": "SearchAction",
-    "target": "https://homestay.lovable.app/apartments?search={search_term_string}",
+    "target": "https://volshebno-tut.lovable.app/apartments?search={search_term_string}",
     "query-input": "required name=search_term_string"
   }
 });
@@ -86,14 +86,14 @@ export const generateApartmentData = (apartment: any) => ({
   "category": "Apartment Rental",
   "brand": {
     "@type": "Organization",
-    "name": "HomeStay"
+    "name": "Волшебно тут"
   }
 });
 
 export const generateApartmentListData = (apartments: any[]) => ({
   "@context": "https://schema.org",
   "@type": "ItemList",
-  "name": "Апартаменты HomeStay",
+  "name": "Апартаменты Волшебно тут",
   "description": "Коллекция комфортных апартаментов для краткосрочной аренды",
   "numberOfItems": apartments.length,
   "itemListElement": apartments.map((apartment, index) => ({
@@ -104,7 +104,7 @@ export const generateApartmentListData = (apartments: any[]) => ({
       "name": apartment.title,
       "description": apartment.description,
       "image": apartment.image,
-      "url": `https://homestay.lovable.app/apartment/${apartment.id}`,
+      "url": `https://volshebno-tut.lovable.app/apartment/${apartment.id}`,
       "offers": {
         "@type": "Offer",
         "price": apartment.price,
@@ -157,9 +157,9 @@ export const generateBreadcrumbData = (items: Array<{name: string, url: string}>
 export const generateLocalBusinessData = () => ({
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "name": "HomeStay",
+  "name": "Волшебно тут",
   "description": "Комфортные апартаменты для посуточной аренды",
-  "url": "https://homestay.lovable.app",
+  "url": "https://volshebno-tut.lovable.app",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Москва",

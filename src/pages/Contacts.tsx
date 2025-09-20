@@ -31,7 +31,7 @@ const Contacts = () => {
     {
       icon: Mail,
       title: "Email",
-      details: ["info@homestay.ru", "support@homestay.ru"],
+      details: ["info@volshebno-tut.ru", "support@volshebno-tut.ru"],
       description: "Ответим в течение часа"
     },
     {
@@ -83,16 +83,16 @@ const Contacts = () => {
   };
 
   const breadcrumbData = generateBreadcrumbData([
-    { name: "Главная", url: "https://homestay.lovable.app/" },
-    { name: "Контакты", url: "https://homestay.lovable.app/contacts" }
+    { name: "Главная", url: "https://volshebno-tut.lovable.app/" },
+    { name: "Контакты", url: "https://volshebno-tut.lovable.app/contacts" }
   ]);
 
   const contactPageData = {
     "@context": "https://schema.org",
     "@type": "ContactPage",
-    "name": "Контакты HomeStay",
+    "name": "Контакты Волшебно тут",
     "description": "Свяжитесь с нами любым удобным способом. Поддержка 24/7.",
-    "url": "https://homestay.lovable.app/contacts",
+    "url": "https://volshebno-tut.lovable.app/contacts",
     "mainEntity": {
       ...generateOrganizationData(),
       "address": {
