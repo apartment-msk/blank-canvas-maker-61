@@ -10,12 +10,16 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="space-y-4">
-            <div className="flex items-center space-x-2">
+            <div className="flex items-center space-x-3">
               <img 
                 src="/src/assets/logo-volshebno-tut.png" 
                 alt="Волшебно тут - Апартаменты Москвы" 
-                className="h-20 w-auto"
+                className="h-12 w-auto"
               />
+              <div className="flex flex-col">
+                <span className="font-bold text-foreground">Волшебно тут</span>
+                <span className="text-xs text-muted-foreground">апартаменты Москвы</span>
+              </div>
             </div>
             <p className="text-sm text-muted-foreground">
               {t('footer.description')}

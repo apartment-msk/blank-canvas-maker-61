@@ -25,12 +25,16 @@ export function Header() {
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
+          <Link to="/" className="flex items-center space-x-3">
             <img 
               src="/src/assets/logo-volshebno-tut.png" 
               alt="Волшебно тут - Апартаменты Москвы" 
-              className="h-24 w-auto"
+              className="h-16 w-auto"
             />
+            <div className="flex flex-col">
+              <span className="text-xl font-bold text-foreground">Волшебно тут</span>
+              <span className="text-sm text-muted-foreground">апартаменты Москвы</span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
