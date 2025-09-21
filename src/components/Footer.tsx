@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Building2, Phone, Mail, MapPin, MessageCircle } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import logo from "@/assets/logo-volshebno-tut.png";
 
 export function Footer() {
   const { t } = useTranslation();
@@ -12,7 +13,7 @@ export function Footer() {
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
               <img 
-                src="/src/assets/logo-volshebno-tut.png" 
+                src={logo} 
                 alt="Волшебно тут - Апартаменты Москвы" 
                 className="h-12 w-auto"
               />

@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { cn } from "@/lib/utils";
 import { useTranslation } from "react-i18next";
+import logo from "@/assets/logo-volshebno-tut.png";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,7 +28,7 @@ export function Header() {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
             <img 
-              src="/src/assets/logo-volshebno-tut.png" 
+              src={logo} 
               alt="Волшебно тут - Апартаменты Москвы" 
               className="h-16 w-auto"
             />
