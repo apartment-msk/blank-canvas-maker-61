@@ -8,7 +8,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { SearchWidget } from "@/components/SearchWidget";
 import { ApartmentCard } from "@/components/ApartmentCard";
-import { ReviewCard } from "@/components/ReviewCard";
+import { ReviewsCarousel } from "@/components/ReviewsCarousel";
 import { StructuredData, generateOrganizationData, generateWebSiteData, generateLocalBusinessData } from "@/components/StructuredData";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
@@ -87,6 +87,12 @@ const Index = () => {
       rating: 4,
       comment: "Wonderful experience! The apartment was clean, modern and in a great location. Host was very responsive and helpful.",
       date: "3 недели назад"
+    },
+    {
+      name: "李明 (Li Ming)",
+      rating: 5,
+      comment: "非常棒的公寓！位置极佳，装修现代，设施齐全。房东非常友善，服务周到。强烈推荐给来莫斯科的朋友们！",
+      date: "1周前"
     }
   ];
 
@@ -576,20 +582,14 @@ const Index = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {reviews.map((review, index) => (
-              <motion.div 
-                key={index} 
-                className="hover-scale"
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: false }}
-                transition={{ duration: 0.6, delay: index * 0.2, ease: "easeOut" }}
-              >
-                <ReviewCard {...review} />
-              </motion.div>
-            ))}
-          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false }}
+            transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+          >
+            <ReviewsCarousel reviews={reviews} />
+          </motion.div>
         </div>
       </motion.section>
 

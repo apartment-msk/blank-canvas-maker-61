@@ -2,7 +2,7 @@ import { useParams, Link } from "react-router-dom";
 import { ArrowLeft, MapPin, Users, Star, Wifi, Car, Coffee, Phone, MessageCircle } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { ReviewCard } from "@/components/ReviewCard";
+import { ReviewsCarousel } from "@/components/ReviewsCarousel";
 import { SearchWidget } from "@/components/SearchWidget";
 import { StructuredData, generateApartmentData, generateReviewsData, generateBreadcrumbData } from "@/components/StructuredData";
 import { Button } from "@/components/ui/button";
@@ -78,6 +78,12 @@ const ApartmentDetail = () => {
       rating: 4,
       comment: "Wonderful location and beautiful apartment. Everything was clean and well-maintained. The host was very helpful with recommendations.",
       date: "3 недели назад"
+    },
+    {
+      name: "王伟 (Wang Wei)",
+      rating: 5,
+      comment: "超级棒的公寓！干净整洁，位置优越，设施完善。房东服务态度很好，入住体验非常愉快。下次来莫斯科还会选择这里！",
+      date: "5天前"
     }
   ];
 
@@ -265,11 +271,7 @@ const ApartmentDetail = () => {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {reviews.map((review, index) => (
-                <ReviewCard key={index} {...review} />
-              ))}
-            </div>
+            <ReviewsCarousel reviews={reviews} />
           </div>
         </div>
       </section>
