@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Building2, Phone, Mail, MapPin, MessageCircle } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import logo from "@/assets/logo-volshebno-tut.png";
+import logo from "@/assets/new-logo.png";
 
 export function Footer() {
   const { t } = useTranslation();

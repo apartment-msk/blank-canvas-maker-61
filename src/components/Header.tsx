@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { cn } from "@/lib/utils";
 import { useTranslation } from "react-i18next";
-import logo from "@/assets/logo-volshebno-tut.png";
+import logo from "@/assets/new-logo.png";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
