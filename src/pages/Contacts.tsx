@@ -25,25 +25,36 @@ const Contacts = () => {
     {
       icon: Phone,
       title: "Телефон",
-      details: ["+7 995 508 58 08"],
+      details: [
+        { text: "+7 995 508 58 08", link: "tel:+79955085808" }
+      ],
       description: "Звоните в любое время"
     },
     {
       icon: Mail,
       title: "Email",
-      details: ["info@volshebno-tut.ru", "support@volshebno-tut.ru"],
+      details: [
+        { text: "info@volshebno-tut.ru", link: "mailto:info@volshebno-tut.ru" },
+        { text: "support@volshebno-tut.ru", link: "mailto:support@volshebno-tut.ru" }
+      ],
       description: "Ответим в течение часа"
     },
     {
       icon: MessageCircle,
       title: "Мессенджеры",
-      details: ["Telegram: @Volshebno_tyt", "WhatsApp"],
+      details: [
+        { text: "Telegram: @Volshebno_tyt", link: "https://t.me/Volshebno_tyt" },
+        { text: "WhatsApp", link: "https://wa.me/79955085808" }
+      ],
       description: "Быстрая связь 24/7"
     },
     {
       icon: Clock,
       title: "Поддержка",
-      details: ["24 часа в сутки", "7 дней в неделю"],
+      details: [
+        { text: "24 часа в сутки" },
+        { text: "7 дней в неделю" }
+      ],
       description: "Всегда готовы помочь"
     }
   ];
@@ -151,7 +162,20 @@ const Contacts = () => {
                   <div className="space-y-1 mb-3">
                     {info.details.map((detail, i) => (
                       <div key={i} className="text-foreground font-medium">
-                        {detail}
+                        {typeof detail === 'string' ? (
+                          detail
+                        ) : detail.link ? (
+                          <a 
+                            href={detail.link} 
+                            target={detail.link.startsWith('http') ? '_blank' : undefined}
+                            rel={detail.link.startsWith('http') ? 'noopener noreferrer' : undefined}
+                            className="hover:text-luxury transition-colors cursor-pointer"
+                          >
+                            {detail.text}
+                          </a>
+                        ) : (
+                          detail.text
+                        )}
                       </div>
                     ))}
                   </div>
