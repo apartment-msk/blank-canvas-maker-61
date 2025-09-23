@@ -60,15 +60,27 @@ export function Footer() {
             <div className="space-y-2 text-sm">
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4 text-luxury" />
-                <span className="text-muted-foreground">+7 (495) 123-45-67</span>
+                <a href="tel:+79955085808" className="text-muted-foreground hover:text-luxury transition-colors">
+                  +7 995 508 58 08
+                </a>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4 text-luxury" />
-                <span className="text-muted-foreground">info@volshebno-tut.ru</span>
+                <a href="mailto:info@volshebno-tut.ru" className="text-muted-foreground hover:text-luxury transition-colors">
+                  info@volshebno-tut.ru
+                </a>
               </div>
               <div className="flex items-center space-x-2">
                 <MessageCircle className="h-4 w-4 text-luxury" />
-                <span className="text-muted-foreground">Поддержка 24/7</span>
+                <a href="https://t.me/Volshebno_tyt" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-luxury transition-colors">
+                  @Volshebno_tyt
+                </a>
+              </div>
+              <div className="flex items-center space-x-2">
+                <MessageCircle className="h-4 w-4 text-luxury" />
+                <a href="https://wa.me/79955085808" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-luxury transition-colors">
+                  WhatsApp
+                </a>
               </div>
             </div>
           </div>

@@ -25,7 +25,7 @@ const Contacts = () => {
     {
       icon: Phone,
       title: "Телефон",
-      details: ["+7 (495) 123-45-67", "+7 (926) 789-01-23"],
+      details: ["+7 995 508 58 08"],
       description: "Звоните в любое время"
     },
     {
@@ -37,7 +37,7 @@ const Contacts = () => {
     {
       icon: MessageCircle,
       title: "Мессенджеры",
-      details: ["WhatsApp", "Telegram"],
+      details: ["Telegram: @Volshebno_tyt", "WhatsApp"],
       description: "Быстрая связь 24/7"
     },
     {
@@ -335,25 +335,34 @@ const Contacts = () => {
               <Button 
                 size="lg" 
                 className="bg-gradient-luxury text-luxury-foreground hover:shadow-luxury hover:scale-105"
+                asChild
               >
-                <Phone className="h-5 w-5 mr-2" />
-                Позвонить
+                <a href="tel:+79955085808">
+                  <Phone className="h-5 w-5 mr-2" />
+                  Позвонить
+                </a>
               </Button>
               <Button 
                 size="lg" 
                 variant="outline"
                 className="border-luxury text-luxury hover:bg-luxury hover:text-luxury-foreground"
+                asChild
               >
-                <MessageCircle className="h-5 w-5 mr-2" />
-                WhatsApp
+                <a href="https://wa.me/79955085808" target="_blank" rel="noopener noreferrer">
+                  <MessageCircle className="h-5 w-5 mr-2" />
+                  WhatsApp
+                </a>
               </Button>
               <Button 
                 size="lg" 
                 variant="outline"
                 className="border-luxury text-luxury hover:bg-luxury hover:text-luxury-foreground"
+                asChild
               >
-                <Mail className="h-5 w-5 mr-2" />
-                Email
+                <a href="https://t.me/Volshebno_tyt" target="_blank" rel="noopener noreferrer">
+                  <MessageCircle className="h-5 w-5 mr-2" />
+                  Telegram
+                </a>
               </Button>
             </div>
           </div>
