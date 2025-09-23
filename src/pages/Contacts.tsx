@@ -44,7 +44,7 @@ const Contacts = () => {
       title: "Мессенджеры",
       details: [
         { text: "Telegram: @Volshebno_tyt", link: "https://t.me/Volshebno_tyt" },
-        { text: "WhatsApp", link: "https://wa.me/79955085808" }
+        { text: "WhatsApp: +7 995 508 58 08", link: "https://api.whatsapp.com/send?phone=79955085808" }
       ],
       description: "Быстрая связь 24/7"
     },
