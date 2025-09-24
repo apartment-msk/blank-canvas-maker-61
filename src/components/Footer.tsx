@@ -78,7 +78,13 @@ export function Footer() {
               </div>
               <div className="flex items-center space-x-2">
                 <MessageCircle className="h-4 w-4 text-luxury" />
-                <a href="https://wa.me/+79955085808" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-luxury transition-colors">
+                <a 
+                  href="https://wa.me/+79955085808" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-muted-foreground hover:text-luxury transition-colors"
+                  title="Открыть WhatsApp с номером +7 995 508 58 08"
+                >
                   WhatsApp
                 </a>
               </div>

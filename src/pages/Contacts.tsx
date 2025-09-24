@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { Phone, Mail, MapPin, MessageCircle, Clock, Send } from "lucide-react";
+import { Phone, Mail, MapPin, MessageCircle, Clock, Send, Copy, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -19,7 +19,55 @@ const Contacts = () => {
     subject: "",
     message: ""
   });
+  const [copiedPhone, setCopiedPhone] = useState(false);
   const { toast } = useToast();
+
+  const phoneNumber = "+79955085808";
+  const displayPhone = "+7 995 508 58 08";
+
+  const copyPhoneNumber = async () => {
+    try {
+      await navigator.clipboard.writeText(displayPhone);
+      setCopiedPhone(true);
+      toast({
+        title: "Номер скопирован!",
+        description: "Теперь вы можете вставить его в WhatsApp",
+      });
+      setTimeout(() => setCopiedPhone(false), 2000);
+    } catch (err) {
+      toast({
+        title: "Ошибка копирования",
+        description: "Попробуйте выделить номер вручную: " + displayPhone,
+        variant: "destructive"
+      });
+    }
+  };
+
+  const openWhatsApp = () => {
+    // Пробуем разные форматы ссылок для максимальной совместимости
+    const whatsappLinks = [
+      `https://wa.me/${phoneNumber}`,
+      `https://api.whatsapp.com/send?phone=${phoneNumber.replace('+', '')}`,
+      `whatsapp://send?phone=${phoneNumber}`
+    ];
+    
+    // Открываем первую ссылку
+    const link = whatsappLinks[0];
+    const newWindow = window.open(link, '_blank');
+    
+    // Если окно не открылось (заблокировано), показываем инструкцию
+    if (!newWindow) {
+      toast({
+        title: "Не удалось открыть WhatsApp",
+        description: `Скопируйте номер ${displayPhone} и найдите нас в WhatsApp вручную`,
+        action: (
+          <Button variant="outline" size="sm" onClick={copyPhoneNumber}>
+            Скопировать номер
+          </Button>
+        )
+      });
+    }
+  };
 
   const contactInfo = [
     {
@@ -44,7 +92,11 @@ const Contacts = () => {
       title: "Мессенджеры",
       details: [
         { text: "Telegram: @Volshebno_tyt", link: "https://t.me/Volshebno_tyt" },
-        { text: "WhatsApp: +7 995 508 58 08", link: "https://wa.me/+79955085808" }
+        { 
+          text: `WhatsApp: ${displayPhone}`, 
+          link: "javascript:void(0)",
+          action: "whatsapp"
+        }
       ],
       description: "Быстрая связь 24/7"
     },
@@ -164,6 +216,33 @@ const Contacts = () => {
                       <div key={i} className="text-foreground font-medium">
                         {typeof detail === 'string' ? (
                           detail
+                        ) : detail.action === 'whatsapp' ? (
+                          <div className="flex flex-col items-center space-y-2">
+                            <button 
+                              onClick={openWhatsApp}
+                              className="hover:text-luxury transition-colors cursor-pointer"
+                            >
+                              {detail.text}
+                            </button>
+                            <Button
+                              variant="outline"
+                              size="sm"
+                              onClick={copyPhoneNumber}
+                              className="text-xs h-7"
+                            >
+                              {copiedPhone ? (
+                                <>
+                                  <CheckCircle className="h-3 w-3 mr-1" />
+                                  Скопировано
+                                </>
+                              ) : (
+                                <>
+                                  <Copy className="h-3 w-3 mr-1" />
+                                  Скопировать
+                                </>
+                              )}
+                            </Button>
+                          </div>
                         ) : detail.link ? (
                           <a 
                             href={detail.link} 
@@ -370,12 +449,10 @@ const Contacts = () => {
                 size="lg" 
                 variant="outline"
                 className="border-luxury text-luxury hover:bg-luxury hover:text-luxury-foreground"
-                asChild
+                onClick={openWhatsApp}
               >
-                <a href="https://wa.me/+79955085808" target="_blank" rel="noopener noreferrer">
-                  <MessageCircle className="h-5 w-5 mr-2" />
-                  WhatsApp
-                </a>
+                <MessageCircle className="h-5 w-5 mr-2" />
+                WhatsApp
               </Button>
               <Button 
                 size="lg" 
