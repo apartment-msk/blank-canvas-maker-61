@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Shield, Clock, Star, MapPin, Users, Award, Trophy, Wifi, Monitor, Sparkles, X } from "lucide-react";
+import { ArrowRight, Shield, Clock, Star, MapPin, Users, Award, Trophy, Wifi, Monitor, Sparkles, X, Phone, MessageCircle } from "lucide-react";
 import guestsChoiceAward from "@/assets/guests-choice-award.png";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTrigger, DialogTitle } from "@/components/ui/dialog";
@@ -141,6 +141,48 @@ const Index = () => {
               transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
             >
               <SearchWidget className="bg-transparent rounded-2xl p-8 max-w-4xl mx-auto" />
+            </motion.div>
+
+            {/* Quick Contact Section */}
+            <motion.div 
+              className="mt-12 flex flex-col sm:flex-row justify-center items-center gap-6 text-white"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.7, ease: "easeOut" }}
+            >
+              <div className="flex items-center space-x-2">
+                <Phone className="h-5 w-5 text-luxury" />
+                <a 
+                  href="tel:+79955085808" 
+                  className="text-lg font-medium hover:text-luxury transition-colors"
+                >
+                  +7 995 508 58 08
+                </a>
+              </div>
+              
+              <div className="hidden sm:block w-px h-8 bg-white/30"></div>
+              
+              <div className="flex items-center space-x-4">
+                <a 
+                  href="https://wa.me/79955085808"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center space-x-2 hover:text-luxury transition-colors"
+                >
+                  <MessageCircle className="h-5 w-5 text-green-400" />
+                  <span>WhatsApp</span>
+                </a>
+                
+                <a 
+                  href="https://t.me/Volshebno_tyt"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center space-x-2 hover:text-luxury transition-colors"
+                >
+                  <MessageCircle className="h-5 w-5 text-blue-400" />
+                  <span>Telegram</span>
+                </a>
+              </div>
             </motion.div>
           </div>
         </div>

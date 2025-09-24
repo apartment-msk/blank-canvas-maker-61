@@ -91,11 +91,16 @@ const Contacts = () => {
       icon: MessageCircle,
       title: "Мессенджеры",
       details: [
-        { text: "Telegram: @Volshebno_tyt", link: "https://t.me/Volshebno_tyt" },
         { 
-          text: `WhatsApp: ${displayPhone}`, 
+          text: "Telegram", 
+          link: "https://t.me/Volshebno_tyt",
+          icon: "telegram"
+        },
+        { 
+          text: "WhatsApp", 
           link: "javascript:void(0)",
-          action: "whatsapp"
+          action: "whatsapp",
+          icon: "whatsapp"
         }
       ],
       description: "Быстрая связь 24/7"
@@ -220,9 +225,10 @@ const Contacts = () => {
                           <div className="flex flex-col items-center space-y-2">
                             <button 
                               onClick={openWhatsApp}
-                              className="hover:text-luxury transition-colors cursor-pointer"
+                              className="hover:text-luxury transition-colors cursor-pointer flex items-center space-x-1"
                             >
-                              {detail.text}
+                              <MessageCircle className="h-4 w-4 text-green-500" />
+                              <span>{detail.text}</span>
                             </button>
                             <Button
                               variant="outline"
@@ -243,6 +249,16 @@ const Contacts = () => {
                               )}
                             </Button>
                           </div>
+                        ) : detail.icon === 'telegram' ? (
+                          <a 
+                            href={detail.link} 
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="hover:text-luxury transition-colors cursor-pointer flex items-center space-x-1"
+                          >
+                            <MessageCircle className="h-4 w-4 text-blue-500" />
+                            <span>{detail.text}</span>
+                          </a>
                         ) : detail.link ? (
                           <a 
                             href={detail.link} 
