@@ -44,7 +44,7 @@ const Contacts = () => {
       title: "Мессенджеры",
       details: [
         { text: "Telegram: @Volshebno_tyt", link: "https://t.me/Volshebno_tyt" },
-        { text: "WhatsApp: +7 995 508 58 08", link: "https://api.whatsapp.com/send?phone=79955085808" }
+        { text: "WhatsApp: +7 995 508 58 08", link: "https://wa.me/+79955085808" }
       ],
       description: "Быстрая связь 24/7"
     },
@@ -372,7 +372,7 @@ const Contacts = () => {
                 className="border-luxury text-luxury hover:bg-luxury hover:text-luxury-foreground"
                 asChild
               >
-                <a href="https://wa.me/79955085808" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/+79955085808" target="_blank" rel="noopener noreferrer">
                   <MessageCircle className="h-5 w-5 mr-2" />
                   WhatsApp
                 </a>
