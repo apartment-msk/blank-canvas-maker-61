@@ -118,6 +118,8 @@ const Contacts = () => {
 
   const subjects = [
     "Бронирование апартаментов",
+    "Командировки и корпоративное размещение",
+    "Долгосрочная аренда от 7 дней",
     "Вопросы по проживанию",
     "Предложение сотрудничества",
     "Техническая поддержка",
@@ -380,60 +382,54 @@ const Contacts = () => {
               </div>
             </div>
 
-            {/* Office Info & Map */}
+            {/* Special Services */}
             <div className="space-y-6">
               <div>
                 <h2 className="text-3xl font-bold text-foreground mb-4">
-                  Наш офис
+                  Наши услуги
                 </h2>
                 <p className="text-muted-foreground">
-                  Приходите к нам в офис для личной консультации
+                  Специальные предложения для корпоративных клиентов и долгосрочного проживания
                 </p>
               </div>
 
-              <Card className="border-0 shadow-card">
-                <CardContent className="p-6">
-                  <div className="space-y-6">
+              <div className="grid gap-6">
+                <Card className="border-0 shadow-card">
+                  <CardContent className="p-6">
                     <div className="flex items-start space-x-4">
                       <div className="w-12 h-12 bg-gradient-luxury rounded-lg flex items-center justify-center flex-shrink-0">
-                        <MapPin className="h-6 w-6 text-luxury-foreground" />
+                        <MessageCircle className="h-6 w-6 text-luxury-foreground" />
                       </div>
                       <div>
-                        <h3 className="font-semibold text-foreground mb-2">Адрес офиса</h3>
+                        <h3 className="font-semibold text-foreground mb-2">Командировки и корпоративное размещение</h3>
                         <p className="text-muted-foreground">
-                          г. Москва, ул. Тверская, д. 10, стр. 2<br/>
-                          БЦ "Центральный", офис 520<br/>
-                          м. Тверская (2 мин. пешком)
+                          Работаем с командировочными и корпоративными клиентами. 
+                          Предоставляем все необходимые документы для отчетности, 
+                          индивидуальные условия оплаты и персональный менеджер для постоянных клиентов.
                         </p>
                       </div>
                     </div>
+                  </CardContent>
+                </Card>
 
+                <Card className="border-0 shadow-card">
+                  <CardContent className="p-6">
                     <div className="flex items-start space-x-4">
                       <div className="w-12 h-12 bg-gradient-luxury rounded-lg flex items-center justify-center flex-shrink-0">
                         <Clock className="h-6 w-6 text-luxury-foreground" />
                       </div>
                       <div>
-                        <h3 className="font-semibold text-foreground mb-2">Часы работы</h3>
+                        <h3 className="font-semibold text-foreground mb-2">Бесплатная уборка при долгосрочном проживании</h3>
                         <p className="text-muted-foreground">
-                          Понедельник - Пятница: 9:00 - 19:00<br/>
-                          Суббота: 10:00 - 16:00<br/>
-                          Воскресенье: выходной<br/>
-                          <span className="text-luxury font-medium">Поддержка 24/7 онлайн</span>
+                          При бронировании от 7 суток предоставляем <span className="text-luxury font-medium">бесплатную уборку</span> каждые 3 дня. 
+                          Смена белья, полотенец, генеральная уборка и поддержание идеального порядка 
+                          в ваших апартаментах на протяжении всего периода проживания.
                         </p>
                       </div>
                     </div>
-
-                    {/* Placeholder for map */}
-                    <div className="w-full h-64 bg-muted rounded-lg flex items-center justify-center">
-                      <div className="text-center text-muted-foreground">
-                        <MapPin className="h-12 w-12 mx-auto mb-2" />
-                        <p>Интерактивная карта</p>
-                        <p className="text-sm">г. Москва, ул. Тверская, 10</p>
-                      </div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+                  </CardContent>
+                </Card>
+              </div>
             </div>
           </div>
         </div>
