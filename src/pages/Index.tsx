@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Shield, Clock, Star, MapPin, Users, Award, Trophy, Wifi, Monitor, Sparkles, X, Phone, MessageCircle } from "lucide-react";
 import guestsChoiceAward from "@/assets/guests-choice-award.png";
+import superhostCertificate from "@/assets/superhost-certificate.png";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTrigger, DialogTitle } from "@/components/ui/dialog";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
@@ -257,9 +258,32 @@ const Index = () => {
                         </div>
                       </DialogTrigger>
                       <DialogContent className="max-w-3xl w-full">
+                        <DialogTitle className="sr-only">Guests' Choice Award 2024</DialogTitle>
                         <img 
                           src={guestsChoiceAward} 
                           alt="Guests' Choice Award 2024" 
+                          className="w-full h-auto rounded-lg"
+                        />
+                      </DialogContent>
+                    </Dialog>
+                  </CarouselItem>
+
+                  <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                    <Dialog>
+                      <DialogTrigger asChild>
+                        <div className="bg-white rounded-xl p-4 text-center shadow-card hover:shadow-lg transition-all hover:scale-105 cursor-pointer hover-scale">
+                          <img 
+                            src={superhostCertificate} 
+                            alt="Статус Суперхозяин" 
+                            className="w-32 h-48 mx-auto rounded-lg object-cover"
+                          />
+                        </div>
+                      </DialogTrigger>
+                      <DialogContent className="max-w-3xl w-full">
+                        <DialogTitle className="sr-only">Статус Суперхозяин</DialogTitle>
+                        <img 
+                          src={superhostCertificate} 
+                          alt="Статус Суперхозяин" 
                           className="w-full h-auto rounded-lg"
                         />
                       </DialogContent>
