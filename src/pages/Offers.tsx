@@ -51,13 +51,8 @@ const Offers = () => {
     },
     {
       icon: Gift,
-      title: "Подарки для гостей",
-      description: "Комплименты от Волшебно тут при заселении"
-    },
-    {
-      icon: Percent,
-      title: "Накопительная программа",
-      description: "Дополнительные скидки для постоянных гостей"
+      title: "Индивидуальный промокод для постоянных гостей",
+      description: "Персональные скидки и специальные предложения для наших постоянных клиентов"
     }
   ];
 
@@ -154,7 +149,7 @@ const Offers = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {benefits.map((benefit, index) => (
                 <Card key={index} className="text-center border-0 shadow-card">
                   <CardContent className="p-6">
