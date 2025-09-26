@@ -382,54 +382,29 @@ const Contacts = () => {
               </div>
             </div>
 
-            {/* Special Services */}
+            {/* Map */}
             <div className="space-y-6">
               <div>
                 <h2 className="text-3xl font-bold text-foreground mb-4">
-                  Наши услуги
+                  Наше расположение
                 </h2>
                 <p className="text-muted-foreground">
-                  Специальные предложения для корпоративных клиентов и долгосрочного проживания
+                  Удобное расположение в центре Москвы
                 </p>
               </div>
 
-              <div className="grid gap-6">
-                <Card className="border-0 shadow-card">
-                  <CardContent className="p-6">
-                    <div className="flex items-start space-x-4">
-                      <div className="w-12 h-12 bg-gradient-luxury rounded-lg flex items-center justify-center flex-shrink-0">
-                        <MessageCircle className="h-6 w-6 text-luxury-foreground" />
-                      </div>
-                      <div>
-                        <h3 className="font-semibold text-foreground mb-2">Командировки и корпоративное размещение</h3>
-                        <p className="text-muted-foreground">
-                          Работаем с командировочными и корпоративными клиентами. 
-                          Предоставляем все необходимые документы для отчетности, 
-                          индивидуальные условия оплаты и персональный менеджер для постоянных клиентов.
-                        </p>
-                      </div>
+              <Card className="border-0 shadow-card">
+                <CardContent className="p-6">
+                  <div className="w-full h-96 bg-muted rounded-lg flex items-center justify-center">
+                    <div className="text-center">
+                      <MapPin className="h-16 w-16 text-muted-foreground mx-auto mb-4" />
+                      <p className="text-muted-foreground">
+                        Интерактивная карта будет добавлена
+                      </p>
                     </div>
-                  </CardContent>
-                </Card>
-
-                <Card className="border-0 shadow-card">
-                  <CardContent className="p-6">
-                    <div className="flex items-start space-x-4">
-                      <div className="w-12 h-12 bg-gradient-luxury rounded-lg flex items-center justify-center flex-shrink-0">
-                        <Clock className="h-6 w-6 text-luxury-foreground" />
-                      </div>
-                      <div>
-                        <h3 className="font-semibold text-foreground mb-2">Бесплатная уборка при долгосрочном проживании</h3>
-                        <p className="text-muted-foreground">
-                          При бронировании от 7 суток предоставляем <span className="text-luxury font-medium">бесплатную уборку</span> каждые 3 дня. 
-                          Смена белья, полотенец, генеральная уборка и поддержание идеального порядка 
-                          в ваших апартаментах на протяжении всего периода проживания.
-                        </p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
+                  </div>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </div>

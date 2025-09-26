@@ -568,6 +568,122 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Our Services Section */}
+      <motion.section 
+        className="py-20 bg-background"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: false }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
+        <div className="container mx-auto px-4">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+              Наши услуги
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Индивидуальный подход к каждому гостю и специальные условия для долгосрочного проживания
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            {/* Corporate Services */}
+            <motion.div
+              className="bg-gradient-to-br from-surface to-surface/50 rounded-3xl p-8 shadow-card hover:shadow-floating transition-all duration-300 border border-border/50"
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: false }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              whileHover={{ scale: 1.02 }}
+            >
+              <div className="flex items-start space-x-6">
+                <div className="w-20 h-20 bg-gradient-luxury rounded-2xl flex items-center justify-center flex-shrink-0">
+                  <Users className="h-10 w-10 text-luxury-foreground" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold text-foreground mb-4">
+                    Командировки и корпоративное размещение
+                  </h3>
+                  <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+                    Работаем с командировочными и корпоративными клиентами. 
+                    Предоставляем все необходимые документы для отчетности, 
+                    индивидуальные условия оплаты и персональный менеджер для постоянных клиентов.
+                  </p>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div className="flex items-center space-x-2">
+                      <div className="w-2 h-2 bg-luxury rounded-full"></div>
+                      <span className="text-sm text-muted-foreground">Отчетные документы</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <div className="w-2 h-2 bg-luxury rounded-full"></div>
+                      <span className="text-sm text-muted-foreground">Персональный менеджер</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <div className="w-2 h-2 bg-luxury rounded-full"></div>
+                      <span className="text-sm text-muted-foreground">Гибкие условия оплаты</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <div className="w-2 h-2 bg-luxury rounded-full"></div>
+                      <span className="text-sm text-muted-foreground">Корпоративные скидки</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Long-term Cleaning */}
+            <motion.div
+              className="bg-gradient-to-br from-surface to-surface/50 rounded-3xl p-8 shadow-card hover:shadow-floating transition-all duration-300 border border-border/50"
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: false }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              whileHover={{ scale: 1.02 }}
+            >
+              <div className="flex items-start space-x-6">
+                <div className="w-20 h-20 bg-gradient-luxury rounded-2xl flex items-center justify-center flex-shrink-0">
+                  <Sparkles className="h-10 w-10 text-luxury-foreground" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold text-foreground mb-4">
+                    Бесплатная уборка при долгосрочном проживании
+                  </h3>
+                  <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+                    При бронировании от 7 суток предоставляем бесплатную уборку. 
+                    Регулярная смена белья и поддержание чистоты в апартаментах 
+                    для вашего максимального комфорта.
+                  </p>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div className="flex items-center space-x-2">
+                      <div className="w-2 h-2 bg-luxury rounded-full"></div>
+                      <span className="text-sm text-muted-foreground">Еженедельная уборка</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <div className="w-2 h-2 bg-luxury rounded-full"></div>
+                      <span className="text-sm text-muted-foreground">Смена белья</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <div className="w-2 h-2 bg-luxury rounded-full"></div>
+                      <span className="text-sm text-muted-foreground">Пополнение принадлежностей</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <div className="w-2 h-2 bg-luxury rounded-full"></div>
+                      <span className="text-sm text-muted-foreground">Гибкий график</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </motion.section>
+
       {/* Featured Apartments */}
       <motion.section 
         className="py-16 bg-surface"
