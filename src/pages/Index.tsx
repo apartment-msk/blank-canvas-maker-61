@@ -684,61 +684,6 @@ const Index = () => {
         </div>
       </motion.section>
 
-      {/* Featured Apartments */}
-      <motion.section 
-        className="py-16 bg-surface"
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: false }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-      >
-        <div className="container mx-auto px-4">
-          <motion.div 
-            className="text-center space-y-4 mb-12"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-              {t('apartments.title')}
-            </h2>
-            <p className="text-lg text-muted-foreground">
-              {t('apartments.description')}
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredApartments.map((apartment, index) => (
-              <motion.div 
-                key={apartment.id} 
-                className="hover-scale"
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: false }}
-                transition={{ duration: 0.6, delay: index * 0.2, ease: "easeOut" }}
-              >
-                <ApartmentCard {...apartment} />
-              </motion.div>
-            ))}
-          </div>
-
-          <motion.div 
-            className="text-center mt-12"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false }}
-            transition={{ duration: 0.6, delay: 0.8, ease: "easeOut" }}
-          >
-            <Link to="/apartments">
-              <Button variant="outline" size="lg" className="border-luxury text-luxury hover:bg-luxury hover:text-luxury-foreground hover-scale">
-                {t('apartments.viewAll')}
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </Link>
-          </motion.div>
-        </div>
-      </motion.section>
 
       {/* Reviews */}
       <motion.section 
