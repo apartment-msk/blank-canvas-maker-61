@@ -126,11 +126,11 @@ const Index = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
             >
-              <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
+              <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-8">
                 {t('hero.title')}
                 <span className="block text-luxury">{t('hero.subtitle')}</span>
               </h1>
-              <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto">
+              <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed">
                 {t('hero.description')}
               </p>
             </motion.div>
