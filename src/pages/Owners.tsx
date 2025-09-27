@@ -81,7 +81,211 @@ const Owners = () => {
           </div>
         </div>
       </section>
+      
+      {/* Problem Identification Section */}
+      <motion.section 
+        className="py-16 bg-surface"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+      >
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto space-y-12">
+            <div className="text-center space-y-4">
+              <motion.h2 
+                className="text-3xl md:text-4xl font-bold text-foreground"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+              >
+                Знакомые проблемы?
+              </motion.h2>
+              <motion.p 
+                className="text-lg text-muted-foreground max-w-3xl mx-auto"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+              >
+                Если вы узнаете себя в одном из пунктов - мы можем решить ваши проблемы
+              </motion.p>
+            </div>
 
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                "Сдаете квартиру на долгосрок и получаете меньше денег",
+                "Понимаете, что недвижимость может приносить больший доход",
+                "Не можете контролировать состояние квартиры",
+                "Часто ремонтируете и покупаете технику взамен сломанной",
+                "Жалко денег на рекламу или не знаете как её настроить",
+                "Выслушиваете жалобы соседей на квартирантов",
+                "Жильцы задерживают оплату",
+                "Хотите быстрее окупить вложения в недвижимость",
+                "Не любите звонки от клиентов в любое время",
+                "Находитесь в другом городе, а недвижимость в Москве"
+              ].map((problem, index) => (
+                <motion.div
+                  key={index}
+                  className="bg-background p-6 rounded-lg border border-border hover:shadow-card transition-all"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                >
+                  <div className="flex items-start space-x-3">
+                    <div className="w-8 h-8 bg-gradient-luxury rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                      <span className="text-luxury-foreground font-bold text-sm">{index + 1}</span>
+                    </div>
+                    <p className="text-foreground text-sm leading-relaxed">{problem}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </motion.section>
+
+      {/* Trust Statistics Section */}
+      <motion.section 
+        className="py-16"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+      >
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto space-y-12">
+            <div className="text-center space-y-4">
+              <motion.h2 
+                className="text-3xl md:text-4xl font-bold text-foreground"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+              >
+                Почему собственники нам доверяют
+              </motion.h2>
+              <motion.p 
+                className="text-lg text-muted-foreground max-w-3xl mx-auto"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+              >
+                Цифры и факты о нашей работе с 2019 года
+              </motion.p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {[
+                {
+                  number: "30+",
+                  text: "собственников работают с нами от 4-х лет",
+                  icon: Users
+                },
+                {
+                  number: "500+",
+                  text: "млн рублей - общая стоимость недвижимости в управлении",
+                  icon: DollarSign
+                },
+                {
+                  number: "90%+",
+                  text: "заполняемость наших объектов",
+                  icon: Star
+                },
+                {
+                  number: "50%",
+                  text: "меньше износ квартиры чем при долгосрочной аренде",
+                  icon: Shield
+                }
+              ].map((stat, index) => (
+                <motion.div
+                  key={index}
+                  className="text-center space-y-4"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                >
+                  <div className="w-16 h-16 mx-auto bg-gradient-luxury rounded-2xl flex items-center justify-center">
+                    <stat.icon className="h-8 w-8 text-luxury-foreground" />
+                  </div>
+                  <div className="text-3xl md:text-4xl font-bold text-primary">
+                    {stat.number}
+                  </div>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    {stat.text}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </motion.section>
+
+      {/* Services Section */}
+      <motion.section 
+        className="py-16 bg-gradient-warm"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+      >
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto space-y-12">
+            <div className="text-center space-y-4">
+              <motion.h2 
+                className="text-3xl md:text-4xl font-bold text-foreground"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+              >
+                Полный спектр услуг
+              </motion.h2>
+              <motion.p 
+                className="text-lg text-muted-foreground max-w-3xl mx-auto"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+              >
+                Все что нужно для эффективного управления вашей недвижимостью
+              </motion.p>
+            </div>
+
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+              {[
+                "Оценка квартир",
+                "Ремонт и клининг", 
+                "Хоум-стейджинг",
+                "Юридическая консультация",
+                "Страхование",
+                "Финансовая статистика",
+                "Подготовка контента",
+                "Создание портрета клиента",
+                "Комплексный маркетинг",
+                "Мониторинг цен",
+                "Обеспечение работы 24/7",
+                "Прачечная"
+              ].map((service, index) => (
+                <motion.div
+                  key={index}
+                  className="bg-background/80 backdrop-blur-sm p-4 rounded-lg border border-border hover:shadow-card transition-all text-center"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: index * 0.05 }}
+                >
+                  <p className="text-foreground text-sm font-medium">{service}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </motion.section>
       {/* Renovation Services Section */}
       <motion.section 
         className="py-16 bg-gradient-warm"
