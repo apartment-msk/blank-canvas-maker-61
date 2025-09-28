@@ -8,7 +8,7 @@ export function Footer() {
   return (
     <footer className="bg-surface border-t">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
@@ -23,7 +23,7 @@ export function Footer() {
               </div>
             </div>
             <p className="text-sm text-muted-foreground">
-              {t('footer.description')}
+              Современные апартаменты Москвы
             </p>
           </div>
 
@@ -55,7 +55,7 @@ export function Footer() {
           </div>
 
           {/* Contact Info */}
-          <div className="space-y-4">
+          <div className="space-y-4 md:col-span-2">
             <h3 className="font-semibold text-foreground">{t('footer.contactInfo')}</h3>
             <div className="space-y-2 text-sm">
               <div className="flex items-center space-x-2">
@@ -71,13 +71,13 @@ export function Footer() {
                 </a>
               </div>
               <div className="flex items-center space-x-2">
-                <MessageCircle className="h-4 w-4 text-luxury" />
+                <MessageCircle className="h-4 w-4 text-blue-400" />
                 <a href="https://t.me/Volshebno_tyt" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-luxury transition-colors">
                   @Volshebno_tyt
                 </a>
               </div>
               <div className="flex items-center space-x-2">
-                <MessageCircle className="h-4 w-4 text-luxury" />
+                <MessageCircle className="h-4 w-4 text-green-400" />
                 <a 
                   href="https://wa.me/+79955085808" 
                   target="_blank" 
@@ -90,32 +90,10 @@ export function Footer() {
               </div>
             </div>
           </div>
-
-          {/* Legal */}
-          <div className="space-y-4">
-            <h3 className="font-semibold text-foreground">{t('footer.documents')}</h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <Link to="/privacy" className="text-muted-foreground hover:text-foreground transition-colors">
-                  {t('footer.privacy')}
-                </Link>
-              </li>
-              <li>
-                <Link to="/terms" className="text-muted-foreground hover:text-foreground transition-colors">
-                  {t('footer.terms')}
-                </Link>
-              </li>
-              <li>
-                <Link to="/owners" className="text-muted-foreground hover:text-foreground transition-colors">
-                  {t('navigation.owners')}
-                </Link>
-              </li>
-            </ul>
-          </div>
         </div>
 
         <div className="border-t mt-8 pt-8 text-center text-sm text-muted-foreground">
-          <p>&copy; 2024 Волшебно тут. {t('footer.copyright')}</p>
+          <p>&copy; 2025 Волшебно тут. {t('footer.copyright')}</p>
         </div>
       </div>
     </footer>
