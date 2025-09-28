@@ -55,7 +55,7 @@ export function Footer() {
           </div>
 
           {/* Contact Info */}
-          <div className="space-y-4 md:col-span-2">
+          <div className="space-y-4">
             <h3 className="font-semibold text-foreground">{t('footer.contactInfo')}</h3>
             <div className="space-y-2 text-sm">
               <div className="flex items-center space-x-2">
