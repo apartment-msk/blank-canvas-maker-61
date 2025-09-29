@@ -24,7 +24,7 @@ i18n
   .init({
     resources,
     fallbackLng: 'ru',
-    debug: false,
+    debug: true,
 
     interpolation: {
       escapeValue: false,
@@ -32,7 +32,7 @@ i18n
 
     detection: {
       order: ['localStorage', 'navigator', 'htmlTag'],
-      caches: ['localStorage'],
+      caches: [],
     },
   });
 
