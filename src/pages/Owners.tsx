@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const renovationServices = [
   {
@@ -62,6 +63,7 @@ const features = [
 ];
 
 const Owners = () => {
+  const { t } = useTranslation();
 
   return (
     <div className="min-h-screen bg-background">
@@ -165,7 +167,7 @@ const Owners = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
               >
-                Почему собственники нам доверяют
+                {t('owners.trustStats.title')}
               </motion.h2>
               <motion.p 
                 className="text-lg text-muted-foreground max-w-3xl mx-auto"
@@ -174,7 +176,7 @@ const Owners = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
-                Цифры и факты о нашей работе с 2019 года
+                {t('owners.trustStats.subtitle')}
               </motion.p>
             </div>
 
@@ -182,17 +184,17 @@ const Owners = () => {
               {[
                 {
                   number: "100+",
-                  text: "млн рублей - общая стоимость недвижимости в управлении",
+                  text: t('owners.trustStats.stats.propertyValue'),
                   icon: DollarSign
                 },
                 {
                   number: "90%+",
-                  text: "заполняемость наших объектов",
+                  text: t('owners.trustStats.stats.occupancy'),
                   icon: Star
                 },
                 {
                   number: "50%",
-                  text: "меньше износ квартиры чем при долгосрочной аренде",
+                  text: t('owners.trustStats.stats.wearReduction'),
                   icon: Shield
                 }
               ].map((stat, index) => (

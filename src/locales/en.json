@@ -163,6 +163,22 @@
       "title": "For property owners",
       "description": "Join our platform and get stable income from renting your apartments with our support and management.",
       "becomePartner": "Become a partner"
+    },
+    "owners": {
+      "hero": {
+        "title": "Get more from your property",
+        "subtitle": "Professional short-term rental management. Increase profitability by 20-30% without your involvement.",
+        "cta": "Discuss cooperation"
+      },
+      "trustStats": {
+        "title": "Why property owners trust us",
+        "subtitle": "Numbers and facts about our work since 2019",
+        "stats": {
+          "propertyValue": "million rubles - total value of real estate under management",
+          "occupancy": "occupancy rate of our properties",
+          "wearReduction": "less apartment wear than long-term rental"
+        }
+      }
     }
   },
   "footer": {

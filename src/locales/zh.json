@@ -163,6 +163,22 @@
       "title": "致房东",
       "description": "加入我们的平台，在我们的支持和管理下从您的公寓租赁中获得稳定收入。",
       "becomePartner": "成为合作伙伴"
+    },
+    "owners": {
+      "hero": {
+        "title": "从您的房产获得更多收益",
+        "subtitle": "专业的短期租赁管理。在您无需参与的情况下将盈利能力提高20-30%。",
+        "cta": "讨论合作"
+      },
+      "trustStats": {
+        "title": "为什么房东信任我们",
+        "subtitle": "自2019年以来我们工作的数字和事实",
+        "stats": {
+          "propertyValue": "百万卢布 - 管理的房地产总价值",
+          "occupancy": "我们房产的入住率",
+          "wearReduction": "比长期租赁减少的公寓磨损"
+        }
+      }
     }
   },
   "footer": {
