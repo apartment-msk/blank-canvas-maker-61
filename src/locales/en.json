@@ -204,6 +204,157 @@
         "occupancy": "occupancy rate of our properties",
         "wearReduction": "less apartment wear than long-term rental"
       }
+    },
+    "problems": {
+      "title": "Familiar problems?",
+      "subtitle": "If you recognize yourself in one of these points - we can solve your problems",
+      "list": [
+        "Renting apartment long-term and getting less money",
+        "Understanding that real estate can bring more income",
+        "Unable to control apartment condition",
+        "Often repairing and buying appliances to replace broken ones",
+        "Don't want to spend money on advertising or don't know how to set it up",
+        "Listening to neighbors' complaints about tenants",
+        "Tenants delay payments",
+        "Want to recover real estate investments faster",
+        "Don't like calls from clients at any time",
+        "Living in another city while property is in Moscow"
+      ]
+    },
+    "services": {
+      "title": "Full range of services",
+      "subtitle": "Everything needed for effective management of your property",
+      "list": [
+        "Apartment valuation",
+        "Repair and cleaning",
+        "Home staging",
+        "Legal consultation",
+        "Insurance",
+        "Financial statistics",
+        "Content preparation",
+        "Customer profile creation",
+        "Comprehensive marketing",
+        "Price monitoring",
+        "24/7 operations",
+        "Laundry"
+      ]
+    },
+    "renovation": {
+      "title": "Preparing properties from scratch",
+      "subtitle": "Even if you have bare walls or need major renovation - we'll handle the entire preparation process to premium apartments for short-term rental",
+      "button": "Get preparation cost estimate",
+      "services": [
+        {
+          "title": "Work with any condition",
+          "description": "From bare walls to major renovation - we'll prepare your property turnkey"
+        },
+        {
+          "title": "Full preparation cycle",
+          "description": "Design, renovation, furnishing and rental launch in 60-90 days"
+        },
+        {
+          "title": "Investment payback",
+          "description": "Preparation costs pay back in 18-24 months thanks to premium rental rates"
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "How it works",
+      "subtitle": "Simple cooperation process",
+      "steps": [
+        {
+          "title": "Property evaluation",
+          "description": "Our specialist will conduct a free assessment of your property's profitability"
+        },
+        {
+          "title": "Preparation for rental",
+          "description": "If necessary, we'll help with renovation, furnishing and decoration"
+        },
+        {
+          "title": "Management and income",
+          "description": "We take care of all management while you receive stable income"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Ready to become a partner?",
+      "subtitle": "Let's discuss your property's potential and calculate possible profitability",
+      "button": "Discuss cooperation"
+    }
+  },
+  "offers": {
+    "hero": {
+      "title": "Special offers",
+      "subtitle": "Great deals for comfortable stay. Save more with extended stays."
+    },
+    "current": {
+      "title": "Current offers",
+      "subtitle": "Special conditions for our guests"
+    },
+    "list": [
+      {
+        "title": "New guest discount",
+        "discount": "5%",
+        "code": "Online5",
+        "description": "5% discount on first booking with promo code"
+      },
+      {
+        "title": "Extended stay 14+ days",
+        "discount": "10%",
+        "description": "Automatic discount for bookings of 14 days or more"
+      },
+      {
+        "title": "Weekly stay 7+ days",
+        "discount": "5%",
+        "description": "Automatic discount for bookings of 7 days or more"
+      },
+      {
+        "title": "Short stay 2+ days",
+        "discount": "3%",
+        "description": "Automatic discount for bookings of 2 days or more"
+      }
+    ],
+    "labels": {
+      "promoCode": "Promo code:",
+      "enterWhenBooking": "Enter when booking",
+      "appliedAutomatically": "✓ Applied automatically"
+    },
+    "benefits": {
+      "title": "Additional benefits",
+      "subtitle": "Even more advantages for our guests",
+      "list": [
+        {
+          "title": "Best price guarantee",
+          "description": "If you find a similar offer cheaper, we'll give you a discount"
+        },
+        {
+          "title": "Individual promo code for regular guests",
+          "description": "Personal discounts and special offers for our regular customers"
+        }
+      ]
+    },
+    "howToUse": {
+      "title": "How to use offers",
+      "subtitle": "Simple steps to get your discount",
+      "steps": [
+        {
+          "title": "Choose apartments",
+          "description": "Find suitable apartments and stay dates"
+        },
+        {
+          "title": "Enter promo code",
+          "description": "Enter code \"Online5\" for first booking or get automatic discount"
+        },
+        {
+          "title": "Enjoy your stay",
+          "description": "Save money and get maximum enjoyment from your accommodation"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Ready to book?",
+      "subtitle": "Don't miss the opportunity to save on comfortable accommodation",
+      "button": "View apartments"
     }
   },
   "notFound": {

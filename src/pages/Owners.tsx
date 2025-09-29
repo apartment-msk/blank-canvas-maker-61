@@ -8,62 +8,11 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 
-const renovationServices = [
-  {
-    icon: Wrench,
-    title: "Работаем с любым состоянием",
-    description: "От голых стен до капитального ремонта - мы подготовим ваш объект под ключ"
-  },
-  {
-    icon: Paintbrush,
-    title: "Полный цикл подготовки",
-    description: "Дизайн, ремонт, меблировка и запуск в аренду за 60-90 дней"
-  },
-  {
-    icon: Star,
-    title: "Окупаемость инвестиций",
-    description: "Затраты на подготовку окупаются за 18-24 месяца благодаря премиальной аренде"
-  }
-];
-
-const benefits = [
-  {
-    icon: Shield,
-    title: "Гарантии",
-    description: "Страхование и защита вашей собственности"
-  },
-  {
-    icon: Clock,
-    title: "Управление",
-    description: "Полное управление арендой и обслуживанием"
-  },
-  {
-    icon: Star,
-    title: "Доходность",
-    description: "Высокая загрузка и стабильный доход"
-  }
-];
-
-const features = [
-  {
-    icon: DollarSign,
-    title: "Увеличение дохода до 40%",
-    description: "Профессиональное управление позволяет максимизировать доходность вашей недвижимости"
-  },
-  {
-    icon: Home,
-    title: "Уход за недвижимостью",
-    description: "Регулярная уборка, техническое обслуживание и контроль состояния вашей квартиры"
-  },
-  {
-    icon: Users,
-    title: "Проверенные гости",
-    description: "Тщательная верификация всех гостей и круглосуточная поддержка"
-  }
-];
-
 const Owners = () => {
   const { t } = useTranslation();
+
+  const renovationIcons = [Wrench, Paintbrush, Star];
+  const statIcons = [DollarSign, Star, Shield];
 
   return (
     <div className="min-h-screen bg-background">
@@ -74,11 +23,10 @@ const Owners = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <h1 className="text-4xl md:text-6xl font-bold text-foreground">
-              Собственникам квартир
+              {t('owners.hero.title')}
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Присоединяйтесь к нашей платформе и получайте стабильный доход 
-              от сдачи своих апартаментов с нашей поддержкой и управлением.
+              {t('owners.hero.subtitle')}
             </p>
           </div>
         </div>
@@ -102,7 +50,7 @@ const Owners = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
               >
-                Знакомые проблемы?
+                {t('owners.problems.title')}
               </motion.h2>
               <motion.p 
                 className="text-lg text-muted-foreground max-w-3xl mx-auto"
@@ -111,23 +59,12 @@ const Owners = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
-                Если вы узнаете себя в одном из пунктов - мы можем решить ваши проблемы
+                {t('owners.problems.subtitle')}
               </motion.p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[
-                "Сдаете квартиру на долгосрок и получаете меньше денег",
-                "Понимаете, что недвижимость может приносить больший доход",
-                "Не можете контролировать состояние квартиры",
-                "Часто ремонтируете и покупаете технику взамен сломанной",
-                "Жалко денег на рекламу или не знаете как её настроить",
-                "Выслушиваете жалобы соседей на квартирантов",
-                "Жильцы задерживают оплату",
-                "Хотите быстрее окупить вложения в недвижимость",
-                "Не любите звонки от клиентов в любое время",
-                "Находитесь в другом городе, а недвижимость в Москве"
-              ].map((problem, index) => (
+              {(t('owners.problems.list', { returnObjects: true }) as string[]).map((problem: string, index: number) => (
                 <motion.div
                   key={index}
                   className="bg-background p-6 rounded-lg border border-border hover:shadow-card transition-all"
@@ -185,17 +122,17 @@ const Owners = () => {
                 {
                   number: "100+",
                   text: t('owners.trustStats.stats.propertyValue'),
-                  icon: DollarSign
+                  icon: statIcons[0]
                 },
                 {
                   number: "90%+",
                   text: t('owners.trustStats.stats.occupancy'),
-                  icon: Star
+                  icon: statIcons[1]
                 },
                 {
                   number: "50%",
                   text: t('owners.trustStats.stats.wearReduction'),
-                  icon: Shield
+                  icon: statIcons[2]
                 }
               ].map((stat, index) => (
                 <motion.div
@@ -240,7 +177,7 @@ const Owners = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
               >
-                Полный спектр услуг
+                {t('owners.services.title')}
               </motion.h2>
               <motion.p 
                 className="text-lg text-muted-foreground max-w-3xl mx-auto"
@@ -249,25 +186,12 @@ const Owners = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
-                Все что нужно для эффективного управления вашей недвижимостью
+                {t('owners.services.subtitle')}
               </motion.p>
             </div>
 
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-              {[
-                "Оценка квартир",
-                "Ремонт и клининг", 
-                "Хоум-стейджинг",
-                "Юридическая консультация",
-                "Страхование",
-                "Финансовая статистика",
-                "Подготовка контента",
-                "Создание портрета клиента",
-                "Комплексный маркетинг",
-                "Мониторинг цен",
-                "Обеспечение работы 24/7",
-                "Прачечная"
-              ].map((service, index) => (
+              {(t('owners.services.list', { returnObjects: true }) as string[]).map((service: string, index: number) => (
                 <motion.div
                   key={index}
                   className="bg-background/80 backdrop-blur-sm p-4 rounded-lg border border-border hover:shadow-card transition-all text-center"
@@ -283,6 +207,7 @@ const Owners = () => {
           </div>
         </div>
       </motion.section>
+
       {/* Renovation Services Section */}
       <motion.section 
         className="py-16 bg-gradient-warm"
@@ -301,7 +226,7 @@ const Owners = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
               >
-                Готовим объекты с нуля
+                {t('owners.renovation.title')}
               </motion.h2>
               <motion.p 
                 className="text-lg text-muted-foreground max-w-3xl mx-auto"
@@ -310,8 +235,7 @@ const Owners = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
-                Даже если у вас голые стены или требуется капитальный ремонт - мы возьмем на себя 
-                весь процесс подготовки до премиальных апартаментов для краткосрочной аренды
+                {t('owners.renovation.subtitle')}
               </motion.p>
             </div>
 
@@ -325,29 +249,32 @@ const Owners = () => {
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
-              {renovationServices.map((service, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: index * 0.2 }}
-                >
-                  <Card className="text-center border-0 shadow-card hover:shadow-floating transition-all hover:scale-105">
-                    <CardContent className="p-6">
-                      <div className="w-16 h-16 mx-auto mb-6 bg-gradient-luxury rounded-2xl flex items-center justify-center">
-                        <service.icon className="h-8 w-8 text-luxury-foreground" />
-                      </div>
-                      <h3 className="text-xl font-semibold text-foreground mb-4">
-                        {service.title}
-                      </h3>
-                      <p className="text-muted-foreground">
-                        {service.description}
-                      </p>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              ))}
+              {(t('owners.renovation.services', { returnObjects: true }) as any[]).map((service: any, index: number) => {
+                const IconComponent = renovationIcons[index] || Wrench;
+                return (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: index * 0.2 }}
+                  >
+                    <Card className="text-center border-0 shadow-card hover:shadow-floating transition-all hover:scale-105">
+                      <CardContent className="p-6">
+                        <div className="w-16 h-16 mx-auto mb-6 bg-gradient-luxury rounded-2xl flex items-center justify-center">
+                          <IconComponent className="h-8 w-8 text-luxury-foreground" />
+                        </div>
+                        <h3 className="text-xl font-semibold text-foreground mb-4">
+                          {service.title}
+                        </h3>
+                        <p className="text-muted-foreground">
+                          {service.description}
+                        </p>
+                      </CardContent>
+                    </Card>
+                  </motion.div>
+                );
+              })}
             </div>
 
             <div className="text-center pt-8">
@@ -359,7 +286,7 @@ const Owners = () => {
               >
                 <Link to="/contacts">
                   <Button size="lg" className="bg-gradient-luxury text-luxury-foreground hover:shadow-luxury hover:scale-105">
-                    Получить расчет стоимости подготовки
+                    {t('owners.renovation.button')}
                   </Button>
                 </Link>
               </motion.div>
@@ -368,75 +295,52 @@ const Owners = () => {
         </div>
       </motion.section>
 
-
       {/* How it works */}
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto space-y-12">
             <div className="text-center space-y-4">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-                Как это работает
+                {t('owners.howItWorks.title')}
               </h2>
               <p className="text-lg text-muted-foreground">
-                Простой процесс сотрудничества
+                {t('owners.howItWorks.subtitle')}
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="text-center space-y-4">
-                <div className="w-16 h-16 mx-auto bg-gradient-luxury rounded-2xl flex items-center justify-center">
-                  <span className="text-2xl font-bold text-luxury-foreground">1</span>
+              {(t('owners.howItWorks.steps', { returnObjects: true }) as any[]).map((step: any, index: number) => (
+                <div key={index} className="text-center space-y-4">
+                  <div className="w-16 h-16 mx-auto bg-gradient-luxury rounded-2xl flex items-center justify-center">
+                    <span className="text-2xl font-bold text-luxury-foreground">{index + 1}</span>
+                  </div>
+                  <h3 className="text-xl font-semibold text-foreground">
+                    {step.title}
+                  </h3>
+                  <p className="text-muted-foreground">
+                    {step.description}
+                  </p>
                 </div>
-                <h3 className="text-xl font-semibold text-foreground">
-                  Оценка квартиры
-                </h3>
-                <p className="text-muted-foreground">
-                  Наш специалист проведет бесплатную оценку доходности вашей недвижимости
-                </p>
-              </div>
-              
-              <div className="text-center space-y-4">
-                <div className="w-16 h-16 mx-auto bg-gradient-luxury rounded-2xl flex items-center justify-center">
-                  <span className="text-2xl font-bold text-luxury-foreground">2</span>
-                </div>
-                <h3 className="text-xl font-semibold text-foreground">
-                  Подготовка к сдаче
-                </h3>
-                <p className="text-muted-foreground">
-                  Профессиональная фотосъемка, создание описания и размещение на платформах
-                </p>
-              </div>
-              
-              <div className="text-center space-y-4">
-                <div className="w-16 h-16 mx-auto bg-gradient-luxury rounded-2xl flex items-center justify-center">
-                  <span className="text-2xl font-bold text-luxury-foreground">3</span>
-                </div>
-                <h3 className="text-xl font-semibold text-foreground">
-                  Получение дохода
-                </h3>
-                <p className="text-muted-foreground">
-                  Ежемесячные выплаты без участия в операционных процессах
-                </p>
-              </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA */}
+      {/* CTA Section */}
       <section className="py-16 bg-gradient-hero">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-              Готовы стать партнером?
+              {t('owners.cta.title')}
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Свяжитесь с нами для консультации и оценки доходности вашей недвижимости
+              {t('owners.cta.subtitle')}
             </p>
             
             <Link to="/contacts">
               <Button size="lg" className="bg-gradient-luxury text-luxury-foreground hover:shadow-luxury hover:scale-105">
-                Стать партнером
+                {t('owners.cta.button')}
               </Button>
             </Link>
           </div>
