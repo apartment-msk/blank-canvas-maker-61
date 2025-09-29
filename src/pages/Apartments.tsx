@@ -9,11 +9,13 @@ import { StructuredData, generateApartmentListData, generateBreadcrumbData } fro
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { useTranslation } from "react-i18next";
 import apartment1 from "@/assets/apartment-1.jpg";
 import apartment2 from "@/assets/apartment-2.jpg";
 import apartment3 from "@/assets/apartment-3.jpg";
 
 const Apartments = () => {
+  const { t } = useTranslation();
   const [searchQuery, setSearchQuery] = useState("");
   const [sortBy, setSortBy] = useState("price-low");
   const [priceRange, setPriceRange] = useState("all");
@@ -128,10 +130,10 @@ const Apartments = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center space-y-6">
             <h1 className="text-4xl md:text-5xl font-bold text-foreground">
-              Наши апартаменты
+              {t('apartments.title')}
             </h1>
             <p className="text-lg text-muted-foreground">
-              Найдите идеальное место для вашего пребывания из нашей коллекции комфортных апартаментов
+              {t('apartments.description')}
             </p>
           </div>
         </div>
@@ -154,7 +156,7 @@ const Apartments = () => {
               <div className="relative w-full sm:w-80">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-4 w-4" />
                 <Input
-                  placeholder="Поиск по названию или району..."
+                  placeholder={t('search.placeholder')}
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="pl-10"
@@ -164,13 +166,13 @@ const Apartments = () => {
               <Select value={priceRange} onValueChange={setPriceRange}>
                 <SelectTrigger className="w-full sm:w-48">
                   <Filter className="h-4 w-4 mr-2" />
-                  <SelectValue placeholder="Цена" />
+                  <SelectValue placeholder={t('filters.priceRange')} />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="all">Любая цена</SelectItem>
-                  <SelectItem value="budget">До 7,000₽</SelectItem>
-                  <SelectItem value="mid">7,000₽ - 12,000₽</SelectItem>
-                  <SelectItem value="luxury">От 12,000₽</SelectItem>
+                  <SelectItem value="all">{t('filters.anyPrice')}</SelectItem>
+                  <SelectItem value="budget">{t('filters.budget')}</SelectItem>
+                  <SelectItem value="mid">{t('filters.mid')}</SelectItem>
+                  <SelectItem value="luxury">{t('filters.luxury')}</SelectItem>
                 </SelectContent>
               </Select>
             </div>
@@ -179,18 +181,18 @@ const Apartments = () => {
               <Select value={sortBy} onValueChange={setSortBy}>
                 <SelectTrigger className="w-48">
                   <SlidersHorizontal className="h-4 w-4 mr-2" />
-                  <SelectValue placeholder="Сортировка" />
+                  <SelectValue placeholder={t('filters.sortBy')} />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="price-low">Цена: по возрастанию</SelectItem>
-                  <SelectItem value="price-high">Цена: по убыванию</SelectItem>
-                  <SelectItem value="rating">По рейтингу</SelectItem>
-                  <SelectItem value="guests">По количеству гостей</SelectItem>
+                  <SelectItem value="price-low">{t('filters.priceLow')}</SelectItem>
+                  <SelectItem value="price-high">{t('filters.priceHigh')}</SelectItem>
+                  <SelectItem value="rating">{t('filters.byRating')}</SelectItem>
+                  <SelectItem value="guests">{t('filters.byGuests')}</SelectItem>
                 </SelectContent>
               </Select>
               
               <span className="text-sm text-muted-foreground whitespace-nowrap">
-                {filteredApartments.length} из {apartments.length}
+                {filteredApartments.length} {t('filters.resultsOf')} {apartments.length}
               </span>
             </div>
           </div>

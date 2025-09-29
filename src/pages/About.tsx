@@ -4,29 +4,32 @@ import { Shield, Clock, MapPin, Users, Star, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+
 const About = () => {
+  const { t } = useTranslation();
   const stats = [{
     number: "2500+",
-    label: "Довольных гостей"
+    label: t('about.stats.guests')
   }, {
     number: "4.9/5",
-    label: "Средний рейтинг"
+    label: t('about.stats.rating')
   }, {
     number: "24/7",
-    label: "Поддержка"
+    label: t('about.stats.support')
   }];
   const values = [{
     icon: Heart,
-    title: "Забота о каждом госте",
-    description: "Мы относимся к каждому гостю как к близкому другу, обеспечивая персональный подход и внимание к деталям."
+    title: t('about.values.care.title'),
+    description: t('about.values.care.description')
   }, {
     icon: Shield,
-    title: "Честность и прозрачность",
-    description: "Все фотографии соответствуют действительности. Никаких скрытых платежей или неприятных сюрпризов."
+    title: t('about.values.honesty.title'),
+    description: t('about.values.honesty.description')
   }, {
     icon: Star,
-    title: "Качество превыше всего",
-    description: "Мы тщательно отбираем каждые апартаменты и поддерживаем высокие стандарты чистоты и комфорта."
+    title: t('about.values.quality.title'),
+    description: t('about.values.quality.description')
   }];
   return <div className="min-h-screen bg-background">
       <Header />
@@ -36,11 +39,10 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <h1 className="text-4xl md:text-6xl font-bold text-foreground">
-              О нас
+              {t('about.title')}
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Мы создаем незабываемый опыт проживания, объединяя комфорт современных апартаментов 
-              с персональным сервисом и честным подходом к бизнесу.
+              {t('about.description')}
             </p>
           </div>
         </div>
@@ -66,10 +68,10 @@ const About = () => {
           <div className="max-w-4xl mx-auto space-y-8">
             <div className="text-center space-y-4">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-                Наша история
+                {t('about.story.title')}
               </h2>
               <p className="text-lg text-muted-foreground">
-                Как мы пришли к созданию сервиса комфортной аренды апартаментов
+                {t('about.story.description')}
               </p>
             </div>
 
@@ -113,10 +115,10 @@ const About = () => {
           <div className="max-w-4xl mx-auto space-y-12">
             <div className="text-center space-y-4">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-                Наши ценности
+                {t('about.values.title')}
               </h2>
               <p className="text-lg text-muted-foreground">
-                Принципы, которыми мы руководствуемся в своей работе
+                {t('about.values.description')}
               </p>
             </div>
 

@@ -10,8 +10,10 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import { StructuredData, generateOrganizationData, generateBreadcrumbData } from "@/components/StructuredData";
+import { useTranslation } from "react-i18next";
 
 const Contacts = () => {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -30,8 +32,8 @@ const Contacts = () => {
       await navigator.clipboard.writeText(displayPhone);
       setCopiedPhone(true);
       toast({
-        title: "Номер скопирован!",
-        description: "Теперь вы можете вставить его в WhatsApp",
+        title: t('contact.messageSent'),
+        description: t('contact.willContact'),
       });
       setTimeout(() => setCopiedPhone(false), 2000);
     } catch (err) {
@@ -72,47 +74,47 @@ const Contacts = () => {
   const contactInfo = [
     {
       icon: Phone,
-      title: "Телефон",
+      title: t('contact.phoneTitle'),
       details: [
         { text: "+7 995 508 58 08", link: "tel:+79955085808" }
       ],
-      description: "Звоните в любое время"
+      description: t('contact.phoneDescription')
     },
     {
       icon: Mail,
-      title: "Email",
+      title: t('contact.emailTitle'),
       details: [
         { text: "info@volshebno-tut.ru", link: "mailto:info@volshebno-tut.ru" },
         { text: "support@volshebno-tut.ru", link: "mailto:support@volshebno-tut.ru" }
       ],
-      description: "Ответим в течение часа"
+      description: t('contact.emailDescription')
     },
     {
       icon: MessageCircle,
-      title: "Мессенджеры",
+      title: t('contact.messengersTitle'),
       details: [
         { 
-          text: "Telegram", 
+          text: t('contact.telegram'), 
           link: "https://t.me/Volshebno_tyt",
           icon: "telegram"
         },
         { 
-          text: "WhatsApp", 
+          text: t('contact.whatsapp'), 
           link: "javascript:void(0)",
           action: "whatsapp",
           icon: "whatsapp"
         }
       ],
-      description: "Быстрая связь 24/7"
+      description: t('contact.messengersDescription')
     },
     {
       icon: Clock,
-      title: "Поддержка",
+      title: t('contact.supportTitle'),
       details: [
         { text: "24 часа в сутки" },
         { text: "7 дней в неделю" }
       ],
-      description: "Всегда готовы помочь"
+      description: t('contact.supportDescription')
     }
   ];
 
@@ -134,8 +136,8 @@ const Contacts = () => {
     console.log("Form submitted:", formData);
     
     toast({
-      title: "Сообщение отправлено!",
-      description: "Мы свяжемся с вами в ближайшее время.",
+      title: t('contact.messageSent'),
+      description: t('contact.willContact'),
     });
 
     // Очистка формы
@@ -195,11 +197,10 @@ const Contacts = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <h1 className="text-4xl md:text-6xl font-bold text-foreground">
-              Контакты
+              {t('contact.title')}
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Свяжитесь с нами любым удобным способом. Мы работаем 24/7 и всегда готовы помочь 
-              с любыми вопросами по бронированию и проживанию.
+              {t('contact.description')}
             </p>
           </div>
         </div>
@@ -295,10 +296,10 @@ const Contacts = () => {
               <div className="space-y-6">
                 <div>
                   <h2 className="text-3xl font-bold text-foreground mb-4">
-                    Напишите нам
+                    {t('contact.formTitle')}
                   </h2>
                   <p className="text-muted-foreground">
-                    Заполните форму, и мы свяжемся с вами в течение часа
+                    {t('contact.formDescription')}
                   </p>
                 </div>
 
@@ -307,17 +308,17 @@ const Contacts = () => {
                     <form onSubmit={handleSubmit} className="space-y-6">
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div className="space-y-2">
-                          <Label htmlFor="name">Имя *</Label>
+                          <Label htmlFor="name">{t('contact.name')} *</Label>
                           <Input
                             id="name"
                             value={formData.name}
                             onChange={(e) => handleInputChange("name", e.target.value)}
                             required
-                            placeholder="Ваше имя"
+                            placeholder={t('contact.name')}
                           />
                         </div>
                         <div className="space-y-2">
-                          <Label htmlFor="email">Email *</Label>
+                          <Label htmlFor="email">{t('contact.email')} *</Label>
                           <Input
                             id="email"
                             type="email"
@@ -331,7 +332,7 @@ const Contacts = () => {
 
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div className="space-y-2">
-                          <Label htmlFor="phone">Телефон</Label>
+                          <Label htmlFor="phone">{t('contact.phone')}</Label>
                           <Input
                             id="phone"
                             type="tel"
@@ -341,10 +342,10 @@ const Contacts = () => {
                           />
                         </div>
                         <div className="space-y-2">
-                          <Label htmlFor="subject">Тема обращения</Label>
+                          <Label htmlFor="subject">{t('contact.subject')}</Label>
                           <Select value={formData.subject} onValueChange={(value) => handleInputChange("subject", value)}>
                             <SelectTrigger>
-                              <SelectValue placeholder="Выберите тему" />
+                              <SelectValue placeholder={t('contact.subject')} />
                             </SelectTrigger>
                             <SelectContent>
                               {subjects.map((subject, index) => (
@@ -358,13 +359,13 @@ const Contacts = () => {
                       </div>
 
                       <div className="space-y-2">
-                        <Label htmlFor="message">Сообщение *</Label>
+                        <Label htmlFor="message">{t('contact.yourMessage')} *</Label>
                         <Textarea
                           id="message"
                           value={formData.message}
                           onChange={(e) => handleInputChange("message", e.target.value)}
                           required
-                          placeholder="Расскажите подробнее о вашем вопросе..."
+                          placeholder={t('contact.yourMessage')}
                           rows={5}
                         />
                       </div>
@@ -374,7 +375,7 @@ const Contacts = () => {
                         className="w-full bg-gradient-luxury text-luxury-foreground hover:shadow-luxury hover:scale-105"
                       >
                         <Send className="h-4 w-4 mr-2" />
-                        Отправить сообщение
+                        {t('contact.send')}
                       </Button>
                     </form>
                   </CardContent>
@@ -386,10 +387,10 @@ const Contacts = () => {
             <div className="space-y-6">
               <div>
                 <h2 className="text-3xl font-bold text-foreground mb-4">
-                  Наше расположение
+                  {t('contact.locationTitle')}
                 </h2>
                 <p className="text-muted-foreground">
-                  Удобное расположение в центре Москвы
+                  {t('contact.locationDescription')}
                 </p>
               </div>
 
@@ -399,7 +400,7 @@ const Contacts = () => {
                     <div className="text-center">
                       <MapPin className="h-16 w-16 text-muted-foreground mx-auto mb-4" />
                       <p className="text-muted-foreground">
-                        Интерактивная карта будет добавлена
+                        {t('contact.mapPlaceholder')}
                       </p>
                     </div>
                   </div>
@@ -415,10 +416,10 @@ const Contacts = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-              Нужна помощь прямо сейчас?
+              {t('contact.needHelpNow')}
             </h2>
             <p className="text-lg text-muted-foreground">
-              Свяжитесь с нами любым удобным способом для получения быстрой помощи
+              {t('contact.quickContactDescription')}
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -429,7 +430,7 @@ const Contacts = () => {
               >
                 <a href="tel:+79955085808">
                   <Phone className="h-5 w-5 mr-2" />
-                  Позвонить
+                  {t('contact.call')}
                 </a>
               </Button>
               <Button 
@@ -439,7 +440,7 @@ const Contacts = () => {
                 onClick={openWhatsApp}
               >
                 <MessageCircle className="h-5 w-5 mr-2" />
-                WhatsApp
+                {t('contact.whatsapp')}
               </Button>
               <Button 
                 size="lg" 
