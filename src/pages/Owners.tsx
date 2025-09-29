@@ -178,15 +178,10 @@ const Owners = () => {
               </motion.p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
                 {
-                  number: "30+",
-                  text: "собственников работают с нами от 4-х лет",
-                  icon: Users
-                },
-                {
-                  number: "500+",
+                  number: "100+",
                   text: "млн рублей - общая стоимость недвижимости в управлении",
                   icon: DollarSign
                 },
