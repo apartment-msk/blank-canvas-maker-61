@@ -196,78 +196,45 @@
         "不可预测的收入"
       ]
     },
-    "trust": {
+    "trustStats": {
       "title": "我们的成就和评级",
       "subtitle": "数字说明一切",
-      "propertyValue": {
-        "number": "25%",
-        "label": "房产价值增长"
-      },
-      "occupancy": {
-        "number": "95%",
-        "label": "平均入住率"
-      },
-      "wearReduction": {
-        "number": "40%",
-        "label": "磨损减少"
+      "stats": {
+        "propertyValue": "房产价值增长25%",
+        "occupancy": "平均入住率95%",
+        "wearReduction": "磨损减少40%"
       }
     },
     "services": {
       "title": "我们的服务",
       "subtitle": "全面的房产管理解决方案",
       "list": [
-        {
-          "title": "专业清洁",
-          "description": "每次客人入住后的深度清洁"
-        },
-        {
-          "title": "房产维护",
-          "description": "定期检查和维修工作"
-        },
-        {
-          "title": "客人筛选",
-          "description": "验证文件和评估可靠性"
-        },
-        {
-          "title": "24/7支持",
-          "description": "随时为客人和房东提供帮助"
-        },
-        {
-          "title": "营销和推广",
-          "description": "专业摄影和多平台发布"
-        },
-        {
-          "title": "收入优化",
-          "description": "动态定价和收益管理"
-        }
+        "专业清洁",
+        "房产维护", 
+        "客人筛选",
+        "24/7支持",
+        "营销和推广",
+        "收入优化"
       ]
-    },
-    "reviews": {
-      "title": "客户评论",
-      "subtitle": "房东和客人对我们的评价"
     },
     "renovation": {
       "title": "全面服务",
       "subtitle": "有效管理您房产所需的一切",
-      "description": "我们提供完整的房产管理服务，从准备到日常维护。",
-      "preparation": {
-        "title": "从零开始准备房产",
-        "subtitle": "我们将您的房产变成舒适的住宿",
-        "services": [
-          {
-            "title": "设计和装修",
-            "description": "现代室内设计，考虑到客人的需求"
-          },
-          {
-            "title": "家具和设备",
-            "description": "优质家具和必要电器的完整配套"
-          },
-          {
-            "title": "技术解决方案",
-            "description": "智能锁、Wi-Fi、智能电视和其他现代便利设施"
-          }
-        ]
-      }
+      "button": "获取准备成本估算",
+      "services": [
+        {
+          "title": "任何条件下的工作",
+          "description": "从毛坯到大修 - 我们将为您的房产提供一站式准备"
+        },
+        {
+          "title": "完整的家具配套",
+          "description": "优质家具和必要电器的完整配套"
+        },
+        {
+          "title": "现代技术解决方案",
+          "description": "智能锁、Wi-Fi、智能电视和其他现代便利设施"
+        }
+      ]
     },
     "howItWorks": {
       "title": "如何工作",
