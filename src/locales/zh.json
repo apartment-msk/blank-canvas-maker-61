@@ -30,7 +30,8 @@
     "apartments": "公寓",
     "about": "关于我们",
     "contacts": "联系我们",
-    "owners": "房东专区"
+    "owners": "房东专区",
+    "offers": "特别优惠"
   },
   "hero": {
     "title": "舒适公寓",
@@ -49,230 +50,244 @@
   },
   "benefits": {
     "title": "为什么选择我们",
-    "description": "我们为每位客人创造难忘的住宿体验",
+    "description": "我们提供最好的服务和舒适度",
     "honestPhotos": {
       "title": "真实照片",
-      "description": "所有照片都与实际相符。入住时绝无不愉快的意外。"
+      "description": "所有照片都是公寓的真实状态"
     },
-    "support24": {
+    "support": {
       "title": "24/7支持",
-      "description": "我们的团队随时准备在昼夜任何时间为您提供帮助。"
+      "description": "我们随时为您提供帮助"
     },
     "bestLocations": {
-      "title": "优越位置",
-      "description": "临近景点、交通和基础设施的便利位置。"
+      "title": "最佳位置",
+      "description": "所有公寓都位于便利的地区"
     },
     "highSpeedInternet": {
-      "title": "高速网络",
-      "description": "300Mbps以上的高速网络连接，满足工作和娱乐需求。"
+      "title": "高速互联网",
+      "description": "可靠的Wi-Fi连接"
     },
     "smartTv": {
       "title": "智能电视",
-      "description": "现代智能电视，配有各种流媒体服务订阅。"
+      "description": "现代电视，提供各种娱乐选择"
     },
     "perfectCleanliness": {
-      "title": "完美清洁",
-      "description": "对每套公寓的清洁和整洁保持格外细致的标准。"
+      "title": "完美的清洁",
+      "description": "每次入住前都进行专业清洁"
     }
   },
   "apartments": {
-    "title": "热门公寓",
-    "description": "我们的客人特别推荐这些住宿选择",
-    "viewAll": "查看所有公寓",
-    "perNight": "/ 夜",
+    "title": "我们的公寓",
+    "description": "为任何品味和预算精心挑选的住宿",
+    "viewAll": "查看所有",
+    "perNight": "每晚",
     "upTo": "最多",
     "guests": "客人",
-    "details": "详情",
     "rating": "评分",
-    "reviews": "评价",
+    "reviews": "评论",
     "bedrooms": "卧室",
     "bathrooms": "浴室",
     "area": "面积",
-    "amenities": "设施",
-    "rules": "住宿规则",
+    "amenities": "便利设施",
+    "rules": "规则",
     "description": "描述"
   },
   "reviews": {
-    "title": "客人评价",
-    "description": "了解已经选择我们公寓的客人怎么说",
+    "title": "客户评论",
+    "description": "我们客人的真实反馈",
     "ago": "前",
     "weeks": "周",
     "month": "月"
   },
   "filters": {
-    "priceRange": "价格",
+    "priceRange": "价格范围",
     "anyPrice": "任何价格",
-    "budget": "低于800元",
-    "mid": "800元 - 1500元",
-    "luxury": "超过1500元",
-    "sortBy": "排序方式",
+    "budget": "经济",
+    "mid": "中等",
+    "luxury": "豪华",
+    "sortBy": "排序",
     "priceLow": "价格：从低到高",
     "priceHigh": "价格：从高到低",
     "byRating": "按评分",
     "byGuests": "按客人数量",
-    "resultsOf": "的",
     "resetFilters": "重置筛选"
   },
   "contact": {
-    "call": "拨打电话",
-    "message": "发送消息",
+    "call": "致电",
+    "message": "消息",
     "whatsapp": "WhatsApp",
-    "email": "邮箱",
+    "email": "邮件",
     "support247": "24/7支持",
     "quickResponse": "快速响应",
-    "formTitle": "联系我们",
-    "formDescription": "填写表格，我们将在一小时内回复您",
     "name": "姓名",
     "phone": "电话",
     "subject": "主题",
-    "yourMessage": "消息",
-    "send": "发送消息",
+    "yourMessage": "您的消息",
     "messageSent": "消息已发送！",
-    "willContact": "我们会尽快联系您。",
+    "willContact": "我们会尽快与您联系。",
     "title": "联系我们",
-    "description": "通过任何方便的方式联系我们。我们24/7工作，随时准备协助您解决任何预订和住宿问题。",
+    "description": "我们随时准备回答您的问题",
     "phoneTitle": "电话",
-    "phoneDescription": "随时致电",
-    "emailTitle": "邮箱",
-    "emailDescription": "一小时内回复",
-    "messengersTitle": "即时通讯",
-    "messengersDescription": "24/7快速沟通",
+    "phoneDescription": "随时致电我们",
+    "emailTitle": "邮件",
+    "emailDescription": "给我们写信",
+    "messengersTitle": "消息应用",
+    "messengersDescription": "通过消息应用联系",
     "supportTitle": "支持",
-    "supportDescription": "随时准备提供帮助",
-    "locationTitle": "我们的位置",
-    "locationDescription": "位于莫斯科市中心的便利位置",
-    "mapPlaceholder": "即将添加交互式地图",
-    "needHelpNow": "现在需要帮助？",
-    "quickContactDescription": "通过任何方便的方式联系我们获得快速帮助",
-    "telegram": "Telegram"
+    "supportDescription": "我们随时为您提供帮助",
+    "locationTitle": "位置",
+    "locationDescription": "我们在这里为您服务"
   },
   "about": {
     "title": "关于我们",
-    "description": "我们通过将舒适公寓的便利与个性化服务和诚信的商业理念相结合，创造难忘的住宿体验。",
-    "stats": {
-      "guests": "满意客人",
-      "apartments": "公寓数量",
-      "rating": "平均评分",
-      "support": "支持"
-    },
+    "description": "了解我们的故事和价值观",
+    "guests": "客人",
+    "apartments": "公寓",
+    "rating": "评分",
+    "support": "支持",
     "story": {
       "title": "我们的故事",
-      "description": "我们如何创建舒适公寓租赁服务"
+      "description": "多年来，我们一直致力于为客人提供最佳的住宿体验。"
     },
     "values": {
       "title": "我们的价值观",
-      "description": "指导我们工作的原则",
       "care": {
-        "title": "关爱每一位客人",
-        "description": "我们像对待挚友一样对待每一位客人，提供个性化服务和细致入微的关怀。"
+        "title": "关怀",
+        "description": "我们关心每一位客人的舒适度"
       },
       "honesty": {
-        "title": "诚信透明",
-        "description": "所有照片都与实际相符。没有隐藏费用或不愉快的意外。"
+        "title": "诚实",
+        "description": "我们提供真实信息，没有隐藏费用"
       },
       "quality": {
-        "title": "品质至上",
-        "description": "我们精心挑选每一套公寓，保持高标准的清洁度和舒适度。"
+        "title": "质量",
+        "description": "我们努力在所有方面保持高标准"
       }
     },
     "forOwners": {
-      "title": "致房东",
-      "description": "加入我们的平台，在我们的支持和管理下从您的公寓租赁中获得稳定收入。",
-      "becomePartner": "成为合作伙伴"
+      "title": "为房东",
+      "description": "加入我们，实现您房产的潜力",
+      "button": "了解更多"
     }
   },
   "footer": {
-    "description": "短期租赁的舒适公寓。舒适、品质、可靠。",
+    "description": "舒适公寓租赁，诚实价格和优质服务。",
     "quickLinks": "快速链接",
     "contactInfo": "联系信息",
     "documents": "文档",
     "privacy": "隐私政策",
-    "terms": "服务条款",
-    "copyright": "版权所有。"
+    "terms": "使用条款",
+    "copyright": "版权所有"
   },
   "owners": {
     "hero": {
-      "title": "从您的房产获得更多收益",
-      "subtitle": "专业的短期租赁管理。在您无需参与的情况下将盈利能力提高20-30%。",
-      "cta": "讨论合作"
-    },
-    "trustStats": {
-      "title": "为什么房东信任我们",
-      "subtitle": "自2019年以来我们工作的数字和事实",
-      "stats": {
-        "propertyValue": "百万卢布 - 管理的房地产总价值",
-        "occupancy": "我们房产的入住率",
-        "wearReduction": "比长期租赁减少的公寓磨损"
-      }
+      "title": "房东专区",
+      "subtitle": "让您的房产为您工作"
     },
     "problems": {
-      "title": "熟悉的问题？",
-      "subtitle": "如果您在其中一点中认出了自己 - 我们可以解决您的问题",
+      "title": "房东常见问题",
+      "subtitle": "我们理解房东面临的挑战",
       "list": [
-        "长期出租公寓获得较少收入",
-        "明白房地产可以带来更多收入",
-        "无法控制公寓状况",
-        "经常维修和购买设备替换损坏的",
-        "舍不得花钱做广告或不知道如何设置",
-        "听邻居抱怨租客",
-        "租客拖延付款",
-        "想要更快收回房地产投资",
-        "不喜欢客户随时打电话",
-        "住在另一个城市而房产在莫斯科"
+        "空置期间的经济损失",
+        "寻找可靠租客的困难",
+        "房产维护和管理的复杂性",
+        "法律问题和文书工作",
+        "营销和广告费用",
+        "不可预测的收入"
       ]
+    },
+    "trust": {
+      "title": "我们的成就和评级",
+      "subtitle": "数字说明一切",
+      "propertyValue": {
+        "number": "25%",
+        "label": "房产价值增长"
+      },
+      "occupancy": {
+        "number": "95%",
+        "label": "平均入住率"
+      },
+      "wearReduction": {
+        "number": "40%",
+        "label": "磨损减少"
+      }
     },
     "services": {
-      "title": "全方位服务",
-      "subtitle": "有效管理您房产所需的一切",
+      "title": "我们的服务",
+      "subtitle": "全面的房产管理解决方案",
       "list": [
-        "公寓评估",
-        "维修清洁",
-        "房屋装饰",
-        "法律咨询",
-        "保险",
-        "财务统计",
-        "内容准备",
-        "客户画像创建",
-        "综合营销",
-        "价格监控",
-        "24/7运营",
-        "洗衣服务"
-      ]
-    },
-    "renovation": {
-      "title": "从零开始准备物业",
-      "subtitle": "即使您有毛坯房或需要大装修 - 我们将处理整个准备过程，打造短期租赁的高端公寓",
-      "button": "获取准备成本估算",
-      "services": [
         {
-          "title": "适用于任何状况",
-          "description": "从毛坯房到大装修 - 我们将为您的物业提供全套准备"
+          "title": "专业清洁",
+          "description": "每次客人入住后的深度清洁"
         },
         {
-          "title": "完整准备周期",
-          "description": "设计、装修、家具配置和租赁启动，60-90天完成"
+          "title": "房产维护",
+          "description": "定期检查和维修工作"
         },
         {
-          "title": "投资回报",
-          "description": "由于高端租金，准备成本在18-24个月内收回"
+          "title": "客人筛选",
+          "description": "验证文件和评估可靠性"
+        },
+        {
+          "title": "24/7支持",
+          "description": "随时为客人和房东提供帮助"
+        },
+        {
+          "title": "营销和推广",
+          "description": "专业摄影和多平台发布"
+        },
+        {
+          "title": "收入优化",
+          "description": "动态定价和收益管理"
         }
       ]
     },
+    "reviews": {
+      "title": "客户评论",
+      "subtitle": "房东和客人对我们的评价"
+    },
+    "renovation": {
+      "title": "全面服务",
+      "subtitle": "有效管理您房产所需的一切",
+      "description": "我们提供完整的房产管理服务，从准备到日常维护。",
+      "preparation": {
+        "title": "从零开始准备房产",
+        "subtitle": "我们将您的房产变成舒适的住宿",
+        "services": [
+          {
+            "title": "设计和装修",
+            "description": "现代室内设计，考虑到客人的需求"
+          },
+          {
+            "title": "家具和设备",
+            "description": "优质家具和必要电器的完整配套"
+          },
+          {
+            "title": "技术解决方案",
+            "description": "智能锁、Wi-Fi、智能电视和其他现代便利设施"
+          }
+        ]
+      }
+    },
     "howItWorks": {
-      "title": "如何运作",
+      "title": "如何工作",
       "subtitle": "简单的合作流程",
       "steps": [
         {
-          "title": "房产评估",
-          "description": "我们的专家将免费评估您房产的盈利能力"
+          "title": "评估",
+          "description": "我们评估您的房产并计算潜在收入"
         },
         {
-          "title": "准备出租",
-          "description": "如有必要，我们将协助装修、家具配置和装饰"
+          "title": "准备",
+          "description": "我们准备房产并创建有吸引力的列表"
         },
         {
-          "title": "管理和收入",
-          "description": "我们负责所有管理工作，您获得稳定收入"
+          "title": "管理",
+          "description": "我们处理所有客人互动和房产维护"
+        },
+        {
+          "title": "收入",
+          "description": "您获得稳定收入，无需担心"
         }
       ]
     },
