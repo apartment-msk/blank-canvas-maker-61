@@ -150,6 +150,10 @@
   "about": {
     "title": "About us",
     "description": "We create unforgettable living experiences by combining the comfort of modern apartments with personal service and an honest approach to business.",
+    "achievements": {
+      "title": "Our achievements and ratings",
+      "subtitle": "Numbers that speak about our experience and service quality"
+    },
     "stats": {
       "guests": "Happy guests",
       "apartments": "Apartments",
@@ -188,7 +192,19 @@
       "description": "Join our platform and get stable income from renting your apartments with our support and management.",
       "button": "Become a partner"
     }
-  },
+    },
+    "services": {
+      "title": "Our services",
+      "subtitle": "Full range of services for comfortable stay",
+      "list": [
+        "Online booking",
+        "24/7 guest support", 
+        "Professional cleaning",
+        "Quality control",
+        "Honest photos",
+        "Transparent pricing"
+      ]
+    },
   "footer": {
     "description": "Comfortable apartments for short-term rental. Comfort, quality, reliability.",
     "quickLinks": "Quick links",
