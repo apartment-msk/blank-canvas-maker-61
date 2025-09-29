@@ -158,7 +158,14 @@
     },
     "story": {
       "title": "Our story",
-      "description": "How we came to create a comfortable apartment rental service"
+      "description": "How we came to create a comfortable apartment rental service",
+      "content1": "It all started with a simple idea: to make short-term accommodation rental honest, transparent and truly comfortable. We ourselves traveled often and faced disappointment when reality did not match expectations.",
+      "content2": "In 2020, we decided to create a service that would solve these problems. We started with careful selection of apartments, honest photography and implementation of quality standards that guarantee an excellent experience for every guest.",
+      "content3": "Today Volshebno Tut is a team of professionals that continues to grow and develop, remaining true to its principles of quality and honesty."
+    },
+    "quote": {
+      "text": "We believe that every journey should start with a comfortable and safe place where you can feel at home.",
+      "author": "— Anastasia Bezborodova, founder of Volshebno Tut"
     },
     "values": {
       "title": "Our values",
@@ -179,7 +186,7 @@
     "forOwners": {
       "title": "For property owners",
       "description": "Join our platform and get stable income from renting your apartments with our support and management.",
-      "becomePartner": "Become a partner"
+      "button": "Become a partner"
     }
   },
   "footer": {

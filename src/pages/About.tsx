@@ -76,31 +76,25 @@ const About = () => {
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div className="space-y-6">
+            <div className="space-y-6">
                 <p className="text-muted-foreground leading-relaxed">
-                  Все началось с простой идеи: сделать краткосрочную аренду жилья честной, 
-                  прозрачной и по-настоящему комфортной. Мы сами часто путешествовали и 
-                  сталкивались с разочарованием, когда реальность не соответствовала ожиданиям.
+                  {t('about.story.content1')}
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  В 2020 году мы решили создать сервис, который бы решал эти проблемы. 
-                  Мы начали с тщательного отбора апартаментов, честной фотосъемки и 
-                  внедрения стандартов качества, которые гарантируют отличный опыт каждому гостю.
+                  {t('about.story.content2')}
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  Сегодня Волшебно тут — это команда профессионалов, которая продолжает расти 
-                  и развиваться, оставаясь верной своим принципам качества и честности.
+                  {t('about.story.content3')}
                 </p>
               </div>
               
               <div className="relative">
                 <div className="bg-gradient-luxury rounded-2xl p-8 text-luxury-foreground">
                   <blockquote className="text-lg italic">
-                    "Мы верим, что каждое путешествие должно начинаться с комфортного 
-                    и безопасного места, где можно чувствовать себя как дома."
+                    "{t('about.quote.text')}"
                   </blockquote>
                   <footer className="mt-4">
-                    <cite className="font-semibold">— Анастасия Безбородова, основатель Волшебно тут</cite>
+                    <cite className="font-semibold">{t('about.quote.author')}</cite>
                   </footer>
                 </div>
               </div>
